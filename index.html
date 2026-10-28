@@ -1,1 +1,360 @@
 
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>أحب صلاتي | نتعلم الصلاة ونحبها</title>
+  <link rel="icon" type="image/png" href="faction.png">
+
+  <style>
+    :root {
+      --brown: #4b2e20;
+      --dark: #291b15;
+      --gold: #d8ad58;
+      --cream: #fff8e9;
+      --light: #f4e5c9;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Tahoma, sans-serif;
+      background: var(--cream);
+      color: var(--dark);
+      line-height: 1.9;
+    }
+
+    header {
+      padding: 38px 20px;
+      text-align: center;
+      color: white;
+      background: linear-gradient(135deg, #3b2419, #80512d, #d5ad60);
+      border-bottom: 5px solid var(--gold);
+    }
+
+    .logo {
+      display: inline-flex;
+      width: 115px;
+      height: 115px;
+      align-items: center;
+      justify-content: center;
+      border: 3px solid var(--gold);
+      border-radius: 50%;
+      font-size: 25px;
+      font-weight: bold;
+      line-height: 1.5;
+      padding: 12px;
+      margin-bottom: 10px;
+      box-shadow: 0 0 18px #f3d58a55;
+    }
+
+    header h1 {
+      margin: 5px 0;
+      font-size: clamp(28px, 5vw, 42px);
+      color: #ffe6a6;
+    }
+
+    header p {
+      margin: 5px auto;
+      max-width: 650px;
+      font-size: 17px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 15px;
+      background: var(--dark);
+    }
+
+    nav a {
+      color: #ffe6a6;
+      text-decoration: none;
+      padding: 7px 15px;
+      border: 1px solid #b58b48;
+      border-radius: 20px;
+    }
+
+    nav a:hover {
+      background: var(--gold);
+      color: var(--dark);
+    }
+
+    main {
+      width: min(1050px, 92%);
+      margin: 30px auto;
+    }
+
+    .welcome {
+      text-align: center;
+      padding: 24px;
+      margin-bottom: 30px;
+      background: white;
+      border: 1px solid #e6d1a6;
+      border-radius: 18px;
+      box-shadow: 0 5px 16px #4b2e2010;
+    }
+
+    .welcome h2 {
+      color: var(--brown);
+      margin-top: 0;
+    }
+
+    .group {
+      margin: 24px 0;
+      overflow: hidden;
+      border: 1px solid #d9bd83;
+      border-radius: 16px;
+      background: white;
+      box-shadow: 0 4px 12px #4b2e2010;
+    }
+
+    .group h2 {
+      margin: 0;
+      padding: 15px 20px;
+      color: white;
+      font-size: 21px;
+      background: linear-gradient(90deg, var(--brown), #986a36);
+    }
+
+    .group-description {
+      margin: 0;
+      padding: 10px 20px;
+      color: #70523a;
+      background: #fff8e9;
+    }
+
+    .booklet-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .booklet-table th,
+    .booklet-table td {
+      padding: 12px 18px;
+      text-align: right;
+      border-top: 1px solid #eee1c9;
+    }
+
+    .booklet-table th {
+      color: var(--brown);
+      background: #f7ecd6;
+    }
+
+    .booklet-table a {
+      color: #80501f;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .booklet-table a:hover {
+      color: #b47d25;
+      text-decoration: underline;
+    }
+
+    .status {
+      display: inline-block;
+      padding: 2px 10px;
+      border-radius: 15px;
+      color: #74572d;
+      background: #f8edcf;
+      font-size: 13px;
+    }
+
+    .activities {
+      margin: 35px 0;
+      padding: 24px;
+      text-align: center;
+      background: #fff;
+      border: 2px dashed #bd9652;
+      border-radius: 16px;
+    }
+
+    .activities h2 {
+      color: var(--brown);
+    }
+
+    .activity-placeholder {
+      margin-top: 15px;
+      padding: 18px;
+      border-radius: 10px;
+      background: #faf4e8;
+      border: 1px solid #e8d8b8;
+    }
+
+    .activity-placeholder a {
+      color: #80501f;
+      font-weight: bold;
+    }
+
+    footer {
+      padding: 25px 15px;
+      text-align: center;
+      color: #fce9bf;
+      background: var(--dark);
+      border-top: 4px solid var(--gold);
+    }
+
+    footer p {
+      margin: 5px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 28px 14px;
+      }
+
+      .booklet-table th,
+      .booklet-table td {
+        padding: 10px;
+        font-size: 14px;
+      }
+
+      .group h2 {
+        font-size: 18px;
+      }
+
+      nav {
+        gap: 7px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header id="top">
+    <div class="logo">أحب<br>صلاتي</div>
+    <h1>أحب صلاتي</h1>
+    <p>رحلة جميلة نتعلم فيها الصلاة، ونفهم معانيها، ونقترب بها من الله.</p>
+  </header>
+
+  <nav>
+    <a href="#top">الرئيسية</a>
+    <a href="#group1">أتعرف على الصلاة</a>
+    <a href="#group2">أتعلم كيف أصلي</a>
+    <a href="#group3">أعيش الصلاة بقلبي</a>
+    <a href="#group4">أحافظ على صلاتي</a>
+    <a href="#group5">أنمو مع صلاتي</a>
+    <a href="#group6">أحب الصلاة</a>
+    <a href="#activities">الأنشطة</a>
+  </nav>
+
+  <main>
+    <section class="welcome">
+      <h2>أهلًا بك في عالم أحب صلاتي</h2>
+      <p>
+        هنا ستتعرف على الصلاة وفضلها، وتتعلم كيف تصلي،
+        وتكتشف معانيها، وتجد أفكارًا تساعدك على المحافظة عليها
+        حتى تصبح الصلاة جزءًا جميلًا من يومك.
+      </p>
+      <p>اختر المجموعة التي تريد البدء بها، ثم اضغط على عنوان الكتيب.</p>
+    </section>
+
+    <section class="group" id="group1">
+      <h2>المجموعة الأولى: أتعرف على الصلاة</h2>
+      <p class="group-description">التأسيس الإيماني ومعرفة مكانة الصلاة.</p>
+      <table class="booklet-table">
+        <thead><tr><th>الكتيب</th><th>الرابط</th></tr></thead>
+        <tbody>
+          <tr><td>لماذا أصلي؟ — أحب صلاتي</td><td><a href="booklet1.html">فتح الكتيب</a></td></tr>
+          <tr><td>الصلاة هدية عظيمة من الله</td><td><a href="unavailable.html">صفحة الكتيب</a></td></tr>
+          <tr><td>ماذا تعلمني الصلاة؟</td><td><a href="unavailable.html">صفحة الكتيب</a></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="group" id="group2">
+      <h2>المجموعة الثانية: أتعلم كيف أصلي</h2>
+      <p class="group-description">تعلم الصلاة وأحكامها بطريقة عملية.</p>
+      <table class="booklet-table">
+        <thead><tr><th>الكتيب</th><th>الرابط</th></tr></thead>
+        <tbody>
+          <tr><td>أتوضأ لأصلي</td><td><a href="unavailable.html">صفحة الكتيب</a></td></tr>
+          <tr><td>أستعد لصلاتي</td><td><a href="unavailable.html">صفحة الكتيب</a></td></tr>
+          <tr><td>صلاتي خطوة بخطوة</td><td><a href="unavailable.html">صفحة الكتيب</a></td></tr>
+          <tr><td>ماذا أقول وأنا أصلي؟</td><td><a href="unavailable.html">صفحة الكتيب</a></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="group" id="group3">
+      <h2>المجموعة الثالثة: أعيش الصلاة بقلبي</h2>
+      <p class="group-description">فهم معاني الصلاة والخشوع فيها.</p>
+      <table class="booklet-table">
+        <thead><tr><th>الكتيب</th><th>الرابط</th></tr></thead>
+        <tbody>
+          <tr><td>كيف أخشع في صلاتي؟</td><td><a href="unavailable.html">صفحة الكتيب</a></td></tr>
+          <tr><td>أفهم ما أقرأ في صلاتي</td><td><a href="unavailable.html">صفحة الكتيب</a></td></tr>
+          <tr><td>كيف أتغلب على السرحان في الصلاة؟</td><td><a href="unavailable.html">صفحة الكتيب</a></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="group" id="group4">
+      <h2>المجموعة الرابعة: أحافظ على صلاتي</h2>
+      <p class="group-description">تنظيم الوقت والتعامل مع المواقف اليومية.</p>
+      <table class="booklet-table">
+        <thead><tr><th>الكتيب</th><th>الرابط</th></tr></thead>
+        <tbody>
+          <tr><td>الصلوات الخمس في يومي</td><td><a href="unavailable.html">صفحة الكتيب</a></td></tr>
+          <tr><td>عندما أشعر بالكسل عن الصلاة</td><td><a href="unavailable.html">صفحة الكتيب</a></td></tr>
+          <tr><td>أصلي في البيت والمدرسة والمسجد</td><td><a href="unavailable.html">صفحة الكتيب</a></td></tr>
+          <tr><td>إذا أخطأت في صلاتي، فماذا أفعل؟</td><td><a href="unavailable.html">صفحة الكتيب</a></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="group" id="group5">
+      <h2>المجموعة الخامسة: أنمو مع صلاتي</h2>
+      <p class="group-description">مساحة مخصصة لكتيبات هذه المجموعة، وسنضيف عناوينها عند تثبيتها.</p>
+      <table class="booklet-table">
+        <thead><tr><th>الكتيب</th><th>الرابط</th></tr></thead>
+        <tbody>
+          <tr><td>كتيبات المجموعة الخامسة</td><td><span class="status">ستُضاف لاحقًا</span></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="group" id="group6">
+      <h2>المجموعة السادسة: أحب الصلاة وأقترب منها</h2>
+      <p class="group-description">أفكار تساعد الطفل على أن يحب الصلاة ويقبل عليها بقلب مطمئن.</p>
+      <table class="booklet-table">
+        <thead><tr><th>الكتيب</th><th>الرابط</th></tr></thead>
+        <tbody>
+          <tr><td>كتيبات تقريب الصلاة إلى قلب الطفل</td><td><span class="status">ستُضاف لاحقًا</span></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="activities" id="activities">
+      <h2>🌟 أتعلم وأطبّق</h2>
+      <p>مساحة للأنشطة والأسئلة التي تساعدك على تذكر ما تعلمته.</p>
+
+      <div class="activity-placeholder">
+        <strong>أنشطة الكتيب الأول</strong>
+        <p>سيُضاف النشاط هنا بعد تجهيزه.</p>
+        <a href="activity1.html">الانتقال إلى أنشطة الكتيب الأول</a>
+      </div>
+
+      <div class="activity-placeholder">
+        <strong>أنشطة الكتيبات الأخرى</strong>
+        <p>ستُضاف روابط الأنشطة تباعًا مع نشر الكتيبات.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>أحب صلاتي</strong></p>
+    <p>نتعلم الصلاة ونحبها، خطوة جميلة كل يوم.</p>
+    <p>مورد تعليمي مجاني للأطفال وأسرهم.</p>
+  </footer>
+
+</body>
+</html>
