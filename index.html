@@ -1,360 +1,459 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>أحب صلاتي | نتعلم الصلاة ونحبها</title>
-  <link rel="icon" type="image/png" href="faction.png">
-
-  <style>
-    :root {
-      --brown: #4b2e20;
-      --dark: #291b15;
-      --gold: #d8ad58;
-      --cream: #fff8e9;
-      --light: #f4e5c9;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, Tahoma, sans-serif;
-      background: var(--cream);
-      color: var(--dark);
-      line-height: 1.9;
-    }
-
-    header {
-      padding: 38px 20px;
-      text-align: center;
-      color: white;
-      background: linear-gradient(135deg, #3b2419, #80512d, #d5ad60);
-      border-bottom: 5px solid var(--gold);
-    }
-
-    .logo {
-      display: inline-flex;
-      width: 115px;
-      height: 115px;
-      align-items: center;
-      justify-content: center;
-      border: 3px solid var(--gold);
-      border-radius: 50%;
-      font-size: 25px;
-      font-weight: bold;
-      line-height: 1.5;
-      padding: 12px;
-      margin-bottom: 10px;
-      box-shadow: 0 0 18px #f3d58a55;
-    }
-
-    header h1 {
-      margin: 5px 0;
-      font-size: clamp(28px, 5vw, 42px);
-      color: #ffe6a6;
-    }
-
-    header p {
-      margin: 5px auto;
-      max-width: 650px;
-      font-size: 17px;
-    }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 10px;
-      padding: 15px;
-      background: var(--dark);
-    }
-
-    nav a {
-      color: #ffe6a6;
-      text-decoration: none;
-      padding: 7px 15px;
-      border: 1px solid #b58b48;
-      border-radius: 20px;
-    }
-
-    nav a:hover {
-      background: var(--gold);
-      color: var(--dark);
-    }
-
-    main {
-      width: min(1050px, 92%);
-      margin: 30px auto;
-    }
-
-    .welcome {
-      text-align: center;
-      padding: 24px;
-      margin-bottom: 30px;
-      background: white;
-      border: 1px solid #e6d1a6;
-      border-radius: 18px;
-      box-shadow: 0 5px 16px #4b2e2010;
-    }
-
-    .welcome h2 {
-      color: var(--brown);
-      margin-top: 0;
-    }
-
-    .group {
-      margin: 24px 0;
-      overflow: hidden;
-      border: 1px solid #d9bd83;
-      border-radius: 16px;
-      background: white;
-      box-shadow: 0 4px 12px #4b2e2010;
-    }
-
-    .group h2 {
-      margin: 0;
-      padding: 15px 20px;
-      color: white;
-      font-size: 21px;
-      background: linear-gradient(90deg, var(--brown), #986a36);
-    }
-
-    .group-description {
-      margin: 0;
-      padding: 10px 20px;
-      color: #70523a;
-      background: #fff8e9;
-    }
-
-    .booklet-table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-
-    .booklet-table th,
-    .booklet-table td {
-      padding: 12px 18px;
-      text-align: right;
-      border-top: 1px solid #eee1c9;
-    }
-
-    .booklet-table th {
-      color: var(--brown);
-      background: #f7ecd6;
-    }
-
-    .booklet-table a {
-      color: #80501f;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    .booklet-table a:hover {
-      color: #b47d25;
-      text-decoration: underline;
-    }
-
-    .status {
-      display: inline-block;
-      padding: 2px 10px;
-      border-radius: 15px;
-      color: #74572d;
-      background: #f8edcf;
-      font-size: 13px;
-    }
-
-    .activities {
-      margin: 35px 0;
-      padding: 24px;
-      text-align: center;
-      background: #fff;
-      border: 2px dashed #bd9652;
-      border-radius: 16px;
-    }
-
-    .activities h2 {
-      color: var(--brown);
-    }
-
-    .activity-placeholder {
-      margin-top: 15px;
-      padding: 18px;
-      border-radius: 10px;
-      background: #faf4e8;
-      border: 1px solid #e8d8b8;
-    }
-
-    .activity-placeholder a {
-      color: #80501f;
-      font-weight: bold;
-    }
-
-    footer {
-      padding: 25px 15px;
-      text-align: center;
-      color: #fce9bf;
-      background: var(--dark);
-      border-top: 4px solid var(--gold);
-    }
-
-    footer p {
-      margin: 5px;
-    }
-
-    @media (max-width: 600px) {
-      header {
-        padding: 28px 14px;
-      }
-
-      .booklet-table th,
-      .booklet-table td {
-        padding: 10px;
-        font-size: 14px;
-      }
-
-      .group h2 {
-        font-size: 18px;
-      }
-
-      nav {
-        gap: 7px;
-      }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="x-/image" href="faction.png">
+<title>ط£ط­ط¨ طµظ„ط§طھظٹ â€” ظ…ظƒطھط¨ط© ط§ظ„ظƒطھظٹظ‘ط¨ط§طھ</title>
+<style>
+:root {
+  --site-primary: #70452B;
+  --site-on-primary: #FFFFFF;
+  --site-secondary: #DDB45F;
+  --site-on-secondary: #3B281B;
+  --site-background: #FBF5EA;
+  --site-on-background: #3B2A1E;
+  --site-font-body: Arial, Tahoma, sans-serif;
+  --site-font-heading: Arial, Tahoma, sans-serif;
+  --site-heading-scale: 1;
+  --site-spacing-scale: 1;
+  --site-radius-scale: 1;
+  --site-decoration-opacity: 1;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: var(--site-font-body); background: var(--site-background); color: var(--site-on-background); line-height: 1.8; }
+#app { min-height: 100vh; width: 100%; background-color: var(--site-background); color: var(--site-on-background); padding: calc(24px * var(--site-spacing-scale)) 16px calc(40px * var(--site-spacing-scale)); }
+.shell { max-width: 780px; margin: 0 auto; }
+.hero { background: var(--site-primary); color: var(--site-on-primary); padding: calc(28px * var(--site-spacing-scale)); border-radius: calc(22px * var(--site-radius-scale)); position: relative; overflow: hidden; }
+.hero::after { content: "âœ¦"; position: absolute; left: 24px; top: 4px; font-size: 5rem; opacity: calc(.12 * var(--site-decoration-opacity)); pointer-events: none; }
+.kicker { color: var(--site-secondary); font-weight: 700; margin: 0 0 6px; }
+h1 { font-family: var(--site-font-heading); font-size: calc(2rem * var(--site-heading-scale)); line-height: 1.35; margin: 0 0 8px; }
+.hero p { margin: 0; max-width: 560px; }
+.progress-wrap { margin: 22px 0 14px; display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: .95rem; }
+.progress { height: 8px; background: #E8DCC9; border-radius: 99px; overflow: hidden; margin-bottom: 20px; }
+.progress span { display: block; height: 100%; width: 0; background: var(--site-secondary); transition: width .2s ease; }
+.card { background: #FFFCF6; border: 1px solid #E8D8BE; border-radius: calc(18px * var(--site-radius-scale)); padding: calc(22px * var(--site-spacing-scale)); box-shadow: 0 8px 26px rgba(80,48,25,.07); }
+.question-number { color: var(--site-primary); font-weight: 800; font-size: .95rem; }
+h2 { font-size: calc(1.35rem * var(--site-heading-scale)); margin: 8px 0 18px; line-height: 1.55; }
+.options { display: grid; gap: 10px; }
+.option { display: flex; align-items: flex-start; gap: 10px; border: 1px solid #E3D3BB; border-radius: 12px; padding: 12px 14px; cursor: pointer; background: #FFFCF6; color: #3B2A1E; transition: border-color .15s, background .15s; }
+.option:hover { border-color: var(--site-primary); }
+.option input { margin-top: 8px; accent-color: var(--site-primary); flex: 0 0 auto; }
+.option:has(input:checked) { border-color: var(--site-primary); background: #F5E8D1; }
+.option.correct { border-color: #A77B32; background: #F2E2C7; }
+.option.wrong { border-color: #8B5D3D; background: #F8EBDD; }
+.feedback { margin-top: 16px; padding: 12px 14px; border-radius: 12px; background: #F6EDDF; }
+.feedback.good { border-right: 4px solid #A77B32; }
+.feedback.bad { border-right: 4px solid #70452B; }
+.actions { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
+button { font: inherit; font-weight: 700; border: 0; border-radius: 12px; padding: 12px 20px; cursor: pointer; }
+button:focus-visible, input:focus-visible { outline: 3px solid var(--site-secondary); outline-offset: 3px; }
+.primary { background: var(--site-primary); color: var(--site-on-primary); }
+.secondary { background: var(--site-secondary); color: var(--site-on-secondary); }
+button:disabled { opacity: .45; cursor: not-allowed; }
+.small-note { color: #806B56; font-size: .9rem; margin-top: 18px; }
+.result { text-align: center; }
+.result-mark { width: 78px; height: 78px; border-radius: 50%; display: grid; place-items: center; background: var(--site-secondary); color: var(--site-on-secondary); font-size: 2rem; margin: 0 auto 14px; }
+.score { font-size: 2.3rem; font-weight: 800; color: var(--site-primary); margin: 6px 0; }
+.hidden { display: none !important; }
+footer { text-align: center; margin-top: 20px; font-size: .9rem; color: #806B56; }
+.site-header { display:flex; align-items:center; justify-content:space-between; gap:18px; padding:0 0 18px; margin-bottom:22px; border-bottom:1px solid #E7D8C2; }
+.brand-lockup { display:flex; align-items:center; gap:11px; color:#4B2D1A; text-decoration:none; }
+.brand-mark { width:46px; height:46px; flex:0 0 auto; display:grid; place-items:center; border-radius:15px; background:var(--site-primary); color:var(--site-secondary); border:1px solid var(--site-secondary); font-size:1.45rem; font-weight:900; }
+.brand-title { display:block; font-weight:900; font-size:1.12rem; line-height:1.35; }
+.brand-subtitle { display:block; color:#80664F; font-size:.78rem; }
+.top-nav { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+.top-nav button, .top-nav a { border:1px solid #E2D0B2; background:#FFF9EF; color:#624128; border-radius:999px; padding:8px 14px; font-size:.9rem; text-decoration:none; font-weight:700; }
+.top-nav button.nav-active { background:var(--site-primary); color:var(--site-on-primary); border-color:var(--site-primary); }
+.page { animation:pageIn .18s ease-out; }
+@keyframes pageIn { from { opacity:.75; transform:translateY(4px); } to { opacity:1; transform:translateY(0); } }
+.home-hero { background:linear-gradient(135deg,#70452B 0%,#4A2C1B 100%); color:#FFFCF6; padding:calc(34px * var(--site-spacing-scale)); border-radius:calc(22px * var(--site-radius-scale)); position:relative; overflow:hidden; margin-bottom:26px; }
+.home-hero::after { content:"âœ¦"; position:absolute; left:25px; top:-18px; font-size:8rem; line-height:1; color:var(--site-secondary); opacity:calc(.15 * var(--site-decoration-opacity)); pointer-events:none; }
+.home-hero .kicker { color:#F1D18B; }
+.home-hero h1 { font-size:calc(2.35rem * var(--site-heading-scale)); max-width:600px; }
+.home-hero p { max-width:590px; }
+.home-hero .primary { margin-top:18px; background:var(--site-secondary); color:var(--site-on-secondary); }
+.section-heading { margin:0 0 6px; color:#56351F; font-size:calc(1.5rem * var(--site-heading-scale)); }
+.section-intro { margin:0 0 18px; color:#806B56; }
+.group-card { background:#FFFCF6; border:1px solid #E8D8BE; border-radius:18px; overflow:hidden; margin-bottom:18px; box-shadow:0 8px 26px rgba(80,48,25,.05); }
+.sitemap { background:#FFFCF6; border:1px solid #E8D8BE; border-radius:18px; padding:20px; margin:28px 0 10px; }
+.sitemap h2 { margin:0 0 12px; color:#56351F; }
+.sitemap-list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:9px 18px; margin:0; padding:0; list-style:none; }
+.sitemap-list a { color:#70452B; text-decoration-color:#DDB45F; text-underline-offset:4px; font-weight:700; }
+.sitemap-list a:hover { color:#4A2C1B; }
+.group-placeholder { padding:18px; background:#FBF4E8; color:#705B46; border-top:1px solid #E8D8BE; }
+.group-card-head { display:flex; align-items:center; justify-content:space-between; gap:10px; background:#F2E2C7; padding:15px 18px; border-bottom:1px solid #E5D2B2; }
+.group-card-head h3 { margin:0; font-size:1.1rem; color:#56351F; }
+.group-count { color:#80603B; font-size:.88rem; white-space:nowrap; }
+.table-wrap { overflow-x:auto; }
+.library-table { width:100%; min-width:560px; border-collapse:collapse; text-align:right; }
+.library-table th, .library-table td { padding:13px 16px; border-bottom:1px solid #F0E5D4; vertical-align:middle; }
+.library-table th { background:#FBF4E8; color:#65452A; font-size:.9rem; font-weight:800; }
+.library-table tr:last-child td { border-bottom:0; }
+.library-table td { color:#493629; }
+.book-description { margin:4px 0 0; color:#806B56; font-size:.9rem; line-height:1.65; font-weight:400; }
+.status { display:inline-flex; align-items:center; gap:6px; border-radius:999px; padding:5px 10px; font-size:.82rem; font-weight:800; white-space:nowrap; }
+.status.available { background:#F2E2C7; color:#70452B; }
+.status.preparing { background:#F6E9CC; color:#78551B; }
+.book-link { color:#70452B; font-weight:800; text-decoration:underline; text-decoration-color:#DDB45F; text-decoration-thickness:2px; text-underline-offset:4px; }
+.book-link:hover { color:#4A2C1B; text-decoration-color:#70452B; }
+.book-link:focus-visible { outline:3px solid #DDB45F; outline-offset:4px; border-radius:3px; }
+.unavailable-panel { margin-top:18px; border-top:4px solid #DDB45F; }
+.unavailable-icon { display:grid; place-items:center; width:64px; height:64px; border-radius:18px; background:#F2E2C7; color:#70452B; font-size:1.8rem; margin-bottom:12px; }
+.unavailable-panel h2 { color:#56351F; }
+.unavailable-panel p { color:#705B46; }
+.page .hero { margin-bottom:20px; }
+.booklet-cover { background:linear-gradient(135deg,#70452B,#4A2C1B); color:#FFFCF6; border-radius:22px; padding:30px; margin-bottom:20px; position:relative; overflow:hidden; }
+.booklet-cover::after { content:"âک¾"; position:absolute; left:24px; top:4px; font-size:6rem; opacity:.13; pointer-events:none; }
+.booklet-cover .kicker { color:#F1D18B; }
+.booklet-content { display:grid; gap:16px; }
+.booklet-section { background:#FFFCF6; border:1px solid #E8D8BE; border-radius:18px; padding:22px; box-shadow:0 6px 20px rgba(80,48,25,.04); }
+.booklet-section h2 { color:#56351F; margin:0 0 12px; border-bottom:1px solid #E8D8BE; padding-bottom:8px; }
+.booklet-section h3 { color:#70452B; font-size:1.12rem; margin:18px 0 8px; }
+.booklet-section p { margin:9px 0; }
+.booklet-section ul,.booklet-section ol { padding-right:24px; }
+.booklet-verse { background:#F5E8D1; border-right:4px solid #DDB45F; padding:14px 16px; border-radius:10px; font-weight:700; text-align:center; margin:12px 0; }
+.booklet-activity { background:#FBF4E8; border:1px dashed #D3B985; border-radius:12px; padding:14px 16px; margin-top:12px; }
+.booklet-answer { display:block; min-height:42px; border-bottom:1px solid #CDBA9C; margin:8px 0 14px; width:100%; }
+.booklet-answer-input { display:block; width:100%; min-height:76px; margin:10px 0 16px; padding:10px 12px; border:1px solid #CDBA9C; border-radius:9px; background:#FFFFFF; color:#3B2A1E; font:inherit; line-height:1.7; resize:vertical; }
+.booklet-answer-input:focus { outline:3px solid #DDB45F; outline-offset:2px; }
+@media print { .site-header,.booklet-toolbar { display:none!important; } .booklet-cover,.booklet-section { box-shadow:none; break-inside:avoid; } }
+#quizPage { color:var(--site-on-background); }
+#quizPage .progress { background:#E8DCC9; }
+#quizPage .progress span { background:var(--site-secondary); }
+#quizPage .option.correct { border-color:#A77B32; background:#F2E2C7; color:#3B2A1E; }
+#quizPage .option.wrong { border-color:#8B5D3D; background:#F8EBDD; color:#3B2A1E; }
+#quizPage .feedback.good { border-right-color:#A77B32; background:#F2E2C7; color:#3B2A1E; }
+#quizPage .feedback.bad { border-right-color:#70452B; background:#F8EBDD; color:#3B2A1E; }
+#quizPage .primary { background:#70452B; color:#FFFFFF; }
+#quizPage .secondary { background:#DDB45F; color:#3B281B; }
+@media (max-width: 620px) { .site-header { align-items:flex-start; flex-direction:column; } .top-nav { width:100%; } .top-nav button, .top-nav a { flex:1; text-align:center; } .home-hero { padding:24px 19px; } .home-hero h1 { font-size:calc(1.8rem * var(--site-heading-scale)); } .group-card-head { align-items:flex-start; flex-direction:column; } .sitemap-list { grid-template-columns:1fr; } }
+@media (max-width: 520px) { #app { padding: 12px 10px 28px; } .hero { padding: 22px 18px; } h1 { font-size: calc(1.65rem * var(--site-heading-scale)); } .card { padding: 17px; } .actions button { flex: 1 1 100%; } }
+</style>
 </head>
-
 <body>
-
-  <header id="top">
-    <div class="logo">أحب<br>صلاتي</div>
-    <h1>أحب صلاتي</h1>
-    <p>رحلة جميلة نتعلم فيها الصلاة، ونفهم معانيها، ونقترب بها من الله.</p>
-  </header>
-
-  <nav>
-    <a href="#top">الرئيسية</a>
-    <a href="#group1">أتعرف على الصلاة</a>
-    <a href="#group2">أتعلم كيف أصلي</a>
-    <a href="#group3">أعيش الصلاة بقلبي</a>
-    <a href="#group4">أحافظ على صلاتي</a>
-    <a href="#group5">أنمو مع صلاتي</a>
-    <a href="#group6">أحب الصلاة</a>
-    <a href="#activities">الأنشطة</a>
-  </nav>
-
-  <main>
-    <section class="welcome">
-      <h2>أهلًا بك في عالم أحب صلاتي</h2>
-      <p>
-        هنا ستتعرف على الصلاة وفضلها، وتتعلم كيف تصلي،
-        وتكتشف معانيها، وتجد أفكارًا تساعدك على المحافظة عليها
-        حتى تصبح الصلاة جزءًا جميلًا من يومك.
-      </p>
-      <p>اختر المجموعة التي تريد البدء بها، ثم اضغط على عنوان الكتيب.</p>
+<main id="app">
+  <div class="shell">
+    <header class="site-header">
+      <a class="brand-lockup" href="#" id="brandHome" aria-label="ط£ط­ط¨ طµظ„ط§طھظٹ - ط§ظ„ط±ط¦ظٹط³ظٹط©">
+        <span class="brand-mark" aria-hidden="true">ط£</span>
+        <span><span class="brand-title">ط£ط­ط¨ طµظ„ط§طھظٹ</span><span class="brand-subtitle">ظƒطھظٹظ‘ط¨ط§طھ ظˆط£ظ†ط´ط·ط© طھط¹ظ„ظٹظ…ظٹط©</span></span>
+      </a>
+      <nav class="top-nav" aria-label="ط§ظ„طھظ†ظ‚ظ„ ط§ظ„ط±ط¦ظٹط³ظٹ">
+        <button type="button" class="nav-active" data-page="homePage" aria-current="page">ط§ظ„ط±ط¦ظٹط³ظٹط©</button>
+        <a href="#siteMap">ط®ط±ظٹط·ط© ط§ظ„ظ…ظˆظ‚ط¹</a>
+      </nav>
+    </header>
+    <section id="homePage" class="page">
+      <header class="home-hero">
+        <p class="kicker">ط±ط­ظ„ط© طھط¹ظ„ظ‘ظ… ظ…ظ† ط³ظ„ط³ظ„ط© ط£ط­ط¨ طµظ„ط§طھظٹ</p>
+        <h1>ظ†طھط¹ظ„ظ‘ظ… ط§ظ„طµظ„ط§ط© ط¨ظ…ط­ط¨ط© ظˆظپظ‡ظ…</h1>
+        <p>ظ…ط±ط­ط¨ظ‹ط§ ط¨ظƒ ظپظٹ ظ…ظƒطھط¨ط© آ«ط£ط­ط¨ طµظ„ط§طھظٹآ». طھطµظپظ‘ط­ ط§ظ„ظ…ط¬ظ…ظˆط¹ط§طھ ظ„ظ…ط¹ط±ظپط© ط§ظ„ظƒطھظٹظ‘ط¨ط§طھ ط§ظ„ظ…طھظˆظپط±ط©طŒ ط£ظˆ ط¬ط±ظ‘ط¨ ط§ظ„ط§ط®طھط¨ط§ط± ط§ظ„طھظپط§ط¹ظ„ظٹ.</p>
+        <button type="button" class="primary" id="browseGroups">طھطµظپظ‘ط­ ظ…ط¬ظ…ظˆط¹ط§طھ ط§ظ„ظƒطھظٹظ‘ط¨ط§طھ</button>
+      </header>
+      <section aria-labelledby="libraryHeading">
+        <h2 id="libraryHeading" class="section-heading">ظ…ظƒطھط¨ط© ط§ظ„ظƒطھظٹظ‘ط¨ط§طھ</h2>
+        <p class="section-intro">ط§ط¶ط؛ط· ط¹ظ„ظ‰ ط§ط³ظ… ط£ظٹ ظƒطھظٹظ‘ط¨ ظ„ظپطھط­ ظ…ط­طھظˆط§ظ‡ ط¥ظ† ظƒط§ظ† ظ…طھظˆظپط±ظ‹ط§ ط¹ظ„ظ‰ ط§ظ„ظ…ظˆظ‚ط¹طŒ ط£ظˆ ظ„ظ…ط¹ط±ظپط© ط­ط§ظ„ط© طھظˆظپط±ظ‡.</p>
+        <article class="group-card" id="group-1">
+          <div class="group-card-head"><h3>ط§ظ„ظ…ط¬ظ…ظˆط¹ط© ط§ظ„ط£ظˆظ„ظ‰: ط£طھط¹ط±ظپ ط¹ظ„ظ‰ ط§ظ„طµظ„ط§ط©</h3><span class="group-count">ط§ظ„طھط£ط³ظٹط³ ط§ظ„ط¥ظٹظ…ط§ظ†ظٹ ظˆظ…ط¹ط±ظپط© ظ…ظƒط§ظ†ط© ط§ظ„طµظ„ط§ط© آ· 3 ظƒطھظٹظ‘ط¨ط§طھ</span></div>
+          <div class="table-wrap"><table class="library-table">
+            <thead><tr><th scope="col">ط§ط³ظ… ط§ظ„ظƒطھظٹظ‘ط¨</th><th scope="col">ط§ظ„طھظˆظپط±</th></tr></thead>
+            <tbody>
+              <tr><td><a class="book-link" href="#bookletOnePage" id="bookletOneLink">ظ„ظ…ط§ط°ط§ ط£طµظ„ظٹطں â€” ط£ط­ط¨ طµظ„ط§طھظٹ.</a><p class="book-description">ظ…ط¯ط®ظ„ ط¥ظ„ظ‰ ظ…ط¹ظ†ظ‰ ط§ظ„طµظ„ط§ط© ظˆظ…ظƒط§ظ†طھظ‡ط§ ظˆط¹ظ„ط§ظ‚طھظ‡ط§ ط¨ط¹ط¨ظˆط¯ظٹط© ط§ظ„ظ…ط³ظ„ظ… ظ„ظ„ظ‡.</p></td><td><span class="status available">ظ…طھظˆظپط± ظ„ظ„ظ‚ط±ط§ط،ط©</span></td></tr>
+              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="ط§ظ„طµظ„ط§ط© ظ‡ط¯ظٹط© ط¹ط¸ظٹظ…ط© ظ…ظ† ط§ظ„ظ„ظ‡." data-description="ط§ظ„طھط¹ط±ظپ ط¥ظ„ظ‰ ط§ظ„طµظ„ط§ط© ط¨ظˆطµظپظ‡ط§ ظ†ط¹ظ…ط© ط¹ط¸ظٹظ…ط©طŒ ظˆظپظ‡ظ… ظ…ط§ طھظ…ظ†ط­ظ‡ ظ„ظ„ظ…ط³ظ„ظ… ظ…ظ† ط°ظƒط± ظˆظ‚ط±ط¨ ظ…ظ† ط§ظ„ظ„ظ‡.">ط§ظ„طµظ„ط§ط© ظ‡ط¯ظٹط© ط¹ط¸ظٹظ…ط© ظ…ظ† ط§ظ„ظ„ظ‡.</a><p class="book-description">ط§ظ„طھط¹ط±ظپ ط¥ظ„ظ‰ ط§ظ„طµظ„ط§ط© ط¨ظˆطµظپظ‡ط§ ظ‡ط¯ظٹط© ط¹ط¸ظٹظ…ط© ظ…ظ† ط§ظ„ظ„ظ‡.</p></td><td><span class="status preparing">ط؛ظٹط± ظ…طھظˆظپط± ط¹ظ„ظ‰ ط§ظ„ظ…ظˆظ‚ط¹ ط§ظ„ط¢ظ†</span></td></tr>
+              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="ظ…ط§ط°ط§ طھط¹ظ„ظ…ظ†ظٹ ط§ظ„طµظ„ط§ط©طں" data-description="ط§ظ„طھط¹ط±ظپ ط¥ظ„ظ‰ ظ…ط§ طھط¹ظ„ظ‘ظ…ظ‡ ط§ظ„طµظ„ط§ط© ظ„ظ„ظ…ط³ظ„ظ… ظ…ظ† ط¹ط¨ط§ط¯ط© ظˆط°ظƒط± ظˆط·ظ…ط£ظ†ظٹظ†ط© ظˆط£ط®ظ„ط§ظ‚.">ظ…ط§ط°ط§ طھط¹ظ„ظ…ظ†ظٹ ط§ظ„طµظ„ط§ط©طں</a><p class="book-description">ظ…ط§ ظ†طھط¹ظ„ظ…ظ‡ ظ…ظ† ط§ظ„طµظ„ط§ط© ظ…ظ† ظ…ط¹ط§ظ†ظچ ط¥ظٹظ…ط§ظ†ظٹط© ظˆطھط±ط¨ظˆظٹط©.</p></td><td><span class="status preparing">ط؛ظٹط± ظ…طھظˆظپط± ط¹ظ„ظ‰ ط§ظ„ظ…ظˆظ‚ط¹ ط§ظ„ط¢ظ†</span></td></tr>
+            </tbody>
+          </table></div>
+        </article>
+        <article class="group-card" id="group-2">
+          <div class="group-card-head"><h3>ط§ظ„ظ…ط¬ظ…ظˆط¹ط© ط§ظ„ط«ط§ظ†ظٹط©: ط£طھط¹ظ„ظ… ظƒظٹظپ ط£طµظ„ظٹ</h3><span class="group-count">طھط¹ظ„ظ… ط§ظ„طµظ„ط§ط© ظˆط£ط­ظƒط§ظ…ظ‡ط§ ط¨ط·ط±ظٹظ‚ط© ط¹ظ…ظ„ظٹط© آ· 4 ظƒطھظٹظ‘ط¨ط§طھ</span></div>
+          <div class="table-wrap"><table class="library-table">
+            <thead><tr><th scope="col">ط§ط³ظ… ط§ظ„ظƒطھظٹظ‘ط¨</th><th scope="col">ط§ظ„طھظˆظپط±</th></tr></thead>
+            <tbody>
+              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="ط£طھظˆط¶ط£ ظ„ط£طµظ„ظٹ." data-description="ط§ظ„طھط¹ط±ظپ ط¥ظ„ظ‰ ط§ظ„ظˆط¶ظˆط، ط¨ظˆطµظپظ‡ ط§ط³طھط¹ط¯ط§ط¯ظ‹ط§ ظ„ظ„طµظ„ط§ط© ظˆطھط¹ظ„ظ‘ظ… ط®ط·ظˆط§طھظ‡ ط§ظ„ط£ط³ط§ط³ظٹط©.">ط£طھظˆط¶ط£ ظ„ط£طµظ„ظٹ.</a><p class="book-description">طھط¹ظ„ظ‘ظ… ط§ظ„ظˆط¶ظˆط، ظˆط§ظ„ط§ط³طھط¹ط¯ط§ط¯ ظ„ظ„ط·ظ‡ط§ط±ط© ظ‚ط¨ظ„ ط§ظ„طµظ„ط§ط©.</p></td><td><span class="status preparing">ط؛ظٹط± ظ…طھظˆظپط± ط¹ظ„ظ‰ ط§ظ„ظ…ظˆظ‚ط¹ ط§ظ„ط¢ظ†</span></td></tr>
+              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="ط£ط³طھط¹ط¯ ظ„طµظ„ط§طھظٹ." data-description="ط§ظ„ط§ط³طھط¹ط¯ط§ط¯ ظ„ظ„طµظ„ط§ط© ظˆطھظ†ط¸ظٹظ… ظ…ط§ ظٹط­طھط§ط¬ ط¥ظ„ظٹظ‡ ط§ظ„ظ…طµظ„ظٹ ظ‚ط¨ظ„ ظˆظ‚طھظ‡ط§.">ط£ط³طھط¹ط¯ ظ„طµظ„ط§طھظٹ.</a><p class="book-description">ط§ظ„طھظ‡ظٹط¤ ظ„ظ„طµظ„ط§ط© ظˆطھط¬ظ‡ظٹط² ط§ظ„ظ†ظپط³ ظˆط§ظ„ظˆظ‚طھ ظ„ظ‡ط§.</p></td><td><span class="status preparing">ط؛ظٹط± ظ…طھظˆظپط± ط¹ظ„ظ‰ ط§ظ„ظ…ظˆظ‚ط¹ ط§ظ„ط¢ظ†</span></td></tr>
+              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="طµظ„ط§طھظٹ ط®ط·ظˆط© ط¨ط®ط·ظˆط©." data-description="طھط¹ظ„ظ‘ظ… ط£ط¯ط§ط، ط§ظ„طµظ„ط§ط© ط¨طھط±طھظٹط¨ ط¹ظ…ظ„ظٹطŒ ط®ط·ظˆط© ط¨ط®ط·ظˆط©طŒ ظ…ظ† ط§ظ„ط¨ط¯ط§ظٹط© ط¥ظ„ظ‰ ط§ظ„طھط³ظ„ظٹظ….">طµظ„ط§طھظٹ ط®ط·ظˆط© ط¨ط®ط·ظˆط©.</a><p class="book-description">ط¯ظ„ظٹظ„ ط¹ظ…ظ„ظٹ ظ„ظ„طھط¹ط±ظ‘ظپ ط¥ظ„ظ‰ ط®ط·ظˆط§طھ ط§ظ„طµظ„ط§ط© ظˆطھط±طھظٹط¨ظ‡ط§.</p></td><td><span class="status preparing">ط؛ظٹط± ظ…طھظˆظپط± ط¹ظ„ظ‰ ط§ظ„ظ…ظˆظ‚ط¹ ط§ظ„ط¢ظ†</span></td></tr>
+              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="ظ…ط§ط°ط§ ط£ظ‚ظˆظ„ ظˆط£ظ†ط§ ط£طµظ„ظٹطں" data-description="ط§ظ„طھط¹ط±ظپ ط¥ظ„ظ‰ ط§ظ„ط£ظ‚ظˆط§ظ„ ظˆط§ظ„ط£ط°ظƒط§ط± ط§ظ„طھظٹ طھظ‚ط§ظ„ ظپظٹ ط§ظ„طµظ„ط§ط© ظˆظ…ظˆط§ط¶ط¹ظ‡ط§.">ظ…ط§ط°ط§ ط£ظ‚ظˆظ„ ظˆط£ظ†ط§ ط£طµظ„ظٹطں</a><p class="book-description">ط£ط°ظƒط§ط± ط§ظ„طµظ„ط§ط© ظˆط§ظ„ط£ظ‚ظˆط§ظ„ ط§ظ„طھظٹ ظٹط±ط¯ط¯ظ‡ط§ ط§ظ„ظ…طµظ„ظٹ ظپظٹ ظ…ظˆط§ط¶ط¹ظ‡ط§.</p></td><td><span class="status preparing">ط؛ظٹط± ظ…طھظˆظپط± ط¹ظ„ظ‰ ط§ظ„ظ…ظˆظ‚ط¹ ط§ظ„ط¢ظ†</span></td></tr>
+            </tbody>
+          </table></div>
+        </article>
+        <article class="group-card" id="group-3">
+          <div class="group-card-head"><h3>ط§ظ„ظ…ط¬ظ…ظˆط¹ط© ط§ظ„ط«ط§ظ„ط«ط©: ط£ط¹ظٹط´ ط§ظ„طµظ„ط§ط© ط¨ظ‚ظ„ط¨ظٹ</h3><span class="group-count">ظپظ‡ظ… ظ…ط¹ط§ظ†ظٹ ط§ظ„طµظ„ط§ط© ظˆط§ظ„ط®ط´ظˆط¹ ظپظٹظ‡ط§ آ· 3 ظƒطھظٹظ‘ط¨ط§طھ</span></div>
+          <div class="table-wrap"><table class="library-table">
+            <thead><tr><th scope="col">ط§ط³ظ… ط§ظ„ظƒطھظٹظ‘ط¨</th><th scope="col">ط§ظ„طھظˆظپط±</th></tr></thead>
+            <tbody>
+              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="ظƒظٹظپ ط£ط®ط´ط¹ ظپظٹ طµظ„ط§طھظٹطں" data-description="ط§ظ„طھط¹ط±ظپ ط¥ظ„ظ‰ ط§ظ„ط®ط´ظˆط¹ ظˆط£ظ‡ظ…ظٹطھظ‡ ظˆط®ط·ظˆط§طھ ط¹ظ…ظ„ظٹط© طھط³ط§ط¹ط¯ ط¹ظ„ظ‰ ط­ط¶ظˆط± ط§ظ„ظ‚ظ„ط¨ ط£ط«ظ†ط§ط، ط§ظ„طµظ„ط§ط©.">ظƒظٹظپ ط£ط®ط´ط¹ ظپظٹ طµظ„ط§طھظٹطں</a><p class="book-description">ط§ظ„طھط¹ط±ظ‘ظپ ط¥ظ„ظ‰ ط§ظ„ط®ط´ظˆط¹ ظˆظˆط³ط§ط¦ظ„ ط§ط³طھط­ط¶ط§ط± ط§ظ„ظ‚ظ„ط¨ ظپظٹ ط§ظ„طµظ„ط§ط©.</p></td><td><span class="status preparing">ط؛ظٹط± ظ…طھظˆظپط± ط¹ظ„ظ‰ ط§ظ„ظ…ظˆظ‚ط¹ ط§ظ„ط¢ظ†</span></td></tr>
+              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="ط£ظپظ‡ظ… ظ…ط§ ط£ظ‚ط±ط£ ظپظٹ طµظ„ط§طھظٹ." data-description="ظپظ‡ظ… ظ…ط¹ط§ظ†ظٹ ظ…ط§ ظ†ظ‚ط±ط£ظ‡ ظپظٹ ط§ظ„طµظ„ط§ط©طŒ ظˆظƒظٹظپ ظٹط¹ظٹظ† ط§ظ„ظپظ‡ظ… ط¹ظ„ظ‰ ط§ظ„ط®ط´ظˆط¹ ظˆط§ظ„ط§ظ†طھط¨ط§ظ‡.">ط£ظپظ‡ظ… ظ…ط§ ط£ظ‚ط±ط£ ظپظٹ طµظ„ط§طھظٹ.</a><p class="book-description">ظپظ‡ظ… ط§ظ„ظ…ط¹ط§ظ†ظٹ ط§ظ„ظ…ظ‚ط±ظˆط،ط© ظپظٹ ط§ظ„طµظ„ط§ط© ظˆط£ط«ط±ظ‡ط§ ظپظٹ ط§ظ„ط®ط´ظˆط¹.</p></td><td><span class="status preparing">ط؛ظٹط± ظ…طھظˆظپط± ط¹ظ„ظ‰ ط§ظ„ظ…ظˆظ‚ط¹ ط§ظ„ط¢ظ†</span></td></tr>
+              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="ظƒظٹظپ ط£طھط؛ظ„ط¨ ط¹ظ„ظ‰ ط§ظ„ط³ط±ط­ط§ظ† ظپظٹ ط§ظ„طµظ„ط§ط©طں" data-description="ط§ظ„طھط¹ط±ظپ ط¥ظ„ظ‰ ط£ط³ط¨ط§ط¨ طھط´طھطھ ط§ظ„ط°ظ‡ظ† ظˆظˆط³ط§ط¦ظ„ ط¹ظ…ظ„ظٹط© ظ„ظ„ط¹ظˆط¯ط© ط¥ظ„ظ‰ ط§ظ„طھط±ظƒظٹط² ط£ط«ظ†ط§ط، ط§ظ„طµظ„ط§ط©.">ظƒظٹظپ ط£طھط؛ظ„ط¨ ط¹ظ„ظ‰ ط§ظ„ط³ط±ط­ط§ظ† ظپظٹ ط§ظ„طµظ„ط§ط©طں</a><p class="book-description">ط£ظپظƒط§ط± ط¹ظ…ظ„ظٹط© ظ„ظ…ظˆط§ط¬ظ‡ط© طھط´طھطھ ط§ظ„ط°ظ‡ظ† ظˆط§ط³طھط¹ط§ط¯ط© ط§ظ„طھط±ظƒظٹط².</p></td><td><span class="status preparing">ط؛ظٹط± ظ…طھظˆظپط± ط¹ظ„ظ‰ ط§ظ„ظ…ظˆظ‚ط¹ ط§ظ„ط¢ظ†</span></td></tr>
+            </tbody>
+          </table></div>
+        </article>
+        <article class="group-card" id="group-4">
+          <div class="group-card-head"><h3>ط§ظ„ظ…ط¬ظ…ظˆط¹ط© ط§ظ„ط±ط§ط¨ط¹ط©: ط£ط­ط§ظپط¸ ط¹ظ„ظ‰ طµظ„ط§طھظٹ</h3><span class="group-count">طھظ†ط¸ظٹظ… ط§ظ„ظˆظ‚طھ ظˆط§ظ„طھط¹ط§ظ…ظ„ ظ…ط¹ ط§ظ„ظ…ظˆط§ظ‚ظپ ط§ظ„ظٹظˆظ…ظٹط© آ· 4 ظƒطھظٹظ‘ط¨ط§طھ</span></div>
+          <div class="table-wrap"><table class="library-table">
+            <thead><tr><th scope="col">ط§ط³ظ… ط§ظ„ظƒطھظٹظ‘ط¨</th><th scope="col">ط§ظ„طھظˆظپط±</th></tr></thead>
+            <tbody>
+              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="ط§ظ„طµظ„ظˆط§طھ ط§ظ„ط®ظ…ط³ ظپظٹ ظٹظˆظ…ظٹ." data-description="ط§ظ„طھط¹ط±ظپ ط¥ظ„ظ‰ ط§ظ„طµظ„ظˆط§طھ ط§ظ„ط®ظ…ط³ ظˆظƒظٹظپظٹط© طھظ†ط¸ظٹظ… ط§ظ„ظٹظˆظ… ظ„ظ„ظ…ط­ط§ظپط¸ط© ط¹ظ„ظ‰ ط£ط¯ط§ط¦ظ‡ط§.">ط§ظ„طµظ„ظˆط§طھ ط§ظ„ط®ظ…ط³ ظپظٹ ظٹظˆظ…ظٹ.</a><p class="book-description">طھظ†ط¸ظٹظ… ط§ظ„ظٹظˆظ… ط­ظˆظ„ ط£ظˆظ‚ط§طھ ط§ظ„طµظ„ظˆط§طھ ط§ظ„ط®ظ…ط³.</p></td><td><span class="status preparing">ط؛ظٹط± ظ…طھظˆظپط± ط¹ظ„ظ‰ ط§ظ„ظ…ظˆظ‚ط¹ ط§ظ„ط¢ظ†</span></td></tr>
+              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="ط¹ظ†ط¯ظ…ط§ ط£ط´ط¹ط± ط¨ط§ظ„ظƒط³ظ„ ط¹ظ† ط§ظ„طµظ„ط§ط©." data-description="ط§ظ„طھط¹ط§ظ…ظ„ ظ…ط¹ ط§ظ„ظƒط³ظ„ ظˆط§ظ„طھط±ط¯ط¯ ظˆطھط¹ظ„ظ‘ظ… ط®ط·ظˆط§طھ طھط³ط§ط¹ط¯ ط¹ظ„ظ‰ ط§ظ„ظ…ط¨ط§ط¯ط±ط© ط¥ظ„ظ‰ ط§ظ„طµظ„ط§ط©.">ط¹ظ†ط¯ظ…ط§ ط£ط´ط¹ط± ط¨ط§ظ„ظƒط³ظ„ ط¹ظ† ط§ظ„طµظ„ط§ط©.</a><p class="book-description">ط£ظپظƒط§ط± ط¹ظ…ظ„ظٹط© ظ„طھط¬ط§ظˆط² ط§ظ„ظƒط³ظ„ ظˆط§ظ„ط§ط³طھط¬ط§ط¨ط© ظ„ظ„طµظ„ط§ط©.</p></td><td><span class="status preparing">ط؛ظٹط± ظ…طھظˆظپط± ط¹ظ„ظ‰ ط§ظ„ظ…ظˆظ‚ط¹ ط§ظ„ط¢ظ†</span></td></tr>
+              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="ط£طµظ„ظٹ ظپظٹ ط§ظ„ط¨ظٹطھ ظˆط§ظ„ظ…ط¯ط±ط³ط© ظˆط§ظ„ظ…ط³ط¬ط¯." data-description="ط§ظ„ظ…ط­ط§ظپط¸ط© ط¹ظ„ظ‰ ط§ظ„طµظ„ط§ط© ظپظٹ ط§ظ„ط£ظ…ط§ظƒظ† ط§ظ„ظ…ط®طھظ„ظپط© ظˆط§ظ„طھط¹ط§ظ…ظ„ ظ…ط¹ ط¸ط±ظˆظپ ط§ظ„ظٹظˆظ….">ط£طµظ„ظٹ ظپظٹ ط§ظ„ط¨ظٹطھ ظˆط§ظ„ظ…ط¯ط±ط³ط© ظˆط§ظ„ظ…ط³ط¬ط¯.</a><p class="book-description">طھط·ط¨ظٹظ‚ ط§ظ„ظ…ط­ط§ظپط¸ط© ط¹ظ„ظ‰ ط§ظ„طµظ„ط§ط© ظپظٹ ط§ظ„ط¨ظٹطھ ظˆط§ظ„ظ…ط¯ط±ط³ط© ظˆط§ظ„ظ…ط³ط¬ط¯.</p></td><td><span class="status preparing">ط؛ظٹط± ظ…طھظˆظپط± ط¹ظ„ظ‰ ط§ظ„ظ…ظˆظ‚ط¹ ط§ظ„ط¢ظ†</span></td></tr>
+              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="ط¥ط°ط§ ط£ط®ط·ط£طھ ظپظٹ طµظ„ط§طھظٹطŒ ظپظ…ط§ط°ط§ ط£ظپط¹ظ„طں" data-description="ط§ظ„طھط¹ط±ظپ ط¥ظ„ظ‰ ظƒظٹظپظٹط© ط§ظ„طھطµط±ظپ ط¹ظ†ط¯ ط§ظ„ط®ط·ط£ ظپظٹ ط§ظ„طµظ„ط§ط© ظˆط·ظ„ط¨ ط§ظ„طھظˆط¬ظٹظ‡ ط§ظ„ظ…ظˆط«ظˆظ‚ ط¹ظ†ط¯ ط§ظ„ط­ط§ط¬ط©.">ط¥ط°ط§ ط£ط®ط·ط£طھ ظپظٹ طµظ„ط§طھظٹطŒ ظپظ…ط§ط°ط§ ط£ظپط¹ظ„طں</a><p class="book-description">ظƒظٹظپظٹط© ط§ظ„طھط¹ط§ظ…ظ„ ظ…ط¹ ط§ظ„ط®ط·ط£ ظپظٹ ط§ظ„طµظ„ط§ط© ظˆظ…ط¹ط±ظپط© ظ…ط§ ظٹظ„ط²ظ… ظپط¹ظ„ظ‡.</p></td><td><span class="status preparing">ط؛ظٹط± ظ…طھظˆظپط± ط¹ظ„ظ‰ ط§ظ„ظ…ظˆظ‚ط¹ ط§ظ„ط¢ظ†</span></td></tr>
+            </tbody>
+          </table></div>
+        </article>
+        <article class="group-card" id="group-5">
+          <div class="group-card-head"><h3>ط§ظ„ظ…ط¬ظ…ظˆط¹ط© ط§ظ„ط®ط§ظ…ط³ط©: ط£ظ†ظ…ظˆ ظ…ط¹ طµظ„ط§طھظٹ</h3><span class="group-count">ط§ظ„ط£ط³ط±ط© ظˆط§ظ„ظ…ط³ط¬ط¯ ظˆط§ظ„ط¹ط¨ط§ط¯ط§طھ ط§ظ„ظ…ط±طھط¨ط·ط© ط¨ط§ظ„طµظ„ط§ط© آ· 4 ظƒطھظٹظ‘ط¨ط§طھ</span></div>
+          <div class="table-wrap"><table class="library-table">
+            <thead><tr><th scope="col">ط§ط³ظ… ط§ظ„ظƒطھظٹظ‘ط¨</th><th scope="col">ط§ظ„طھظˆظپط±</th></tr></thead>
+            <tbody>
+              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="ط£ط­ط¨ ط§ظ„ظ…ط³ط¬ط¯ ظˆطµظ„ط§ط© ط§ظ„ط¬ظ…ط§ط¹ط©." data-description="ط§ظ„طھط¹ط±ظپ ط¥ظ„ظ‰ ط¢ط¯ط§ط¨ ط§ظ„ظ…ط³ط¬ط¯ ظˆظ…ط¹ط§ظ†ظٹ طµظ„ط§ط© ط§ظ„ط¬ظ…ط§ط¹ط© ظˆظƒظٹظپظٹط© ط§ظ„ظ…ط´ط§ط±ظƒط© ظپظٹظ‡ط§.">ط£ط­ط¨ ط§ظ„ظ…ط³ط¬ط¯ ظˆطµظ„ط§ط© ط§ظ„ط¬ظ…ط§ط¹ط©.</a><p class="book-description">ط¢ط¯ط§ط¨ ط§ظ„ظ…ط³ط¬ط¯ ظˆطµظ„ط§ط© ط§ظ„ط¬ظ…ط§ط¹ط© ظˆط§ظ„ط£ظ†ظ…ظˆط°ط¬ ط§ظ„ط¹ظ…ظ„ظٹ ظ„ظ„ظ…ط´ط§ط±ظƒط© ظپظٹظ‡ظ…ط§.</p></td><td><span class="status preparing">ط؛ظٹط± ظ…طھظˆظپط± ط¹ظ„ظ‰ ط§ظ„ظ…ظˆظ‚ط¹ ط§ظ„ط¢ظ†</span></td></tr>
+              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="ط£طµظ„ظٹ ظ…ط¹ ط£ط³ط±طھظٹ." data-description="طھط¹ط²ظٹط² ط§ظ„ظ…ط´ط§ط±ظƒط© ط§ظ„ط£ط³ط±ظٹط© ظپظٹ ط§ظ„طµظ„ط§ط© ظˆط§ظ„طھط´ط¬ظٹط¹ ط§ظ„ظ…طھط¨ط§ط¯ظ„ ط¹ظ„ظ‰ ط§ظ„ظ…ط­ط§ظپط¸ط© ط¹ظ„ظٹظ‡ط§.">ط£طµظ„ظٹ ظ…ط¹ ط£ط³ط±طھظٹ.</a><p class="book-description">ط¯ظˆط± ط§ظ„ط£ط³ط±ط© ظپظٹ ط§ظ„طھط´ط¬ظٹط¹ ط¹ظ„ظ‰ ط§ظ„طµظ„ط§ط© ظˆط§ظ„ظ…ط­ط§ظپط¸ط© ط¹ظ„ظٹظ‡ط§.</p></td><td><span class="status preparing">ط؛ظٹط± ظ…طھظˆظپط± ط¹ظ„ظ‰ ط§ظ„ظ…ظˆظ‚ط¹ ط§ظ„ط¢ظ†</span></td></tr>
+              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="طµظ„ط§ط© ط§ظ„ط¬ظ…ط¹ط© ظˆط§ظ„ط£ط¹ظٹط§ط¯." data-description="ط§ظ„طھط¹ط±ظپ ط¥ظ„ظ‰ طµظ„ط§ط© ط§ظ„ط¬ظ…ط¹ط© ظˆطµظ„ط§ط© ط§ظ„ط¹ظٹط¯ظٹظ† ظˆظ…ط§ ظٹظ…ظٹط²ظ‡ط§ ظ…ظ† ط£ط­ظƒط§ظ… ظˆط¢ط¯ط§ط¨.">طµظ„ط§ط© ط§ظ„ط¬ظ…ط¹ط© ظˆط§ظ„ط£ط¹ظٹط§ط¯.</a><p class="book-description">ظ…ط¯ط®ظ„ ط¥ظ„ظ‰ طµظ„ط§ط© ط§ظ„ط¬ظ…ط¹ط© ظˆط§ظ„ط¹ظٹط¯ظٹظ† ظˆط¢ط¯ط§ط¨ظ‡ظ…ط§.</p></td><td><span class="status preparing">ط؛ظٹط± ظ…طھظˆظپط± ط¹ظ„ظ‰ ط§ظ„ظ…ظˆظ‚ط¹ ط§ظ„ط¢ظ†</span></td></tr>
+              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="طµظ„ط§ط© ط§ظ„ظ…ط³ط§ظپط± ظˆط§ظ„ظ…ط±ظٹط¶: ط£طھط¹ظ„ظ… ظƒظٹظپ ط£طµظ„ظٹ ظپظٹ ط§ظ„ط¸ط±ظˆظپ ط§ظ„ظ…ط®طھظ„ظپط©." data-description="طھط¹ط±ظپ ظ…ط¨ط¯ط¦ظٹ ط¥ظ„ظ‰ ظƒظٹظپظٹط© ط§ظ„طµظ„ط§ط© ظپظٹ ط§ظ„ط³ظپط± ظˆط§ظ„ظ…ط±ط¶ ظˆط§ظ„ط¸ط±ظˆظپ ط§ظ„طھظٹ طھط®طھظ„ظپ ظپظٹظ‡ط§ ط§ظ„ط§ط³طھط·ط§ط¹ط©.">طµظ„ط§ط© ط§ظ„ظ…ط³ط§ظپط± ظˆط§ظ„ظ…ط±ظٹط¶: ط£طھط¹ظ„ظ… ظƒظٹظپ ط£طµظ„ظٹ ظپظٹ ط§ظ„ط¸ط±ظˆظپ ط§ظ„ظ…ط®طھظ„ظپط©.</a><p class="book-description">ط§ظ„طھط¹ط±ظپ ط¥ظ„ظ‰ ط£ط­ظƒط§ظ… ط§ظ„طµظ„ط§ط© ط¹ظ†ط¯ ط§ظ„ط³ظپط± ظˆط§ظ„ظ…ط±ط¶ ظˆط§ظ„ط¸ط±ظˆظپ ط§ظ„ظ…ط®طھظ„ظپط©.</p></td><td><span class="status preparing">ط؛ظٹط± ظ…طھظˆظپط± ط¹ظ„ظ‰ ط§ظ„ظ…ظˆظ‚ط¹ ط§ظ„ط¢ظ†</span></td></tr>
+            </tbody>
+          </table></div>
+        </article>
+        <article class="group-card" id="group-6">
+          <div class="group-card-head"><h3>ط§ظ„ظ…ط¬ظ…ظˆط¹ط© ط§ظ„ط³ط§ط¯ط³ط©: ط£ظڈظ‚ط±ظ‘ط¨ ط§ظ„طµظ„ط§ط© ط¥ظ„ظ‰ ظ‚ظ„ط¨ظٹ</h3><span class="group-count">ظ…ط¬ظ…ظˆط¹ط© طھط±ط¨ظˆظٹط© ط¥ظٹظ…ط§ظ†ظٹط© ظ„ظ…ط¹ط§ظ„ط¬ط© ط§ظ„ظ†ظپظˆط± ظˆط§ظ„طھظƒط§ط³ظ„ ظˆط¨ظ†ط§ط، ط§ظ„ظ…ط­ط¨ط© آ· 6 ظƒطھظٹظ‘ط¨ط§طھ</span></div>
+          <div class="table-wrap"><table class="library-table">
+            <thead><tr><th scope="col">ط§ط³ظ… ط§ظ„ظƒطھظٹظ‘ط¨</th><th scope="col">ط§ظ„طھظˆظپط±</th></tr></thead>
+            <tbody>
+              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="19. ظ„ظ…ط§ط°ط§ ظ„ط§ ط£ط´ط¹ط± ط¨ط§ظ„ط±ط؛ط¨ط© ظپظٹ ط§ظ„طµظ„ط§ط© ط£ط­ظٹط§ظ†ظ‹ط§طں" data-description="ظ†ظپظ‡ظ… ط£ط³ط¨ط§ط¨ ط§ظ„طھظƒط§ط³ظ„ ظˆط§ظ„ظ…ظ„ظ„ ظˆط§ظ„طھط´طھطھ ط¹ظ†ط¯ ط§ظ„ط·ظپظ„طŒ ظˆظ†ط³ط§ط¹ط¯ظ‡ ط¹ظ„ظ‰ ط§ظ„طھط¹ط±ظپ ط¥ظ„ظ‰ ظ…ط´ط§ط¹ط±ظ‡ ظˆط§ظ„طھط¹ط§ظ…ظ„ ظ…ط¹ظ‡ط§ ط¯ظˆظ† ط¥ط´ط¹ط§ط±ظ‡ ط¨ط£ظ†ظ‡ ط·ظپظ„ ط³ظٹط¦.">19. ظ„ظ…ط§ط°ط§ ظ„ط§ ط£ط´ط¹ط± ط¨ط§ظ„ط±ط؛ط¨ط© ظپظٹ ط§ظ„طµظ„ط§ط© ط£ط­ظٹط§ظ†ظ‹ط§طں</a><p class="book-description">ظ†ظپظ‡ظ… ط£ط³ط¨ط§ط¨ ط§ظ„طھظƒط§ط³ظ„ ظˆط§ظ„ظ…ظ„ظ„ ظˆط§ظ„طھط´طھطھطŒ ظˆظ†طھط¹ط§ظ…ظ„ ظ…ط¹ ط§ظ„ظ…ط´ط§ط¹ط± ط¯ظˆظ† ط¥ط´ط¹ط§ط± ط§ظ„ط·ظپظ„ ط¨ط£ظ†ظ‡ ط³ظٹط¦.</p></td><td><span class="status preparing">ط؛ظٹط± ظ…طھظˆظپط± ط¹ظ„ظ‰ ط§ظ„ظ…ظˆظ‚ط¹ ط§ظ„ط¢ظ†</span></td></tr>
+              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="20. ظƒظٹظپ ط£ط¬ط¹ظ„ ط§ظ„طµظ„ط§ط© ط£ط­ط¨ ط¥ظ„ظ‰ ظ‚ظ„ط¨ظٹطں" data-description="ظ†طھط¹ط±ظپ ط¹ظ„ظ‰ ظ…ط¹ط§ظ†ظٹ ط§ظ„ظˆظ‚ظˆظپ ط¨ظٹظ† ظٹط¯ظٹ ط§ظ„ظ„ظ‡طŒ ظˆط´ظƒط± ط§ظ„ظ†ط¹ظ…طŒ ظˆط§ظ„ط¯ط¹ط§ط،طŒ ظˆط§ظ„ط·ظ…ط£ظ†ظٹظ†ط©طŒ ظˆظƒظٹظپ ظ†ظ†ظ…ظ‘ظٹ ظ…ط­ط¨ط© ط§ظ„طµظ„ط§ط© ظ…ظ† ط®ظ„ط§ظ„ ط§ظ„ظپظ‡ظ… ظˆط§ظ„طھط¬ط±ط¨ط©.">20. ظƒظٹظپ ط£ط¬ط¹ظ„ ط§ظ„طµظ„ط§ط© ط£ط­ط¨ ط¥ظ„ظ‰ ظ‚ظ„ط¨ظٹطں</a><p class="book-description">طھظ†ظ…ظٹط© ظ…ط­ط¨ط© ط§ظ„طµظ„ط§ط© ظ…ظ† ط®ظ„ط§ظ„ ط§ظ„ظپظ‡ظ… ظˆط§ظ„ط¯ط¹ط§ط، ظˆط´ظƒط± ط§ظ„ظ†ط¹ظ… ظˆط§ظ„ط·ظ…ط£ظ†ظٹظ†ط©.</p></td><td><span class="status preparing">ط؛ظٹط± ظ…طھظˆظپط± ط¹ظ„ظ‰ ط§ظ„ظ…ظˆظ‚ط¹ ط§ظ„ط¢ظ†</span></td></tr>
+              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="21. ط¹ظ†ط¯ظ…ط§ ط£ظƒظˆظ† ظ…ط´ط؛ظˆظ„ظ‹ط§ ط£ظˆ ط£ظ„ط¹ط¨طŒ ظƒظٹظپ ط£ط³طھط¬ظٹط¨ ظ„ظ„طµظ„ط§ط©طں" data-description="ط§ظ„طھط¹ط§ظ…ظ„ ظ…ط¹ ط§ظ„ط±ط؛ط¨ط© ظپظٹ ظ…ظˆط§طµظ„ط© ط§ظ„ظ„ط¹ط¨طŒ ظˆظ…ط´ط§ظ‡ط¯ط© ط§ظ„ط´ط§ط´ط§طھطŒ ظˆطھط£ط¬ظٹظ„ ط§ظ„طµظ„ط§ط©طŒ ظ…ط¹ طھط¹ظ„ظ… ط§ظ„ط§ظ†طھظ‚ط§ظ„ ط¥ظ„ظٹظ‡ط§ ط¯ظˆظ† ظ…ظ…ط§ط·ظ„ط©.">21. ط¹ظ†ط¯ظ…ط§ ط£ظƒظˆظ† ظ…ط´ط؛ظˆظ„ظ‹ط§ ط£ظˆ ط£ظ„ط¹ط¨طŒ ظƒظٹظپ ط£ط³طھط¬ظٹط¨ ظ„ظ„طµظ„ط§ط©طں</a><p class="book-description">ط§ظ„طھط¹ط§ظ…ظ„ ظ…ط¹ ط§ظ„ظ„ط¹ط¨ ظˆط§ظ„ط´ط§ط´ط§طھ ظˆطھط£ط¬ظٹظ„ ط§ظ„طµظ„ط§ط©طŒ ظˆط§ظ„طھط¯ط±ظ‘ط¨ ط¹ظ„ظ‰ ط§ظ„ط§ط³طھط¬ط§ط¨ط© ط¯ظˆظ† ظ…ظ…ط§ط·ظ„ط©.</p></td><td><span class="status preparing">ط؛ظٹط± ظ…طھظˆظپط± ط¹ظ„ظ‰ ط§ظ„ظ…ظˆظ‚ط¹ ط§ظ„ط¢ظ†</span></td></tr>
+              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="22. ظƒظٹظپ ط£ط¨ط¯ط£ ط§ظ„طµظ„ط§ط© ط¨ظ†ظپط³ظٹ ط¯ظˆظ† ط£ظ† ظٹط°ظƒط±ظ†ظٹ ط£ط­ط¯طں" data-description="ط¨ظ†ط§ط، ط§ظ„ط§ط³طھظ‚ظ„ط§ظ„ظٹط© طھط¯ط±ظٹط¬ظٹظ‹ط§طŒ ظˆط§ط³طھط®ط¯ط§ظ… ط§ظ„طھط°ظƒظٹط±ط§طھ ط§ظ„ظ…ظ†ط§ط³ط¨ط©طŒ ظˆطھظ†ط¸ظٹظ… ط§ظ„ظٹظˆظ…طŒ ظˆطھط­ظˆظٹظ„ ط§ظ„ط§ط³طھط¹ط¯ط§ط¯ ظ„ظ„طµظ„ط§ط© ط¥ظ„ظ‰ ط¹ط§ط¯ط© ط«ط§ط¨طھط©.">22. ظƒظٹظپ ط£ط¨ط¯ط£ ط§ظ„طµظ„ط§ط© ط¨ظ†ظپط³ظٹ ط¯ظˆظ† ط£ظ† ظٹط°ظƒط±ظ†ظٹ ط£ط­ط¯طں</a><p class="book-description">طھظ†ظ…ظٹط© ط§ظ„ط§ط³طھظ‚ظ„ط§ظ„ظٹط© ط¨ط§ظ„طھط¯ط±ظٹط¬ ظˆط¨ظ†ط§ط، ط¹ط§ط¯ط© ط«ط§ط¨طھط© ظ„ظ„ط§ط³طھط¹ط¯ط§ط¯ ظ„ظ„طµظ„ط§ط©.</p></td><td><span class="status preparing">ط؛ظٹط± ظ…طھظˆظپط± ط¹ظ„ظ‰ ط§ظ„ظ…ظˆظ‚ط¹ ط§ظ„ط¢ظ†</span></td></tr>
+              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="23. ط¹ظ†ط¯ظ…ط§ ظٹط¯ط¹ظˆظ†ظٹ ط£ط¨ظٹ ط£ظˆ ط£ظ…ظٹ ط¥ظ„ظ‰ ط§ظ„طµظ„ط§ط©طŒ ظƒظٹظپ ط£ط³طھط¬ظٹط¨ ط¨ظ…ط­ط¨ط©طں" data-description="ظپظ‡ظ… ط£ظ‡ظ…ظٹط© ط¨ط± ط§ظ„ظˆط§ظ„ط¯ظٹظ† ظˆط§ظ„ط§ط³طھط¬ط§ط¨ط© ظ„ظ„طµظ„ط§ط©طŒ ظˆط§ظ„طھط¹ط§ظ…ظ„ ظ…ط¹ ط§ظ„ط§ظ†ط²ط¹ط§ط¬ ظ…ظ† ط§ظ„طھط°ظƒظٹط± ط§ظ„ظ…طھظƒط±ط±طŒ ظˆطھط¹ظ„ظ… ط§ظ„ط§ط³طھط¬ط§ط¨ط© ط§ظ„ظ‡ط§ط¯ط¦ط© ط¯ظˆظ† ط¬ط¯ط§ظ„.">23. ط¹ظ†ط¯ظ…ط§ ظٹط¯ط¹ظˆظ†ظٹ ط£ط¨ظٹ ط£ظˆ ط£ظ…ظٹ ط¥ظ„ظ‰ ط§ظ„طµظ„ط§ط©طŒ ظƒظٹظپ ط£ط³طھط¬ظٹط¨ ط¨ظ…ط­ط¨ط©طں</a><p class="book-description">ط§ظ„ط§ط³طھط¬ط§ط¨ط© ط§ظ„ظ‡ط§ط¯ط¦ط© ظˆط§ظ„ظ…ط­ط¨ط© ظ„طھط°ظƒظٹط± ط§ظ„ظˆط§ظ„ط¯ظٹظ† ظˆطھط¬ظ†ط¨ ط§ظ„ط¬ط¯ط§ظ„.</p></td><td><span class="status preparing">ط؛ظٹط± ظ…طھظˆظپط± ط¹ظ„ظ‰ ط§ظ„ظ…ظˆظ‚ط¹ ط§ظ„ط¢ظ†</span></td></tr>
+              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="24. ط±ط­ظ„طھظٹ ط¥ظ„ظ‰ ط§ظ„ظ…ط­ط§ظپط¸ط© ط¹ظ„ظ‰ ط§ظ„طµظ„ط§ط©: ط®ط·ط© 30 ظٹظˆظ…ظ‹ط§" data-description="ط¨ط±ظ†ط§ظ…ط¬ ط¹ظ…ظ„ظٹ ظ…طھط¯ط±ط¬ ظٹط³ط§ط¹ط¯ ط§ظ„ط·ظپظ„ ط¹ظ„ظ‰ ط§ظ„ط§ط³طھط¹ط¯ط§ط¯ ظ„ظ„طµظ„ط§ط©طŒ ظˆط§ظ„طھط؛ظ„ط¨ ط¹ظ„ظ‰ ط§ظ„طھظƒط§ط³ظ„طŒ ظˆظ…ظ„ط§ط­ط¸ط© طھظ‚ط¯ظ…ظ‡طŒ ظˆط§ظ„ط§ط³طھظ…ط±ط§ط± ط¨ظ…ط³ط§ظ†ط¯ط© ط£ط³ط±طھظ‡.">24. ط±ط­ظ„طھظٹ ط¥ظ„ظ‰ ط§ظ„ظ…ط­ط§ظپط¸ط© ط¹ظ„ظ‰ ط§ظ„طµظ„ط§ط©: ط®ط·ط© 30 ظٹظˆظ…ظ‹ط§</a><p class="book-description">ط¨ط±ظ†ط§ظ…ط¬ طھط¯ط±ظٹط¬ظٹ ظ„ظ…ط¯ط© 30 ظٹظˆظ…ظ‹ط§ ظ„ظ„ط§ط³طھط¹ط¯ط§ط¯ ظ„ظ„طµظ„ط§ط© ظˆظ…ظ„ط§ط­ط¸ط© ط§ظ„طھظ‚ط¯ظ… ط¨ظ…ط³ط§ظ†ط¯ط© ط§ظ„ط£ط³ط±ط©.</p></td><td><span class="status preparing">ط؛ظٹط± ظ…طھظˆظپط± ط¹ظ„ظ‰ ط§ظ„ظ…ظˆظ‚ط¹ ط§ظ„ط¢ظ†</span></td></tr>
+            </tbody>
+          </table></div>
+        </article>
+        <section class="sitemap" id="siteMap" aria-labelledby="siteMapHeading">
+          <h2 id="siteMapHeading">ط®ط±ظٹط·ط© ط§ظ„ظ…ظˆظ‚ط¹</h2>
+          <ul class="sitemap-list">
+            <li><a href="#top">ط§ظ„طµظپط­ط© ط§ظ„ط±ط¦ظٹط³ظٹط©</a></li>
+            <li><a href="#libraryHeading">ظ…ظƒطھط¨ط© ط§ظ„ظƒطھظٹظ‘ط¨ط§طھ</a></li>
+            <li><a href="#group-1">ط§ظ„ظ…ط¬ظ…ظˆط¹ط© ط§ظ„ط£ظˆظ„ظ‰: ط£طھط¹ط±ظپ ط¹ظ„ظ‰ ط§ظ„طµظ„ط§ط©</a></li>
+            <li><a href="#group-2">ط§ظ„ظ…ط¬ظ…ظˆط¹ط© ط§ظ„ط«ط§ظ†ظٹط©: ط£طھط¹ظ„ظ… ظƒظٹظپ ط£طµظ„ظٹ</a></li>
+            <li><a href="#group-3">ط§ظ„ظ…ط¬ظ…ظˆط¹ط© ط§ظ„ط«ط§ظ„ط«ط©: ط£ط¹ظٹط´ ط§ظ„طµظ„ط§ط© ط¨ظ‚ظ„ط¨ظٹ</a></li>
+            <li><a href="#group-4">ط§ظ„ظ…ط¬ظ…ظˆط¹ط© ط§ظ„ط±ط§ط¨ط¹ط©: ط£ط­ط§ظپط¸ ط¹ظ„ظ‰ طµظ„ط§طھظٹ</a></li>
+            <li><a href="#group-5">ط§ظ„ظ…ط¬ظ…ظˆط¹ط© ط§ظ„ط®ط§ظ…ط³ط©: ط£ظ†ظ…ظˆ ظ…ط¹ طµظ„ط§طھظٹ</a></li>
+            <li><a href="#group-6">ط§ظ„ظ…ط¬ظ…ظˆط¹ط© ط§ظ„ط³ط§ط¯ط³ط©: ط£ظڈظ‚ط±ظ‘ط¨ ط§ظ„طµظ„ط§ط© ط¥ظ„ظ‰ ظ‚ظ„ط¨ظٹ</a></li>
+            <li><a href="#quizPage" id="sitemapQuizLink">ط§ظ„ط§ط®طھط¨ط§ط± ط§ظ„طھظپط§ط¹ظ„ظٹ</a></li>
+          </ul>
+        </section>
+      </section>
     </section>
-
-    <section class="group" id="group1">
-      <h2>المجموعة الأولى: أتعرف على الصلاة</h2>
-      <p class="group-description">التأسيس الإيماني ومعرفة مكانة الصلاة.</p>
-      <table class="booklet-table">
-        <thead><tr><th>الكتيب</th><th>الرابط</th></tr></thead>
-        <tbody>
-          <tr><td>لماذا أصلي؟ — أحب صلاتي</td><td><a href="booklet1.html">فتح الكتيب</a></td></tr>
-          <tr><td>الصلاة هدية عظيمة من الله</td><td><a href="unavailable.html">صفحة الكتيب</a></td></tr>
-          <tr><td>ماذا تعلمني الصلاة؟</td><td><a href="unavailable.html">صفحة الكتيب</a></td></tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section class="group" id="group2">
-      <h2>المجموعة الثانية: أتعلم كيف أصلي</h2>
-      <p class="group-description">تعلم الصلاة وأحكامها بطريقة عملية.</p>
-      <table class="booklet-table">
-        <thead><tr><th>الكتيب</th><th>الرابط</th></tr></thead>
-        <tbody>
-          <tr><td>أتوضأ لأصلي</td><td><a href="unavailable.html">صفحة الكتيب</a></td></tr>
-          <tr><td>أستعد لصلاتي</td><td><a href="unavailable.html">صفحة الكتيب</a></td></tr>
-          <tr><td>صلاتي خطوة بخطوة</td><td><a href="unavailable.html">صفحة الكتيب</a></td></tr>
-          <tr><td>ماذا أقول وأنا أصلي؟</td><td><a href="unavailable.html">صفحة الكتيب</a></td></tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section class="group" id="group3">
-      <h2>المجموعة الثالثة: أعيش الصلاة بقلبي</h2>
-      <p class="group-description">فهم معاني الصلاة والخشوع فيها.</p>
-      <table class="booklet-table">
-        <thead><tr><th>الكتيب</th><th>الرابط</th></tr></thead>
-        <tbody>
-          <tr><td>كيف أخشع في صلاتي؟</td><td><a href="unavailable.html">صفحة الكتيب</a></td></tr>
-          <tr><td>أفهم ما أقرأ في صلاتي</td><td><a href="unavailable.html">صفحة الكتيب</a></td></tr>
-          <tr><td>كيف أتغلب على السرحان في الصلاة؟</td><td><a href="unavailable.html">صفحة الكتيب</a></td></tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section class="group" id="group4">
-      <h2>المجموعة الرابعة: أحافظ على صلاتي</h2>
-      <p class="group-description">تنظيم الوقت والتعامل مع المواقف اليومية.</p>
-      <table class="booklet-table">
-        <thead><tr><th>الكتيب</th><th>الرابط</th></tr></thead>
-        <tbody>
-          <tr><td>الصلوات الخمس في يومي</td><td><a href="unavailable.html">صفحة الكتيب</a></td></tr>
-          <tr><td>عندما أشعر بالكسل عن الصلاة</td><td><a href="unavailable.html">صفحة الكتيب</a></td></tr>
-          <tr><td>أصلي في البيت والمدرسة والمسجد</td><td><a href="unavailable.html">صفحة الكتيب</a></td></tr>
-          <tr><td>إذا أخطأت في صلاتي، فماذا أفعل؟</td><td><a href="unavailable.html">صفحة الكتيب</a></td></tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section class="group" id="group5">
-      <h2>المجموعة الخامسة: أنمو مع صلاتي</h2>
-      <p class="group-description">مساحة مخصصة لكتيبات هذه المجموعة، وسنضيف عناوينها عند تثبيتها.</p>
-      <table class="booklet-table">
-        <thead><tr><th>الكتيب</th><th>الرابط</th></tr></thead>
-        <tbody>
-          <tr><td>كتيبات المجموعة الخامسة</td><td><span class="status">ستُضاف لاحقًا</span></td></tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section class="group" id="group6">
-      <h2>المجموعة السادسة: أحب الصلاة وأقترب منها</h2>
-      <p class="group-description">أفكار تساعد الطفل على أن يحب الصلاة ويقبل عليها بقلب مطمئن.</p>
-      <table class="booklet-table">
-        <thead><tr><th>الكتيب</th><th>الرابط</th></tr></thead>
-        <tbody>
-          <tr><td>كتيبات تقريب الصلاة إلى قلب الطفل</td><td><span class="status">ستُضاف لاحقًا</span></td></tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section class="activities" id="activities">
-      <h2>🌟 أتعلم وأطبّق</h2>
-      <p>مساحة للأنشطة والأسئلة التي تساعدك على تذكر ما تعلمته.</p>
-
-      <div class="activity-placeholder">
-        <strong>أنشطة الكتيب الأول</strong>
-        <p>سيُضاف النشاط هنا بعد تجهيزه.</p>
-        <a href="activity1.html">الانتقال إلى أنشطة الكتيب الأول</a>
+    <section id="bookletOnePage" class="page hidden booklet-page">
+      <header class="booklet-cover"><p class="kicker">ط³ظ„ط³ظ„ط© ط£ط­ط¨ طµظ„ط§طھظٹ آ· ط§ظ„ظƒطھظٹظ‘ط¨ ط§ظ„ط£ظˆظ„</p><h1>ظ„ظ…ط§ط°ط§ ط£ظڈطµظ„ظ‘ظٹطں</h1><p>ط±ط­ظ„ط© ظ„ظپظ‡ظ… ط§ظ„طµظ„ط§ط© ظˆظ…ظƒط§ظ†طھظ‡ط§ ظپظٹ ط­ظٹط§طھظ†ط§طŒ ظˆط§ظ„طھط¹ط±ظ‘ظپ ط¥ظ„ظ‰ ط§ظ„طµظ„ظˆط§طھ ط§ظ„ط®ظ…ط³ ظˆظƒظٹظپ ظ†ط­ط§ظپط¸ ط¹ظ„ظٹظ‡ط§.</p></header>
+      <div class="booklet-toolbar actions"><button type="button" class="secondary" data-page="homePage">ط§ظ„ط¹ظˆط¯ط© ط¥ظ„ظ‰ ط§ظ„ظ…ظƒطھط¨ط©</button><button type="button" class="primary" id="printBooklet">ط·ط¨ط§ط¹ط© ط§ظ„ظƒطھظٹظ‘ط¨</button></div>
+      <div class="booklet-content">
+        <article class="booklet-section"><h2>ط¹ظ† ظ‡ط°ط§ ط§ظ„ظƒطھط§ط¨</h2><p>ط§ظ„طµظ„ط§ط© ظ…ظ† ط£ط¹ط¸ظ… ط§ظ„ط¹ط¨ط§ط¯ط§طھ ظپظٹ ط§ظ„ط¥ط³ظ„ط§ظ…طŒ ظˆظ‡ظٹ طµظ„ط© ط¨ظٹظ† ط§ظ„ط¹ط¨ط¯ ظˆط±ط¨ظ‡طŒ ظٹظ‚ظپ ظپظٹظ‡ط§ ط§ظ„ظ…ط³ظ„ظ… ظ„ط¹ط¨ط§ط¯ط© ط§ظ„ظ„ظ‡ ظˆط°ظƒط±ظ‡طŒ ظˆظٹظ‚ط±ط£ ط§ظ„ظ‚ط±ط¢ظ†طŒ ظˆظٹط±ظƒط¹ ظˆظٹط³ط¬ط¯ ظƒظ…ط§ ط¹ظ„ظ‘ظ…ظ†ط§ ط±ط³ظˆظ„ ط§ظ„ظ„ظ‡ ï·؛.</p><p>ظپظٹ ظ‡ط°ط§ ط§ظ„ظƒطھط§ط¨ ط³ظ†ط¨ط­ط« ظ…ط¹ظ‹ط§ ط¹ظ† ط¥ط¬ط§ط¨ط§طھ ظ„ط£ط³ط¦ظ„ط© ظ…ظ‡ظ…ط©: ظ„ظ…ط§ط°ط§ ط®ظ„ظ‚ظ†ط§ ط§ظ„ظ„ظ‡طں ظ…ط§ ظ…ط¹ظ†ظ‰ ط£ظ† ظ†ط¹ط¨ط¯ظ‡طں ظ„ظ…ط§ط°ط§ ظ†طµظ„ظ‘ظٹطں ظ…ط§ ط§ظ„طµظ„ظˆط§طھ ط§ظ„ط®ظ…ط³طں ظˆظƒظٹظپ طھط³ط§ط¹ط¯ظ†ط§ ط§ظ„طµظ„ط§ط© ط¹ظ„ظ‰ طھط°ظƒظ‘ط± ط§ظ„ظ„ظ‡ ظˆط§ظ„ط­ط±طµ ط¹ظ„ظ‰ ط§ظ„ط®ظٹط±طں</p><p>ظ„ظ† ظ†ظƒطھظپظٹ ط¨ط­ظپط¸ ط§ظ„ظ…ط¹ظ„ظˆظ…ط§طھطŒ ط¨ظ„ ط³ظ†ط­ط§ظˆظ„ ظپظ‡ظ… ظ…ط¹ط§ظ†ظٹظ‡ط§ ظ…ظ† ط®ظ„ط§ظ„ ط¢ظٹط§طھ ط§ظ„ظ‚ط±ط¢ظ† ط§ظ„ظƒط±ظٹظ… ظˆط£ط­ط§ط¯ظٹط« طµط­ظٹط­ط© ظˆط£ظ†ط´ط·ط© طھط³ط§ط¹ط¯ظ†ط§ ط¹ظ„ظ‰ ط§ظ„طھط¹ظ„ظ‘ظ…. ط§ظ‚ط±ط£ ط¨ظ‡ط¯ظˆط،طŒ ظˆطھظˆظ‚ظ‘ظپ ط¹ظ†ط¯ ط§ظ„ط£ط³ط¦ظ„ط©طŒ ظˆط§ظƒطھط¨ ط¥ط¬ط§ط¨ط§طھظƒطŒ ظˆط§ط³ط£ظ„ ظˆط§ظ„ط¯ظٹظƒ ط£ظˆ ظ…ط¹ظ„ظ‘ظ…ظƒ ط¹ظ†ط¯ظ…ط§ طھط­طھط§ط¬ ط¥ظ„ظ‰ ظ…ط³ط§ط¹ط¯ط©.</p></article>
+        <article class="booklet-section"><h2>ط¥ظ‡ط¯ط§ط، ظˆط±ط³ط§ظ„ط© ط¥ظ„ظٹظƒ</h2><p>ط¥ظ„ظ‰ ظƒظ„ ط·ظپظ„ ظٹطھط¹ظ„ظ‘ظ… ط§ظ„طµظ„ط§ط©طŒ ظˆط¥ظ„ظ‰ ظƒظ„ ظ‚ظ„ط¨ طµط؛ظٹط± ظٹط±ظٹط¯ ط£ظ† ظٹط¹ط±ظپ ط±ط¨ظ‘ظ‡ ظˆظٹط¹ط¨ط¯ظ‡طŒ ظˆط¥ظ„ظ‰ ظƒظ„ ط£ط³ط±ط© طھط³ط§ط¹ط¯ ط£ط¨ظ†ط§ط،ظ‡ط§ ط¹ظ„ظ‰ طھط¹ظ„ظ‘ظ… ط§ظ„طµظ„ط§ط© ط¨ط§ظ„ظ…ط­ط¨ط© ظˆط§ظ„طµط¨ط± ظˆط§ظ„ظ‚ط¯ظˆط© ط§ظ„ط­ط³ظ†ط©.</p><p>ط£ظ‡ظ„ظ‹ط§ ط¨ظƒ ظپظٹ ط±ط­ظ„طھظ†ط§ ظ…ط¹ ط§ظ„طµظ„ط§ط©! ط±ط¨ظ…ط§ طھط¹ط±ظپ ط£ط³ظ…ط§ط، ط§ظ„طµظ„ظˆط§طھ ط§ظ„ط®ظ…ط³طŒ ظˆط±ط¨ظ…ط§ ط¨ط¯ط£طھ طھطھط¹ظ„ظ‘ظ… ط§ظ„ظˆط¶ظˆط، ظˆط§ظ„طµظ„ط§ط©طŒ ظˆط±ط¨ظ…ط§ ظ„ط¯ظٹظƒ ط£ط³ط¦ظ„ط© ظƒط«ظٹط±ط©. ظ„ط§ طھط­طھط§ط¬ ط¥ظ„ظ‰ ظ…ط¹ط±ظپط© ظƒظ„ ط´ظٹط، ظ…ظ† ط§ظ„ط¨ط¯ط§ظٹط©ط› ط®ط° ظˆظ‚طھظƒ ظپظٹ ط§ظ„ظ‚ط±ط§ط،ط©طŒ ظˆط­ط§ظˆظ„ ط£ظ† طھظپظ‡ظ… ط§ظ„ظ…ط¹ظ†ظ‰ ظ‚ط¨ظ„ ط§ظ„ط§ظ†طھظ‚ط§ظ„ ط¥ظ„ظ‰ ط§ظ„طµظپط­ط© ط§ظ„طھط§ظ„ظٹط©. ظˆط¥ط°ط§ ظˆط¬ط¯طھ ط³ط¤ط§ظ„ظ‹ط§ ظ„ط§ طھط¹ط±ظپ ط¥ط¬ط§ط¨طھظ‡طŒ ظپط§ظƒطھط¨ظ‡ ظˆط§ط³ط£ظ„ ط´ط®طµظ‹ط§ ظ…ظˆط«ظˆظ‚ظ‹ط§.</p><p>ظ†ط³ط£ظ„ ط§ظ„ظ„ظ‡ ط£ظ† ظٹط¹ظ„ظ‘ظ…ظ†ط§ ظ…ط§ ظٹظ†ظپط¹ظ†ط§طŒ ظˆط£ظ† ظٹط¹ظٹظ†ظ†ط§ ط¹ظ„ظ‰ ط°ظƒط±ظ‡ ظˆط´ظƒط±ظ‡ ظˆط­ط³ظ† ط¹ط¨ط§ط¯طھظ‡طŒ ظˆط£ظ† ظٹط¬ط¹ظ„ ط§ظ„طµظ„ط§ط© ظ‚ط±ط© ط¹ظٹظ† ظ„ظ†ط§.</p></article>
+        <article class="booklet-section"><h2>ظ„ظ…ط§ط°ط§ ط®ظ„ظ‚ظ†ط§ ط§ظ„ظ„ظ‡طں</h2><p>ط®ظ„ظ‚ ط§ظ„ظ„ظ‡ ط§ظ„ط¥ظ†ط³ط§ظ† ظˆط±ط²ظ‚ظ‡ ظˆط£ظ†ط¹ظ… ط¹ظ„ظٹظ‡ ط¨ظ†ط¹ظ… ظƒط«ظٹط±ط©. ظˆظ†ط­ظ† ظ†ط¤ظ…ظ† ط¨ط£ظ† ط§ظ„ظ„ظ‡ ظ‡ظˆ ط®ط§ظ„ظ‚ظ†ط§طŒ ظˆط£ظ†ظ‡ ظˆط­ط¯ظ‡ ط§ظ„ظ…ط³طھط­ظ‚ ظ„ظ„ط¹ط¨ط§ط¯ط©.</p><div class="booklet-verse">ï´؟ظˆظژظ…ظژط§ ط®ظژظ„ظژظ‚ظ’طھظڈ ط§ظ„ظ’ط¬ظگظ†ظ‘ظژ ظˆظژط§ظ„ظ’ط¥ظگظ†ظ’ط³ظژ ط¥ظگظ„ظ‘ظژط§ ظ„ظگظٹظژط¹ظ’ط¨ظڈط¯ظڈظˆظ†ظگï´¾<br><small>ط³ظˆط±ط© ط§ظ„ط°ط§ط±ظٹط§طھطŒ ط§ظ„ط¢ظٹط© 56</small></div><p>طھط¹ظ„ظ‘ظ…ظ†ط§ ظ‡ط°ظ‡ ط§ظ„ط¢ظٹط© ط£ظ† ط¹ط¨ط§ط¯ط© ط§ظ„ظ„ظ‡ ط؛ط§ظٹط© ط¹ط¸ظٹظ…ط© ظ…ظ† ط§ظ„ط؛ط§ظٹط§طھ ط§ظ„طھظٹ ط®ظ„ظ‚ ط§ظ„ظ„ظ‡ ط§ظ„ط¬ظ† ظˆط§ظ„ط¥ظ†ط³ ظ…ظ† ط£ط¬ظ„ظ‡ط§. ظˆط¹ط¨ط§ط¯ط© ط§ظ„ظ„ظ‡ طھط¹ظ†ظٹ ط£ظ† ظ†طھظ‚ط±ظ‘ط¨ ط¥ظ„ظٹظ‡ ط¨ظ…ط§ ط´ط±ط¹ظ‡ ظˆط£ظ…ط± ط¨ظ‡طŒ ظپظ†ط·ظٹط¹ظ‡ ط¨ط¥ط®ظ„ط§طµطŒ ظˆظ†طµظ„ظ‘ظٹ ظ„ظ‡طŒ ظˆظ†ط¯ط¹ظˆظ‡طŒ ظˆظ†ظ‚ط±ط£ ظƒطھط§ط¨ظ‡طŒ ظˆظ†ط­ط±طµ ط¹ظ„ظ‰ ط§ظ„ط£ط¹ظ…ط§ظ„ ط§ظ„طµط§ظ„ط­ط©.</p><p>ط§ظ„ظ„ظ‡ ط؛ظ†ظٹظ‘ ط¹ظ† ط¹ط¨ط§ط¯طھظ†ط§طŒ ظˆظ†ط­ظ† ط§ظ„ط°ظٹظ† ظ†ط­طھط§ط¬ ط¥ظ„ظٹظ‡ ظˆط¥ظ„ظ‰ ظ‡ط¯ط§ظٹطھظ‡ ظˆط±ط­ظ…طھظ‡.</p><div class="booklet-activity"><strong>ظپظƒظ‘ط± ظˆط£ط¬ط¨</strong><p>ظ…ظ† ط§ظ„ط°ظٹ ط®ظ„ظ‚ظ†ط§ ظˆط±ط²ظ‚ظ†ط§طں <span class="booklet-answer"></span></p><p>ظ…ط§ ط§ظ„ط¹ط¨ط§ط¯ط© ط§ظ„طھظٹ ط³ظ†طھط¹ظ„ظ…ظ‡ط§ ظپظٹ ظ‡ط°ط§ ط§ظ„ظƒطھط§ط¨طں <span class="booklet-answer"></span></p><p>ط§ط°ظƒط± ط¹ظ…ظ„ظ‹ط§ طµط§ظ„ط­ظ‹ط§ ط؛ظٹط± ط§ظ„طµظ„ط§ط©. <span class="booklet-answer"></span></p></div></article>
+        <article class="booklet-section"><h2>ط§ظ„ظ„ظ‡ ط£ظ†ط¹ظ… ط¹ظ„ظٹظ‘ ط¨ظ†ط¹ظ… ظƒط«ظٹط±ط©</h2><p>طھط£ظ…ظ‘ظ„ ظٹظˆظ…ظƒ ظ…ظ†ط° ط£ظ† طھط³طھظٹظ‚ط¸. طھط³طھط·ظٹط¹ ط£ظ† طھط±ظ‰ ظˆطھط³ظ…ط¹ ظˆطھطھط­ط±ظƒ ظˆطھطھط¹ظ„ظ… ظˆطھط£ظƒظ„ ظˆطھط´ط±ط¨. ظˆظ‚ط¯ طھط¬ط¯ ط£ط³ط±ط© طھط­ط¨ظƒ ظˆط£ط´ط®ط§طµظ‹ط§ ظٹط³ط§ط¹ط¯ظˆظ†ظƒ. ظƒظ„ ظ‡ط°ظ‡ ط§ظ„ظ†ط¹ظ… طھط°ظƒظ‘ط±ظ†ط§ ط¨ظپط¶ظ„ ط§ظ„ظ„ظ‡ ط¹ظ„ظٹظ†ط§.</p><div class="booklet-verse">ï´؟ظˆظژط¥ظگظ†ظ’ طھظژط¹ظڈط¯ظ‘ظڈظˆط§ ظ†ظگط¹ظ’ظ…ظژطھظژ ط§ظ„ظ„ظ‘ظژظ‡ظگ ظ„ظژط§ طھظڈط­ظ’طµظڈظˆظ‡ظژط§ï´¾<br><small>ط³ظˆط±ط© ط¥ط¨ط±ط§ظ‡ظٹظ…طŒ ط§ظ„ط¢ظٹط© 34</small></div><p>ظ…ظ† ط´ظƒط± ط§ظ„ظ„ظ‡ ط£ظ† ظ†ط­ظ…ط¯ظ‡طŒ ظˆظ†ط³طھط®ط¯ظ… ظ…ط§ ظˆظ‡ط¨ظ†ط§ ط¥ظٹط§ظ‡ ظپظٹ ط§ظ„ط®ظٹط±طŒ ظˆظ†ط­ط§ظپط¸ ط¹ظ„ظ‰ ط§ظ„ظ†ط¹ظ…طŒ ظˆظ†ط­ط³ظ† ظ…ط¹ط§ظ…ظ„ط© ط§ظ„ط¢ط®ط±ظٹظ†طŒ ظˆظ†ط¤ط¯ظٹ ط§ظ„ط¹ط¨ط§ط¯ط§طھ ط§ظ„طھظٹ ط£ظ…ط±ظ†ط§ ط¨ظ‡ط§طŒ ظˆظ…ظ†ظ‡ط§ ط§ظ„طµظ„ط§ط©.</p><div class="booklet-activity"><strong>ظ†ط´ط§ط·: ط£ظƒطھط´ظپ ط§ظ„ظ†ط¹ظ… ظ…ظ† ط­ظˆظ„ظٹ</strong><p>ط§ظƒطھط¨ ط«ظ„ط§ط« ظ†ط¹ظ… طھط´ظƒط± ط§ظ„ظ„ظ‡ ط¹ظ„ظٹظ‡ط§:</p><p>ظ،. <span class="booklet-answer"></span>ظ¢. <span class="booklet-answer"></span>ظ£. <span class="booklet-answer"></span></p><p>ظƒظٹظپ ط£ط³طھط®ط¯ظ… ط¥ط­ط¯ظ‰ ظ‡ط°ظ‡ ط§ظ„ظ†ط¹ظ… ظپظٹ ط§ظ„ط®ظٹط±طں <span class="booklet-answer"></span></p></div></article>
+        <article class="booklet-section"><h2>ظ…ط§ ط§ظ„طµظ„ط§ط©طں</h2><p>ط§ظ„طµظ„ط§ط© ط¹ط¨ط§ط¯ط© ط¹ط¸ظٹظ…ط© ظپط±ط¶ظ‡ط§ ط§ظ„ظ„ظ‡ ط¹ظ„ظ‰ ط§ظ„ظ…ط³ظ„ظ…ظٹظ†طŒ ظˆظ„ظ‡ط§ ط£ظ‚ظˆط§ظ„ ظˆط£ظپط¹ط§ظ„ ظ…ط®طµظˆطµط© ظ†طھط¹ظ„ظ…ظ‡ط§ ظ…ظ† ظ‡ط¯ظٹ ط§ظ„ظ†ط¨ظٹ ظ…ط­ظ…ط¯ ï·؛. ظ†ط¨ط¯ط£ ط§ظ„طµظ„ط§ط© ط¨طھظƒط¨ظٹط±ط© ط§ظ„ط¥ط­ط±ط§ظ… ظپظ†ظ‚ظˆظ„ آ«ط§ظ„ظ„ظ‡ ط£ظƒط¨ط±آ»طŒ ط«ظ… ظ†ط¤ط¯ظٹ ط£ظپط¹ط§ظ„ ط§ظ„طµظ„ط§ط© ط¨ط§ظ„طھط±طھظٹط¨ ط§ظ„ظ…ط¹ط±ظˆظپطŒ ظˆظ†ط®طھظ…ظ‡ط§ ط¨ط§ظ„طھط³ظ„ظٹظ….</p><div class="booklet-verse">ï´؟ظˆظژط£ظژظ‚ظگظٹظ…ظڈظˆط§ ط§ظ„طµظ‘ظژظ„ظژط§ط©ظژ ظˆظژط¢طھظڈظˆط§ ط§ظ„ط²ظ‘ظژظƒظژط§ط©ظژ ظˆظژط§ط±ظ’ظƒظژط¹ظڈظˆط§ ظ…ظژط¹ظژ ط§ظ„ط±ظ‘ظژط§ظƒظگط¹ظگظٹظ†ظژï´¾<br><small>ط³ظˆط±ط© ط§ظ„ط¨ظ‚ط±ط©طŒ ط§ظ„ط¢ظٹط© 43</small></div><p>ط¥ظ‚ط§ظ…ط© ط§ظ„طµظ„ط§ط© طھط¹ظ†ظٹ ط§ظ„ظ…ط­ط§ظپط¸ط© ط¹ظ„ظٹظ‡ط§ ظˆط£ط¯ط§ط،ظ‡ط§ ط¹ظ„ظ‰ ط§ظ„ظˆط¬ظ‡ ط§ظ„ظ…ط´ط±ظˆط¹. ظˆظ†طھط¹ظ„ظ‘ظ… طµظپطھظ‡ط§ ظ…ظ† ط§ظ„ظ‚ط±ط¢ظ† ط§ظ„ظƒط±ظٹظ… ظˆط³ظ†ط© ط§ظ„ظ†ط¨ظٹ ï·؛طŒ ظˆظ…ظ† طھط¹ظ„ظٹظ… ط§ظ„ظˆط§ظ„ط¯ظٹظ† ظˆط§ظ„ظ…ط¹ظ„ظ…ظٹظ† ط§ظ„ظ…ظˆط«ظˆظ‚ظٹظ†.</p><div class="booklet-verse">آ«طµظژظ„ظ‘ظڈظˆط§ ظƒظژظ…ظژط§ ط±ظژط£ظژظٹظ’طھظڈظ…ظڈظˆظ†ظگظٹ ط£ظڈطµظژظ„ظ‘ظگظٹآ»<br><small>ط±ظˆط§ظ‡ ط§ظ„ط¨ط®ط§ط±ظٹ ط¹ظ† ظ…ط§ظ„ظƒ ط¨ظ† ط§ظ„ط­ظˆظٹط±ط« ط±ط¶ظٹ ط§ظ„ظ„ظ‡ ط¹ظ†ظ‡طŒ ط§ظ„ط­ط¯ظٹط« ط±ظ‚ظ… 631</small></div><div class="booklet-activity"><strong>ظپظƒظ‘ط± ظˆط£ط¬ط¨</strong><p>ظ…ظ† ط§ظ„ط°ظٹ ظپط±ط¶ ط§ظ„طµظ„ط§ط©طں <span class="booklet-answer"></span></p><p>ظ…ظ† ط£ظٹظ† ظ†طھط¹ظ„ظ‘ظ… طµظپط© ط§ظ„طµظ„ط§ط©طں <span class="booklet-answer"></span></p></div></article>
+        <article class="booklet-section"><h2>ظ„ظ…ط§ط°ط§ ط£ظڈطµظ„ظ‘ظٹطں</h2><p>ط£طµظ„ظ‘ظٹ ظ„ط£ظ† ط§ظ„ظ„ظ‡ ط£ظ…ط±ظ†ظٹ ط¨ط§ظ„طµظ„ط§ط©طŒ ظˆظ„ط£ظ†ظ‡ط§ ط¹ط¨ط§ط¯ط© ط£طھظ‚ط±ظ‘ط¨ ط¨ظ‡ط§ ط¥ظ„ظٹظ‡. ظˆظپظٹ ط§ظ„طµظ„ط§ط© ط£ط°ظƒط± ط§ظ„ظ„ظ‡طŒ ظˆط£ظ‚ط±ط£ ط§ظ„ظ‚ط±ط¢ظ†طŒ ظˆط£ط¯ط¹ظˆظ‡طŒ ظˆط£ط®طµظ‘طµ ظˆظ‚طھظ‹ط§ ظ„ط¹ط¨ط§ط¯طھظ‡ ظپظٹ ظٹظˆظ…ظٹ.</p><div class="booklet-verse">ï´؟ظˆظژط£ظژظ‚ظگظ…ظگ ط§ظ„طµظ‘ظژظ„ظژط§ط©ظژ ظ„ظگط°ظگظƒظ’ط±ظگظٹï´¾<br><small>ط³ظˆط±ط© ط·ظ‡طŒ ط§ظ„ط¢ظٹط© 14</small></div><p>ط§ظ„طµظ„ط§ط© ظ„ظٹط³طھ ظ…ط¬ط±ط¯ ط¹ط§ط¯ط© ظ†ط¤ط¯ظٹظ‡ط§ ظ„ط£ظ†ظ†ط§ ط§ط¹طھط¯ظ†ط§ ط¹ظ„ظٹظ‡ط§ط› ط¨ظ„ ظ‡ظٹ ط¹ط¨ط§ط¯ط© ظ†ظ‚طµط¯ ط¨ظ‡ط§ ط·ط§ط¹ط© ط§ظ„ظ„ظ‡ ظˆط§ظ„طھظ‚ط±ظ‘ط¨ ط¥ظ„ظٹظ‡. ظˆظ‚ط¯ ط£ط´ط¹ط± ط¨ط§ظ„ط·ظ…ط£ظ†ظٹظ†ط© ط£ط«ظ†ط§ط، ط§ظ„طµظ„ط§ط©طŒ ظˆظ‚ط¯ ط£ط­طھط§ط¬ ط£ط­ظٹط§ظ†ظ‹ط§ ط¥ظ„ظ‰ ظ…ط²ظٹط¯ ظ…ظ† ط§ظ„طھط¯ط±ظٹط¨ ط¹ظ„ظ‰ ط§ظ„طھط±ظƒظٹط². ظ„ط§ ط£ط¬ط¹ظ„ ط°ظ„ظƒ ط³ط¨ط¨ظ‹ط§ ظ„ظ„ظٹط£ط³طŒ ط¨ظ„ ط£طھط¹ظ„ظ… ظ…ط¹ط§ظ†ظٹ ظ…ط§ ط£ظ‚ط±ط£ ظˆط£ط­ط§ظˆظ„ ط§ظ„ط§ظ†طھط¨ط§ظ‡ ط¥ظ„ظ‰ طµظ„ط§طھظٹ.</p><div class="booklet-activity"><strong>ط£ظƒظ…ظ„ ط§ظ„ط¹ط¨ط§ط±ط©</strong><p>ط£طµظ„ظ‘ظٹ ظ„ط£ظ† <span class="booklet-answer"></span></p><p>ظˆط£ط±ظٹط¯ ط£ظ† ط£طھط¹ظ„ظ‘ظ… ط£ظƒط«ط± ط¹ظ† <span class="booklet-answer"></span></p></div></article>
+        <article class="booklet-section"><h2>ط§ظ„طµظ„ظˆط§طھ ط§ظ„ط®ظ…ط³</h2><p>ظپط±ط¶ ط§ظ„ظ„ظ‡ ط¹ظ„ظ‰ ط§ظ„ظ…ط³ظ„ظ…ظٹظ† ط®ظ…ط³ طµظ„ظˆط§طھ ظپظٹ ط§ظ„ظٹظˆظ… ظˆط§ظ„ظ„ظٹظ„ط©طŒ ظˆظ„ظƒظ„ طµظ„ط§ط© ظˆظ‚طھظ‡ط§ ط§ظ„ط°ظٹ طھط¤ط¯ظ‘ظ‰ ظپظٹظ‡:</p><ol><li><strong>ط§ظ„ظپط¬ط±:</strong> ظ‚ط¨ظ„ ط´ط±ظˆظ‚ ط§ظ„ط´ظ…ط³.</li><li><strong>ط§ظ„ط¸ظ‡ط±:</strong> ط¨ط¹ط¯ ط²ظˆط§ظ„ ط§ظ„ط´ظ…ط³ ط¹ظ† ظˆط³ط· ط§ظ„ط³ظ…ط§ط،.</li><li><strong>ط§ظ„ط¹طµط±:</strong> ظپظٹ ظˆظ‚طھ ط§ظ„ط¹طµط± ط§ظ„ظ…ط¹ط±ظˆظپ.</li><li><strong>ط§ظ„ظ…ط؛ط±ط¨:</strong> ط¨ط¹ط¯ ط؛ط±ظˆط¨ ط§ظ„ط´ظ…ط³.</li><li><strong>ط§ظ„ط¹ط´ط§ط،:</strong> ط¨ط¹ط¯ ط؛ظٹط§ط¨ ط§ظ„ط´ظپظ‚طŒ ظˆظپظ‚ ط£ط­ظƒط§ظ… ط§ظ„ظ…ظˆط§ظ‚ظٹطھ.</li></ol><p>طھط®طھظ„ظپ ظ…ظˆط§ظ‚ظٹطھ ط§ظ„طµظ„ط§ط© ط¨ط§ط®طھظ„ط§ظپ ط§ظ„ظ…ظƒط§ظ† ظˆط§ظ„طھط§ط±ظٹط®طŒ ظˆظ„ط°ظ„ظƒ ظ†ط³طھط¹ظٹظ† ط¨طھظ‚ظˆظٹظ… ظ…ظˆط«ظˆظ‚ ظٹظ†ط§ط³ط¨ ظ…ط¯ظٹظ†طھظ†ط§ ظˆظ†طھط¹ظ„ظ… ظ…ظ† ط£ط³ط±طھظ†ط§ ظƒظٹظپظٹط© ظ…ط¹ط±ظپط© ط§ظ„ظˆظ‚طھ.</p><div class="booklet-activity"><strong>ظ†ط´ط§ط·: ط§ظƒطھط¨ ط£ط³ظ…ط§ط، ط§ظ„طµظ„ظˆط§طھ ط§ظ„ط®ظ…ط³ ط¨ط§ظ„طھط±طھظٹط¨</strong><ol><li><span class="booklet-answer"></span></li><li><span class="booklet-answer"></span></li><li><span class="booklet-answer"></span></li><li><span class="booklet-answer"></span></li><li><span class="booklet-answer"></span></li></ol></div></article>
+        <article class="booklet-section"><h2>ط£ط­ط§ظپط¸ ط¹ظ„ظ‰ ط§ظ„طµظ„ط§ط© ظپظٹ ظˆظ‚طھظ‡ط§</h2><div class="booklet-verse">ï´؟ط¥ظگظ†ظ‘ظژ ط§ظ„طµظ‘ظژظ„ظژط§ط©ظژ ظƒظژط§ظ†ظژطھظ’ ط¹ظژظ„ظژظ‰ ط§ظ„ظ’ظ…ظڈط¤ظ’ظ…ظگظ†ظگظٹظ†ظژ ظƒظگطھظژط§ط¨ظ‹ط§ ظ…ظژظˆظ’ظ‚ظڈظˆطھظ‹ط§ï´¾<br><small>ط³ظˆط±ط© ط§ظ„ظ†ط³ط§ط،طŒ ط§ظ„ط¢ظٹط© 103</small></div><p>طھط¹ظ†ظٹ ط§ظ„ط¢ظٹط© ط£ظ† ط§ظ„طµظ„ط§ط© ظپظڈط±ط¶طھ ظپظٹ ط£ظˆظ‚ط§طھ ظ…ط­ط¯ط¯ط©. ظˆظ…ظ† ط§ظ„ظ…ظ‡ظ… ط£ظ† ط£ظ†ط¸ظ… ظˆظ‚طھ ط§ظ„ظ„ط¹ط¨ ظˆط§ظ„ط¯ط±ط§ط³ط©طŒ ظˆط£ظ† ط£ط³طھط¹ط¯ ظ„ظ„طµظ„ط§ط© ط¹ظ†ط¯ظ…ط§ ظٹط­ظٹظ† ظˆظ‚طھظ‡ط§طŒ ظˆط£ظ† ط£ط·ظ„ط¨ ط§ظ„ظ…ط³ط§ط¹ط¯ط© ط¥ط°ط§ ظ„ظ… ط£ط¹ط±ظپ ظˆظ‚طھظ‡ط§.</p><p>ط¹ظ† ط¹ط¨ط¯ ط§ظ„ظ„ظ‡ ط¨ظ† ظ…ط³ط¹ظˆط¯ ط±ط¶ظٹ ط§ظ„ظ„ظ‡ ط¹ظ†ظ‡ ط£ظ†ظ‡ ط³ط£ظ„ ط§ظ„ظ†ط¨ظٹ ï·؛: ط£ظٹ ط§ظ„ط¹ظ…ظ„ ط£ط­ط¨ ط¥ظ„ظ‰ ط§ظ„ظ„ظ‡طں ظ‚ط§ظ„: آ«ط§ظ„طµظ‘ظژظ„ظژط§ط©ظڈ ط¹ظژظ„ظژظ‰ ظˆظژظ‚ظ’طھظگظ‡ظژط§آ»طŒ ط«ظ… ط°ظƒط± ط¨ط± ط§ظ„ظˆط§ظ„ط¯ظٹظ†طŒ ط«ظ… ط§ظ„ط¬ظ‡ط§ط¯ ظپظٹ ط³ط¨ظٹظ„ ط§ظ„ظ„ظ‡.</p><p class="booklet-note">ط§ظ„ظ…طµط¯ط±: طµط­ظٹط­ ط§ظ„ط¨ط®ط§ط±ظٹطŒ ط§ظ„ط­ط¯ظٹط« ط±ظ‚ظ… 527طŒ ظˆطµط­ظٹط­ ظ…ط³ظ„ظ…طŒ ط§ظ„ط­ط¯ظٹط« ط±ظ‚ظ… 85.</p><div class="booklet-activity"><strong>ط®ط·طھظٹ ظ„ظ„ظ…ط­ط§ظپط¸ط© ط¹ظ„ظ‰ ظˆظ‚طھ ط§ظ„طµظ„ط§ط©</strong><p>ط£ظƒط«ط± ظˆظ‚طھ ط£ظ†ط´ط؛ظ„ ظپظٹظ‡ ط¹ط§ط¯ط©ظ‹ ظ‡ظˆ: <span class="booklet-answer"></span></p><p>ظ…ط§ ط§ظ„ط°ظٹ ط³ظٹط³ط§ط¹ط¯ظ†ظٹ ط¹ظ„ظ‰ ط§ظ„ط§ط³طھط¹ط¯ط§ط¯ ظ„ظ„طµظ„ط§ط©طں <span class="booklet-answer"></span></p></div></article>
+        <article class="booklet-section"><h2>ط§ظ„طµظ„ط§ط© ظ…ط«ظ„ ظ†ظ‡ط± ظ…طھط¬ط¯ط¯</h2><p>ط¶ط±ط¨ ط§ظ„ظ†ط¨ظٹ ï·؛ ظ…ط«ط§ظ„ظ‹ط§ ظٹظ‚ط±ظ‘ط¨ ط¥ظ„ظٹظ†ط§ ظ…ط¹ظ†ظ‰ طھظƒط±ط§ط± ط§ظ„طµظ„ظˆط§طھ ظˆط£ط«ط±ظ‡ط§.</p><div class="booklet-verse">آ«ظ…ظژط«ظژظ„ظڈ ط§ظ„طµظ‘ظژظ„ظژظˆظژط§طھظگ ط§ظ„ظ’ط®ظژظ…ظ’ط³ظگ ظƒظژظ…ظژط«ظژظ„ظگ ظ†ظژظ‡ظژط±ظچ ط¬ظژط§ط±ظچ ط؛ظژظ…ظ’ط±ظچ ط¹ظژظ„ظژظ‰ ط¨ظژط§ط¨ظگ ط£ظژط­ظژط¯ظگظƒظڈظ…ظ’ ظٹظژط؛ظ’طھظژط³ظگظ„ظڈ ظ…ظگظ†ظ’ظ‡ظڈ ظƒظڈظ„ظ‘ظژ ظٹظژظˆظ’ظ…ظچ ط®ظژظ…ظ’ط³ظژ ظ…ظژط±ظ‘ظژط§طھظچآ»<br><small>ط±ظˆط§ظ‡ ط¬ط§ط¨ط± ط¨ظ† ط¹ط¨ط¯ ط§ظ„ظ„ظ‡ ط±ط¶ظٹ ط§ظ„ظ„ظ‡ ط¹ظ†ظ‡ظ…ط§طŒ ظپظٹ طµط­ظٹط­ ظ…ط³ظ„ظ…طŒ ط§ظ„ط­ط¯ظٹط« ط±ظ‚ظ… 668</small></div><p>ظƒظ…ط§ ط£ظ† ط§ظ„ط§ط؛طھط³ط§ظ„ ط§ظ„ظ…طھظƒط±ط± ظٹظ†ط¸ظپ ط§ظ„ط¬ط³ظ…طŒ ظپط¥ظ† ط§ظ„طµظ„ظˆط§طھ ط§ظ„ط®ظ…ط³ ط³ط¨ط¨ ظ„طھظƒظپظٹط± ط§ظ„ط®ط·ط§ظٹط§ ط¨ط¥ط°ظ† ط§ظ„ظ„ظ‡. ظˆظ‡ط°ط§ ظ„ط§ ظٹط¹ظ†ظٹ ط£ظ† ط§ظ„ط¥ظ†ط³ط§ظ† ظ„ط§ ظٹط®ط·ط¦طŒ ط¨ظ„ ظ†طھط¹ظ„ظ… ط£ظ† ظ†ط³طھط؛ظپط± ط§ظ„ظ„ظ‡ ظˆظ†طµظ„ط­ ط£ط®ط·ط§ط،ظ†ط§ ظˆظ†طھظˆط¨ ط¥ظ„ظٹظ‡.</p><div class="booklet-activity"><strong>ظپظƒظ‘ط± ظˆط£ط¬ط¨</strong><p>ط¨ظ…ط§ط°ط§ ط´ط¨ظ‘ظ‡ ط§ظ„ظ†ط¨ظٹ ï·؛ ط§ظ„طµظ„ظˆط§طھ ط§ظ„ط®ظ…ط³طں <span class="booklet-answer"></span></p><p>ظ…ط§ط°ط§ ط£ظپط¹ظ„ ط¥ط°ط§ ط£ط®ط·ط£طھطں <span class="booklet-answer"></span></p></div></article>
+        <article class="booklet-section"><h2>ط£ظ‚ظپ ط¨ظٹظ† ظٹط¯ظٹ ط§ظ„ظ„ظ‡</h2><p>ط¹ظ†ط¯ظ…ط§ ط£ظ‚ظپ ظ„ظ„طµظ„ط§ط©طŒ ط£ظ‚ظپ ظ„ط¹ط¨ط§ط¯ط© ط§ظ„ظ„ظ‡ ظˆط­ط¯ظ‡. ط£طھط±ظƒ ظ…ط§ ظٹط´ط؛ظ„ظ†ظٹ ظ‚ظ„ظٹظ„ظ‹ط§طŒ ظˆط£طھظˆط¬ظ‡ ط¥ظ„ظ‰ ط§ظ„ظ„ظ‡ ط¨ظ‚ظ„ط¨ظٹ ظˆط¬ط³ط¯ظٹطŒ ظˆط£ظ‚ط±ط£ ط§ظ„ظ‚ط±ط¢ظ† ظˆط£ط°ظƒط± ط±ط¨ظٹ ظˆط£ط¯ط¹ظˆظ‡.</p><div class="booklet-verse">ï´؟ظپظژط§ط°ظ’ظƒظڈط±ظڈظˆظ†ظگظٹ ط£ظژط°ظ’ظƒظڈط±ظ’ظƒظڈظ…ظ’ ظˆظژط§ط´ظ’ظƒظڈط±ظڈظˆط§ ظ„ظگظٹ ظˆظژظ„ظژط§ طھظژظƒظ’ظپظڈط±ظڈظˆظ†ظگï´¾<br><small>ط³ظˆط±ط© ط§ظ„ط¨ظ‚ط±ط©طŒ ط§ظ„ط¢ظٹط© 152</small></div><p>ط§ظ„ظ„ظ‡ ظٹط¹ظ„ظ… ظ…ط§ ظپظٹ ظ‚ظ„ط¨ظٹ ظˆظٹط³ظ…ط¹ ط¯ط¹ط§ط¦ظٹ. ط£ط³طھط·ظٹط¹ ط£ظ† ط£ط¯ط¹ظˆظ‡ ط¨ظ…ط§ ط£ط­طھط§ط¬ ط¥ظ„ظٹظ‡طŒ ظˆط£ظ† ط£ط´ظƒط±ظ‡ ط¹ظ„ظ‰ ظ†ط¹ظ…ظ‡طŒ ظˆط£ظ† ط£ط·ظ„ط¨ ظ…ظ†ظ‡ ط§ظ„ط¹ظˆظ† ط¹ظ„ظ‰ ط§ظ„ط®ظٹط±.</p><div class="booklet-activity"><strong>ظپظƒظ‘ط± ظˆط£ط¬ط¨</strong><p>ط¥ظ„ظ‰ ظ…ظ† ط£طھظˆط¬ظ‡ ط¨طµظ„ط§طھظٹطں <span class="booklet-answer"></span></p><p>ط§ط°ظƒط± ظ†ط¹ظ…ط© طھط´ظƒط± ط§ظ„ظ„ظ‡ ط¹ظ„ظٹظ‡ط§. <span class="booklet-answer"></span></p></div></article>
+        <article class="booklet-section"><h2>ط£ط¬طھظ‡ط¯ ط£ظ† ظٹط¸ظ‡ط± ط£ط«ط± ط§ظ„طµظ„ط§ط© ظپظٹ ط³ظ„ظˆظƒظٹ</h2><p>ط£ط­ط±طµ ط£ظ† طھط³ط§ط¹ط¯ظ†ظٹ ط§ظ„طµظ„ط§ط© ط¹ظ„ظ‰ ط·ط§ط¹ط© ط§ظ„ظ„ظ‡ ظˆط­ط³ظ† ط§ظ„طھط¹ط§ظ…ظ„ ظ…ط¹ ط§ظ„ظ†ط§ط³. ط£ط­ط§ظˆظ„ ط£ظ† ط£ظƒظˆظ† طµط§ط¯ظ‚ظ‹ط§طŒ ظˆط£ط­ظپط¸ ط§ظ„ط£ظ…ط§ظ†ط©طŒ ظˆط£ط­طھط±ظ… ط§ظ„ط¢ط®ط±ظٹظ†طŒ ظˆط£ط¨طھط¹ط¯ ط¹ظ† ط¥ظٹط°ط§ط¦ظ‡ظ…. ظˆط¥ط°ط§ ط£ط®ط·ط£طھطŒ ط£ط³طھط؛ظپط± ط§ظ„ظ„ظ‡ ظˆط£طµظ„ط­ ط®ط·ط¦ظٹ ظˆط£ط¬طھظ‡ط¯ ظپظٹ ط§ظ„ط®ظٹط±.</p><div class="booklet-verse">ï´؟ط¥ظگظ†ظ‘ظژ ط§ظ„ظ„ظ‘ظژظ‡ظژ ظٹظژط£ظ’ظ…ظڈط±ظڈ ط¨ظگط§ظ„ظ’ط¹ظژط¯ظ’ظ„ظگ ظˆظژط§ظ„ظ’ط¥ظگط­ظ’ط³ظژط§ظ†ظگ ظˆظژط¥ظگظٹطھظژط§ط،ظگ ط°ظگظٹ ط§ظ„ظ’ظ‚ظڈط±ظ’ط¨ظژظ‰ظ°ï´¾<br><small>ط³ظˆط±ط© ط§ظ„ظ†ط­ظ„طŒ ط§ظ„ط¢ظٹط© 90</small></div><div class="booklet-activity"><strong>ظ…ط§ط°ط§ ط£ظپط¹ظ„ ظپظٹ ظ‡ط°ظ‡ ط§ظ„ظ…ظˆط§ظ‚ظپطں</strong><p>ظˆط¬ط¯طھ ظ‚ظ„ظ…ظ‹ط§ ظ„ظٹط³ ظ„ظٹ. ظ…ط§ ط§ظ„طھطµط±ظپ ط§ظ„طµط­ظٹط­طں <span class="booklet-answer"></span></p><p>ط£ط®ط·ط£ طµط¯ظٹظ‚ظٹ ظپظٹ ط­ظ‚ظٹ. ظƒظٹظپ ط£ط­ط§ظˆظ„ ط­ظ„ ط§ظ„ظ…ط´ظƒظ„ط©طں <span class="booklet-answer"></span></p><p>ط·ظ„ط¨ ظ…ظ†ظٹ ط£ط­ط¯ ط£ظپط±ط§ط¯ ط£ط³ط±طھظٹ ط§ظ„ظ…ط³ط§ط¹ط¯ط©. ظƒظٹظپ ط£ط³طھط¬ظٹط¨طں <span class="booklet-answer"></span></p></div></article>
+        <article class="booklet-section"><h2>ط§ظ„طµظ„ط§ط© ظپط±طµط© ظ„ظ„ط°ظƒط± ظˆط§ظ„ط¯ط¹ط§ط،</h2><p>ظ‚ط¯ ط£ط´ط¹ط± ط¨ط§ظ„ظپط±ط­ ظپظٹ ط¨ط¹ط¶ ط§ظ„ط£ظٹط§ظ…طŒ ظˆظ‚ط¯ ط£ط´ط¹ط± ط¨ط§ظ„ط­ط²ظ† ط£ظˆ ط§ظ„ظ‚ظ„ظ‚ ظپظٹ ط£ظٹط§ظ… ط£ط®ط±ظ‰. ظˆظپظٹ ظƒظ„ ط§ظ„ط£ط­ظˆط§ظ„ ط£ط³طھط·ظٹط¹ ط£ظ† ط£طھظˆط¬ظ‡ ط¥ظ„ظ‰ ط§ظ„ظ„ظ‡ ط¨ط§ظ„ط¯ط¹ط§ط، ظˆط£ط°ظƒط±ظ‡ ظˆط£ط·ظ„ط¨ ظ…ظ†ظ‡ ط§ظ„ط¹ظˆظ†.</p><div class="booklet-verse">ï´؟ط£ظژظ„ظژط§ ط¨ظگط°ظگظƒظ’ط±ظگ ط§ظ„ظ„ظ‘ظژظ‡ظگ طھظژط·ظ’ظ…ظژط¦ظگظ†ظ‘ظڈ ط§ظ„ظ’ظ‚ظڈظ„ظڈظˆط¨ظڈï´¾<br><small>ط³ظˆط±ط© ط§ظ„ط±ط¹ط¯طŒ ط§ظ„ط¢ظٹط© 28</small></div><p>ظ‚ط¯ ط£ط¸ظ„ ط£ط´ط¹ط± ط¨ط§ظ„ط­ط²ظ† ط£ظˆ ط§ظ„ظ‚ظ„ظ‚ ط£ط­ظٹط§ظ†ظ‹ط§طŒ ظˆظ‡ط°ط§ ظ„ط§ ظٹط¹ظ†ظٹ ط£ظ† طµظ„ط§طھظٹ ط¨ظ„ط§ ظ‚ظٹظ…ط©ط› ط¨ظ„ ظٹظ…ظƒظ†ظ†ظٹ ط£ظٹط¶ظ‹ط§ ط§ظ„طھط­ط¯ط« ظ…ط¹ ظˆط§ظ„ط¯ظٹظ‘ ط£ظˆ ط´ط®طµ ظ…ظˆط«ظˆظ‚ ط¹ظ†ط¯ظ…ط§ ط£ط­طھط§ط¬ ط¥ظ„ظ‰ ط§ظ„ظ…ط³ط§ط¹ط¯ط©.</p><div class="booklet-activity"><strong>ظ†ط´ط§ط·</strong><p>ظ…ط§ ط§ظ„ط£ظ…ظˆط± ط§ظ„ظ†ط§ظپط¹ط© ط§ظ„طھظٹ ظٹظ…ظƒظ† ط£ظ† طھط³ط§ط¹ط¯ظ†ظٹ ط¹ظ†ط¯ظ…ط§ ط£ط´ط¹ط± ط¨ط§ظ„ظ‚ظ„ظ‚طں <span class="booklet-answer"></span></p><p>ط§ظƒطھط¨ ط¯ط¹ط§ط،ظ‹ طھط­ط¨ ط£ظ† طھط¯ط¹ظˆ ط§ظ„ظ„ظ‡ ط¨ظ‡. <span class="booklet-answer"></span></p></div></article>
+        <article class="booklet-section"><h2>ط®ظ„ط§طµط© ط§ظ„ظƒطھظٹظ‘ط¨</h2><ul><li>ط§ظ„ظ„ظ‡ ط®ظ„ظ‚ظ†ط§ ظ„ط¹ط¨ط§ط¯طھظ‡طŒ ظˆظ‡ظˆ ط§ظ„ط°ظٹ ط£ظ†ط¹ظ… ط¹ظ„ظٹظ†ط§ ط¨ظ†ط¹ظ… ظƒط«ظٹط±ط©.</li><li>ط§ظ„طµظ„ط§ط© ط¹ط¨ط§ط¯ط© ط¹ط¸ظٹظ…ط© ظ†طھط¹ظ„ظ‘ظ… طµظپطھظ‡ط§ ظ…ظ† ظ‡ط¯ظٹ ط§ظ„ظ†ط¨ظٹ ï·؛.</li><li>ط§ظ„طµظ„ظˆط§طھ ط§ظ„ظ…ظپط±ظˆط¶ط© ط®ظ…ط³ ظپظٹ ط§ظ„ظٹظˆظ… ظˆط§ظ„ظ„ظٹظ„ط©طŒ ظˆظ„ظƒظ„ طµظ„ط§ط© ظˆظ‚طھظ‡ط§.</li><li>ظپظٹ ط§ظ„طµظ„ط§ط© ظ†ط°ظƒط± ط§ظ„ظ„ظ‡ ظˆظ†طھظ„ظˆ ط§ظ„ظ‚ط±ط¢ظ† ظˆظ†ط¯ط¹ظˆظ‡.</li><li>ظ†ط­ط±طµ ط¹ظ„ظ‰ ط§ظ„طµظ„ط§ط© ظپظٹ ظˆظ‚طھظ‡ط§طŒ ظˆظ†ط¬طھظ‡ط¯ ط£ظ† ظٹط¸ظ‡ط± ط£ط«ط± ط¹ط¨ط§ط¯طھظ†ط§ ظپظٹ ط£ط®ظ„ط§ظ‚ظ†ط§.</li><li>ط¥ط°ط§ ظ„ظ… ظ†ظپظ‡ظ… ط£ظ…ط±ظ‹ط§طŒ ظ†ط³ط£ظ„ ط§ظ„ظˆط§ظ„ط¯ظٹظ† ط£ظˆ ظ…ط¹ظ„ظ‘ظ…ظ‹ط§ ظ…ظˆط«ظˆظ‚ظ‹ط§.</li></ul><p><strong>ط¹ظ‡ط¯ظٹ ظ…ط¹ ظ†ظپط³ظٹ:</strong> ط³ط£ظˆط§طµظ„ طھط¹ظ„ظ‘ظ… ط§ظ„طµظ„ط§ط©طŒ ظˆط£ط³ط£ظ„ ط¹ظ…ظ‘ط§ ظ„ط§ ط£ظپظ‡ظ…ظ‡طŒ ظˆط£ط¬طھظ‡ط¯ ظپظٹ ط§ظ„ظ…ط­ط§ظپط¸ط© ط¹ظ„ظٹظ‡ط§ ط¨ظ…ط³ط§ط¹ط¯ط© ط£ط³ط±طھظٹ.</p><span class="booklet-answer"></span><p class="booklet-note">طھظ†ط¨ظٹظ‡: ظ‡ط°ط§ ط§ظ„ظƒطھظٹظ‘ط¨ ظ…ط¯ط®ظ„ طھط¹ظ„ظٹظ…ظٹ ظ…ط¨ط³ظ‘ط·طŒ ظˆظ„ط§ ظٹط؛ظ†ظٹ ط¹ظ† طھط¹ظ„ظ‘ظ… ط£ط­ظƒط§ظ… ط§ظ„طµظ„ط§ط© ط¨ط§ظ„طھظپطµظٹظ„ ظ…ظ† ط§ظ„ظˆط§ظ„ط¯ظٹظ† ط£ظˆ ط§ظ„ظ…ط¹ظ„ظ‘ظ…ظٹظ† ط§ظ„ظ…ظˆط«ظˆظ‚ظٹظ†.</p></article>
       </div>
-
-      <div class="activity-placeholder">
-        <strong>أنشطة الكتيبات الأخرى</strong>
-        <p>ستُضاف روابط الأنشطة تباعًا مع نشر الكتيبات.</p>
-      </div>
+      <article class="booklet-section" id="bookletQuizLink">
+        <h2>ظ‡ظ„ ط£ظ†طھ ظ…ط³طھط¹ط¯ ظ„ط§ط®طھط¨ط§ط± ظ…ط§ طھط¹ظ„ظ‘ظ…طھظ‡طں</h2>
+        <p>ط£ط­ط³ظ†طھ! ط¨ط¹ط¯ ظ‚ط±ط§ط،ط© ط§ظ„ظƒطھظٹظ‘ط¨طŒ ط¬ط±ظ‘ط¨ ط§ظ„ط¥ط¬ط§ط¨ط© ط¹ظ† ط§ظ„ط£ط³ط¦ظ„ط© ظ„طھطھط°ظƒظ‘ط± ط£ظ‡ظ… ظ…ط§ طھط¹ظ„ظ‘ظ…طھظ‡ ط¹ظ† ط§ظ„طµظ„ط§ط©.</p>
+        <div class="actions"><button type="button" class="primary" id="startBookletQuiz">ط§ط¨ط¯ط£ ط§ظ„ط§ط®طھط¨ط§ط± ط§ظ„طھظپط§ط¹ظ„ظٹ</button></div>
+      </article>
+      <div class="booklet-toolbar actions"><button type="button" class="secondary" data-page="homePage">ط§ظ„ط¹ظˆط¯ط© ط¥ظ„ظ‰ ط§ظ„ظ…ظƒطھط¨ط©</button><button type="button" class="primary" id="printBookletBottom">ط·ط¨ط§ط¹ط© ط§ظ„ظƒطھظٹظ‘ط¨</button></div>
+      <footer>ط£ط­ط¨ طµظ„ط§طھظٹ آ· ط§ظ„ظƒطھظٹظ‘ط¨ ط§ظ„ط£ظˆظ„: ظ„ظ…ط§ط°ط§ ط£ظڈطµظ„ظ‘ظٹطں</footer>
     </section>
-  </main>
+    <section id="unavailablePage" class="page hidden">
+      <header class="hero">
+        <p class="kicker">ط³ظ„ط³ظ„ط© ط£ط­ط¨ طµظ„ط§طھظٹ</p>
+        <h1 id="unavailableTitle">ظ‡ط°ط§ ط§ظ„ظƒطھظٹظ‘ط¨ ط؛ظٹط± ظ…طھظˆظپط± ط§ظ„ط¢ظ†</h1>
+        <p>ظ†ط¹ظ…ظ„ ط¹ظ„ظ‰ طھط¬ظ‡ظٹط² ظ…ط­طھظˆظ‰ ط§ظ„ظƒطھظٹظ‘ط¨ ظ„ظ‚ط±ط§ط،طھظ‡ ظ…ط¨ط§ط´ط±ط© ط¹ط¨ط± ط§ظ„ظ…ظˆظ‚ط¹.</p>
+      </header>
+      <article class="card unavailable-panel">
+        <div class="unavailable-icon" aria-hidden="true">â—·</div>
+        <h2>ط؛ظٹط± ظ…طھظˆظپط± ط¹ظ„ظ‰ ط§ظ„ظ…ظˆظ‚ط¹ ظپظٹ ط§ظ„ظˆظ‚طھ ط§ظ„ط­ط§ظ„ظٹ</h2>
+        <p id="unavailableDescription">ظ„ظ… ظٹظڈظ†ط´ط± ظ…ط­طھظˆظ‰ ظ‡ط°ط§ ط§ظ„ظƒطھظٹظ‘ط¨ ط¨ط¹ط¯. ظٹظ…ظƒظ†ظƒ ط§ظ„ط¹ظˆط¯ط© ط¥ظ„ظ‰ ظ…ظƒطھط¨ط© آ«ط£ط­ط¨ طµظ„ط§طھظٹآ» ظ„ط§ط³طھط¹ط±ط§ط¶ ط¨ظ‚ظٹط© ط§ظ„ظƒطھظٹظ‘ط¨ط§طھ.</p>
+        <div class="actions">
+          <button type="button" class="primary" data-page="homePage">ط§ظ„ط¹ظˆط¯ط© ظ„ظ„ط±ط¦ظٹط³ظٹط©</button>
+        </div>
+      </article>
+    </section>
+    <section id="quizPage" class="page hidden">
+    <header class="hero">
+      <p class="kicker">ط³ظ„ط³ظ„ط© ظƒطھظٹط¨ط§طھ ط£ط­ط¨ طµظ„ط§طھظٹ</p>
+      <h1>ط§ط®طھط¨ط± ظ†ظپط³ظƒ: ظ„ظ…ط§ط°ط§ ط£ظڈطµظ„ظ‘ظٹطں</h1>
+      <p>ط£ط³ط¦ظ„ط© ظ‚طµظٹط±ط© طھط³ط§ط¹ط¯ظƒ ط¹ظ„ظ‰ طھط°ظƒظ‘ط± ظ…ط§ طھط¹ظ„ظ‘ظ…طھظ‡ ظپظٹ ط§ظ„ظƒطھظٹط¨. ط§ظ‚ط±ط£ ط§ظ„ط³ط¤ط§ظ„طŒ ظˆط§ط®طھط± ط§ظ„ط¥ط¬ط§ط¨ط© ط§ظ„طھظٹ طھط±ط§ظ‡ط§ طµط­ظٹط­ط©طŒ ط«ظ… ط§ظƒطھط´ظپ ظ†طھظٹط¬طھظƒ.</p>
+    </header>
+    <section id="quizArea" aria-live="polite">
+      <div class="progress-wrap"><span id="stepLabel">ط§ظ„ط³ط¤ط§ظ„ 1 ظ…ظ† 10</span><span id="scoreLabel">ط¥ط¬ط§ط¨ط§طھ طµط­ظٹط­ط©: 0</span></div>
+      <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+      <article class="card">
+        <div class="question-number" id="questionNumber">ط§ظ„ط³ط¤ط§ظ„ ط§ظ„ط£ظˆظ„</div>
+        <h2 id="questionText"></h2>
+        <div class="options" id="options"></div>
+        <div id="feedback" class="feedback hidden" role="status"></div>
+        <div class="actions">
+          <button id="checkBtn" class="primary">طھط­ظ‚ظ‘ظ‚ ظ…ظ† ط¥ط¬ط§ط¨طھظٹ</button>
+          <button id="nextBtn" class="secondary hidden">ط§ظ„ط³ط¤ط§ظ„ ط§ظ„طھط§ظ„ظٹ</button>
+        </div>
+      </article>
+    </section>
+    <section id="resultArea" class="card result hidden" aria-live="polite">
+      <div class="result-mark">âک…</div>
+      <h2>ط£ط­ط³ظ†طھ! ط£ظ†ظ‡ظٹطھ ط§ظ„ط§ط®طھط¨ط§ط±</h2>
+      <p>ظ‡ط°ظ‡ ظ†طھظٹط¬طھظƒ ظپظٹ ط£ط³ط¦ظ„ط© ظƒطھظٹط¨ آ«ظ„ظ…ط§ط°ط§ ط£ظڈطµظ„ظ‘ظٹطںآ»</p>
+      <div id="finalScore" class="score"></div>
+      <p id="resultMessage"></p>
+      <button id="restartBtn" class="primary">ط£ط¹ظٹط¯ ط§ظ„ط§ط®طھط¨ط§ط±</button>
+    </section>
+    <p class="small-note">طھط°ظƒظ‘ط±: ط§ظ„ظ‡ط¯ظپ ظ‡ظˆ ط§ظ„طھط¹ظ„ظ‘ظ… ظˆط§ظ„ظپظ‡ظ…طŒ ظˆط¥ط°ط§ ظ„ظ… طھط¹ط±ظپ ط¥ط¬ط§ط¨ط©طŒ ظٹظ…ظƒظ†ظƒ ط§ظ„ط±ط¬ظˆط¹ ط¥ظ„ظ‰ ط§ظ„ظƒطھظٹط¨ ظˆط·ظ„ط¨ ط§ظ„ظ…ط³ط§ط¹ط¯ط© ظ…ظ† ط£ط³ط±طھظƒ ط£ظˆ ظ…ط¹ظ„ظ‘ظ…ظƒ.</p>
+    <footer>ط£ط­ط¨ طµظ„ط§طھظٹ آ· ظ„ظ…ط§ط°ط§ ط£ظڈطµظ„ظ‘ظٹطں</footer>
+    </section>
+  </div>
+</main>
+<script>
+const questions = [
+  {q:"ظ„ظ…ط§ط°ط§ ط®ظ„ظ‚ ط§ظ„ظ„ظ‡ ط§ظ„ط¬ظ† ظˆط§ظ„ط¥ظ†ط³ ظƒظ…ط§ ظˆط±ط¯ ظپظٹ ط§ظ„ط¢ظٹط© ط§ظ„طھظٹ طھط¹ظ„ظ‘ظ…ظ†ط§ظ‡ط§طں", options:["ظ„ظٹط¹ط¨ط¯ظˆظ‡","ظ„ظٹط¬ظ…ط¹ظˆط§ ط§ظ„ظ…ط§ظ„ ظپظ‚ط·","ظ„ظٹطھط³ط§ط¨ظ‚ظˆط§ ظپظٹ ط§ظ„ظ„ط¹ط¨"], answer:0, explain:"ظ‚ط§ظ„ ط§ظ„ظ„ظ‡ طھط¹ط§ظ„ظ‰: ï´؟ظˆظ…ط§ ط®ظ„ظ‚طھ ط§ظ„ط¬ظ† ظˆط§ظ„ط¥ظ†ط³ ط¥ظ„ط§ ظ„ظٹط¹ط¨ط¯ظˆظ†ï´¾."},
+  {q:"ط£ظٹظ‘ ظ…ظ…ط§ ظٹط£طھظٹ ظٹظڈط¹ط¯ظ‘ ظ…ظ† ط´ظƒط± ط§ظ„ظ„ظ‡ ط¹ظ„ظ‰ ظ†ط¹ظ…ظ‡طں", options:["ط¥ظپط³ط§ط¯ ط§ظ„ظ†ط¹ظ… ط¹ظ…ط¯ظ‹ط§","ط§ط³طھط®ط¯ط§ظ… ط§ظ„ظ†ط¹ظ… ظپظٹ ط§ظ„ط®ظٹط±","طھط¬ط§ظ‡ظ„ ظ…ظ† ظٹط­طھط§ط¬ ط¥ظ„ظ‰ ط§ظ„ظ…ط³ط§ط¹ط¯ط©"], answer:1, explain:"ظ…ظ† ط´ظƒط± ط§ظ„ظ†ط¹ظ… ط£ظ† ظ†ط­ظ…ط¯ ط§ظ„ظ„ظ‡ ظˆظ†ط³طھط®ط¯ظ… ظ…ط§ ط£ظ†ط¹ظ… ط¨ظ‡ ط¹ظ„ظٹظ†ط§ ظپظٹظ…ط§ ظٹظ†ظپط¹."},
+  {q:"ط¨ظ…ط§ط°ط§ ظ†ط¨ط¯ط£ ط§ظ„طµظ„ط§ط©طں", options:["ط¨ط§ظ„طھط³ظ„ظٹظ…","ط¨طھظƒط¨ظٹط±ط© ط§ظ„ط¥ط­ط±ط§ظ…: ط§ظ„ظ„ظ‡ ط£ظƒط¨ط±","ط¨ط§ظ„ط±ظƒظˆط¹ ظ…ط¨ط§ط´ط±ط©"], answer:1, explain:"طھط¨ط¯ط£ ط§ظ„طµظ„ط§ط© ط¨طھظƒط¨ظٹط±ط© ط§ظ„ط¥ط­ط±ط§ظ…طŒ ظˆطھظڈط®طھظژظ… ط¨ط§ظ„طھط³ظ„ظٹظ…."},
+  {q:"ظ…ظ† ط£ظٹظ† ظ†طھط¹ظ„ظ‘ظ… طµظپط© ط§ظ„طµظ„ط§ط©طں", options:["ظ…ظ† ظ‡ط¯ظٹ ط§ظ„ظ†ط¨ظٹ ï·؛ ظˆطھط¹ظ„ظٹظ… ط£ظ‡ظ„ ط§ظ„ط¹ظ„ظ… ط§ظ„ظ…ظˆط«ظˆظ‚ظٹظ†","ظ…ظ† ط§ط®طھط±ط§ط¹ ط­ط±ظƒط§طھ ط¬ط¯ظٹط¯ط©","ظ…ظ† ط§ظ„طھط®ظ…ظٹظ† ظپظ‚ط·"], answer:0, explain:"ظ†طھط¹ظ„ظ‘ظ… ط§ظ„طµظ„ط§ط© ظ…ظ† ط§ظ„ظ‚ط±ط¢ظ† ظˆط§ظ„ط³ظ†ط©طŒ ظˆظ…ظ† طھط¹ظ„ظٹظ… ط§ظ„ظˆط§ظ„ط¯ظٹظ† ظˆط§ظ„ظ…ط¹ظ„ظ…ظٹظ† ط§ظ„ظ…ظˆط«ظˆظ‚ظٹظ†."},
+  {q:"ظƒظ… طµظ„ط§ط© ظ…ظپط±ظˆط¶ط© ظپظٹ ط§ظ„ظٹظˆظ… ظˆط§ظ„ظ„ظٹظ„ط©طں", options:["ط«ظ„ط§ط« طµظ„ظˆط§طھ","ط£ط±ط¨ط¹ طµظ„ظˆط§طھ","ط®ظ…ط³ طµظ„ظˆط§طھ"], answer:2, explain:"ط§ظ„طµظ„ظˆط§طھ ط§ظ„ظ…ظپط±ظˆط¶ط© ظ‡ظٹ ط§ظ„ظپط¬ط± ظˆط§ظ„ط¸ظ‡ط± ظˆط§ظ„ط¹طµط± ظˆط§ظ„ظ…ط؛ط±ط¨ ظˆط§ظ„ط¹ط´ط§ط،."},
+  {q:"ظ…طھظ‰ ظٹط¨ط¯ط£ ظˆظ‚طھ طµظ„ط§ط© ط§ظ„ظ…ط؛ط±ط¨طں", options:["ط¨ط¹ط¯ ط؛ط±ظˆط¨ ط§ظ„ط´ظ…ط³","ظ‚ط¨ظ„ ط´ط±ظˆظ‚ ط§ظ„ط´ظ…ط³","ظپظٹ ظ…ظ†طھطµظپ ط§ظ„ظ†ظ‡ط§ط±"], answer:0, explain:"ظٹط¨ط¯ط£ ظˆظ‚طھ ط§ظ„ظ…ط؛ط±ط¨ ط¨ط¹ط¯ ط؛ط±ظˆط¨ ط§ظ„ط´ظ…ط³."},
+  {q:"ط¨ظ…ط§ط°ط§ ط´ط¨ظ‘ظ‡ ط§ظ„ظ†ط¨ظٹ ï·؛ ط§ظ„طµظ„ظˆط§طھ ط§ظ„ط®ظ…ط³ ظپظٹ ط§ظ„ط­ط¯ظٹط« ط§ظ„ظˆط§ط±ط¯ ظپظٹ ط§ظ„ظƒطھظٹط¨طں", options:["ط¨ط¬ط¨ظ„ ط¨ط¹ظٹط¯","ط¨ظ†ظ‡ط± ط¬ط§ط±ظچ ظٹط؛طھط³ظ„ ظ…ظ†ظ‡ ط§ظ„ظ…ط±ط، ظƒظ„ ظٹظˆظ… ط®ظ…ط³ ظ…ط±ط§طھ","ط¨ط´ط¬ط±ط© ظ„ط§ طھطھط؛ظٹط±"], answer:1, explain:"ط´ط¨ظ‘ظ‡ ط§ظ„ظ†ط¨ظٹ ï·؛ ط§ظ„طµظ„ظˆط§طھ ط§ظ„ط®ظ…ط³ ط¨ظ†ظ‡ط± ط¬ط§ط±ظچ ظٹط؛طھط³ظ„ ظ…ظ†ظ‡ ط§ظ„ط¥ظ†ط³ط§ظ† ط®ظ…ط³ ظ…ط±ط§طھ ظƒظ„ ظٹظˆظ…."},
+  {q:"ظ…ط§ط°ط§ ط£ظپط¹ظ„ ط¥ط°ط§ ط£ط®ط·ط£طھ ظپظٹ ط­ظ‚ ط´ط®طµطں", options:["ط£طµط±ظ‘ ط¹ظ„ظ‰ ط§ظ„ط®ط·ط£","ط£طµظ„ط­ ط®ط·ط¦ظٹ ظˆط£ط³طھط؛ظپط± ط§ظ„ظ„ظ‡ ظˆط£ط¬طھظ‡ط¯ ظپظٹ ط§ظ„ط®ظٹط±","ط£ط¤ط°ظٹ ط§ظ„ط¢ط®ط±ظٹظ†"], answer:1, explain:"ظ†طھط¹ظ„ظ‘ظ… ط£ظ† ظ†ط³طھط؛ظپط± ط§ظ„ظ„ظ‡ ظˆظ†طµظ„ط­ ط£ط®ط·ط§ط،ظ†ط§ ظˆظ†ط¬طھظ‡ط¯ ظپظٹ ظپط¹ظ„ ط§ظ„ط®ظٹط±."},
+  {q:"ظ…ط§ط°ط§ ظٹظ…ظƒظ†ظ†ظٹ ط£ظ† ط£ظپط¹ظ„ ظپظٹ ط§ظ„طµظ„ط§ط©طں", options:["ط£ط°ظƒط± ط§ظ„ظ„ظ‡ ظˆط£ظ‚ط±ط£ ط§ظ„ظ‚ط±ط¢ظ† ظˆط£ط¯ط¹ظˆظ‡","ط£ظ†ط´ط؛ظ„ ط¨ط§ظ„ظ„ط¹ط¨","ط£ط¤ط°ظٹ ظ…ظ† ط­ظˆظ„ظٹ"], answer:0, explain:"ظپظٹ ط§ظ„طµظ„ط§ط© ظ†ط°ظƒط± ط§ظ„ظ„ظ‡طŒ ظˆظ†طھظ„ظˆ ط§ظ„ظ‚ط±ط¢ظ†طŒ ظˆظ†ط¯ط¹ظˆظ‡ ط¨ظ…ط§ ظ†ط­طھط§ط¬ ط¥ظ„ظٹظ‡."},
+  {q:"ط¥ط°ط§ ظ„ظ… ط£ظپظ‡ظ… ط£ظ…ط±ظ‹ط§ ظ…طھط¹ظ„ظ‚ظ‹ط§ ط¨ط§ظ„طµظ„ط§ط©طŒ ظ…ط§ط°ط§ ط£ظپط¹ظ„طں", options:["ط£طھظˆظ‚ظپ ط¹ظ† ط§ظ„طھط¹ظ„ظ‘ظ…","ط£ط®ظ…ظ† ط§ظ„ط¥ط¬ط§ط¨ط© ط¯ظˆظ† ط³ط¤ط§ظ„","ط£ط³ط£ظ„ ظˆط§ظ„ط¯ظٹظ‘ ط£ظˆ ظ…ط¹ظ„ظ‘ظ…ظ‹ط§ ظ…ظˆط«ظˆظ‚ظ‹ط§"], answer:2, explain:"ط·ظ„ط¨ ط§ظ„ظ…ط³ط§ط¹ط¯ط© ظ…ظ† ط´ط®طµ ظ…ظˆط«ظˆظ‚ ط®ط·ظˆط© ط¬ظٹط¯ط© ظپظٹ ط·ط±ظٹظ‚ ط§ظ„طھط¹ظ„ظ‘ظ…."}
+];
+let current = 0;
+let score = 0;
+let answered = false;
+const $ = id => document.getElementById(id);
+const arabicNumbers = ["ط§ظ„ط£ظˆظ„","ط§ظ„ط«ط§ظ†ظٹ","ط§ظ„ط«ط§ظ„ط«","ط§ظ„ط±ط§ط¨ط¹","ط§ظ„ط®ط§ظ…ط³","ط§ظ„ط³ط§ط¯ط³","ط§ظ„ط³ط§ط¨ط¹","ط§ظ„ط«ط§ظ…ظ†","ط§ظ„طھط§ط³ط¹","ط§ظ„ط¹ط§ط´ط±"];
+function renderQuestion() {
+  answered = false;
+  const item = questions[current];
+  $("stepLabel").textContent = `ط§ظ„ط³ط¤ط§ظ„ ${current + 1} ظ…ظ† ${questions.length}`;
+  $("scoreLabel").textContent = `ط¥ط¬ط§ط¨ط§طھ طµط­ظٹط­ط©: ${score}`;
+  $("progressBar").style.width = `${(current / questions.length) * 100}%`;
+  $("questionNumber").textContent = `ط§ظ„ط³ط¤ط§ظ„ ${arabicNumbers[current]}`;
+  $("questionText").textContent = item.q;
+  $("options").replaceChildren();
+  $("feedback").className = "feedback hidden";
+  $("feedback").textContent = "";
+  item.options.forEach((option, index) => {
+    const label = document.createElement("label");
+    label.className = "option";
+    const input = document.createElement("input");
+    input.type = "radio";
+    input.name = "answer";
+    input.value = index;
+    input.setAttribute("aria-label", option);
+    const span = document.createElement("span");
+    span.textContent = option;
+    label.append(input, span);
+    $("options").append(label);
+  });
+  $("checkBtn").classList.remove("hidden");
+  $("checkBtn").disabled = false;
+  $("nextBtn").classList.add("hidden");
+}
+function checkAnswer() {
+  if (answered) return;
+  const selected = document.querySelector('input[name="answer"]:checked');
+  if (!selected) {
+    $("feedback").className = "feedback";
+    $("feedback").textContent = "ط§ط®طھط± ط¥ط¬ط§ط¨ط© ط£ظˆظ„ظ‹ط§طŒ ط«ظ… ط§ط¶ط؛ط· آ«طھط­ظ‚ظ‘ظ‚ ظ…ظ† ط¥ط¬ط§ط¨طھظٹآ».";
+    return;
+  }
+  answered = true;
+  const item = questions[current];
+  const chosen = Number(selected.value);
+  const labels = [...document.querySelectorAll(".option")];
+  labels.forEach((label, i) => {
+    label.querySelector("input").disabled = true;
+    if (i === item.answer) label.classList.add("correct");
+    if (i === chosen && chosen !== item.answer) label.classList.add("wrong");
+  });
+  const isCorrect = chosen === item.answer;
+  if (isCorrect) score++;
+  $("scoreLabel").textContent = `ط¥ط¬ط§ط¨ط§طھ طµط­ظٹط­ط©: ${score}`;
+  $("feedback").className = `feedback ${isCorrect ? "good" : "bad"}`;
+  $("feedback").textContent = `${isCorrect ? "ط¥ط¬ط§ط¨ط© طµط­ظٹط­ط©طŒ ط£ط­ط³ظ†طھ!" : "ظ„ظٹط³طھ ظ‡ط°ظ‡ ط§ظ„ط¥ط¬ط§ط¨ط© ط§ظ„طµط­ظٹط­ط©."} ${item.explain}`;
+  $("checkBtn").classList.add("hidden");
+  $("nextBtn").classList.remove("hidden");
+  $("nextBtn").textContent = current === questions.length - 1 ? "ط¹ط±ط¶ ط§ظ„ظ†طھظٹط¬ط©" : "ط§ظ„ط³ط¤ط§ظ„ ط§ظ„طھط§ظ„ظٹ";
+}
+function nextQuestion() {
+  if (current < questions.length - 1) {
+    current++;
+    renderQuestion();
+  } else {
+    $("quizArea").classList.add("hidden");
+    $("resultArea").classList.remove("hidden");
+    $("progressBar").style.width = "100%";
+    $("finalScore").textContent = `${score} / ${questions.length}`;
+    $("resultMessage").textContent = score === questions.length ? "ظ…ظ…طھط§ط²! ط£ط¬ط¨طھ ط¹ظ† ط¬ظ…ظٹط¹ ط§ظ„ط£ط³ط¦ظ„ط© ط¥ط¬ط§ط¨ط© طµط­ظٹط­ط©. ظˆط§طµظ„ طھط¹ظ„ظ‘ظ… ط§ظ„طµظ„ط§ط© ظˆط§ظ„ظ…ط­ط§ظپط¸ط© ط¹ظ„ظٹظ‡ط§." : score >= 7 ? "ط£ط­ط³ظ†طھ! طھط°ظƒظ‘ط±طھ ظƒط«ظٹط±ظ‹ط§ ظ…ظ† ط§ظ„ظ…ط¹ظ„ظˆظ…ط§طھ. ط±ط§ط¬ط¹ ط§ظ„ط¥ط¬ط§ط¨ط§طھ ط§ظ„طھظٹ طھط­طھط§ط¬ ط¥ظ„ظ‰ طھط«ط¨ظٹطھظ‡ط§طŒ ط«ظ… ط¬ط±ظ‘ط¨ ظ…ط±ط© ط£ط®ط±ظ‰." : "ط¨ط¯ط§ظٹط© ط·ظٹط¨ط©! ط§ط±ط¬ط¹ ط¥ظ„ظ‰ ط§ظ„ظƒطھظٹط¨ ظˆط±ط§ط¬ط¹ ظ…ط§ طھط¹ظ„ظ‘ظ…طھظ‡طŒ ط«ظ… ط£ط¹ط¯ ط§ظ„ط§ط®طھط¨ط§ط± ظ„طھط±ظ‰ طھظ‚ط¯ظ‘ظ…ظƒ.";
+  }
+}
+function restart() {
+  current = 0; score = 0;
+  $("resultArea").classList.add("hidden");
+  $("quizArea").classList.remove("hidden");
+  renderQuestion();
+}
+$("checkBtn").addEventListener("click", checkAnswer);
+$("nextBtn").addEventListener("click", nextQuestion);
+$("restartBtn").addEventListener("click", restart);
+function showPage(pageId) {
+  document.querySelectorAll(".page").forEach(page => page.classList.toggle("hidden", page.id !== pageId));
+  document.querySelectorAll("[data-page]").forEach(button => {
+    const active = button.dataset.page === pageId;
+    button.classList.toggle("nav-active", active && button.closest(".top-nav") !== null);
+    if (active) button.setAttribute("aria-current", "page");
+    else button.removeAttribute("aria-current");
+  });
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+document.querySelectorAll("[data-page]").forEach(button => button.addEventListener("click", () => showPage(button.dataset.page)));
+document.getElementById("bookletOneLink").addEventListener("click", event => { event.preventDefault(); showPage("bookletOnePage"); });
+document.getElementById("printBooklet").addEventListener("click", () => window.print());
+document.getElementById("printBookletBottom").addEventListener("click", () => window.print());
+document.getElementById("startBookletQuiz").addEventListener("click", () => { restart(); showPage("quizPage"); });
+document.getElementById("browseGroups").addEventListener("click", () => {
+  document.getElementById("libraryHeading").scrollIntoView({ behavior: "smooth", block: "start" });
+});
+document.querySelectorAll("[data-booklet]").forEach(link => link.addEventListener("click", event => {
+  event.preventDefault();
+  const title = link.dataset.booklet;
+  $("unavailableTitle").textContent = title;
+  $("unavailableDescription").textContent = (link.dataset.description || "ظ„ظ… ظٹظڈظ†ط´ط± ظ…ط­طھظˆظ‰ ظ‡ط°ط§ ط§ظ„ظƒطھظٹظ‘ط¨ ط¨ط¹ط¯.") + " ظ„ظ… ظٹظڈظ†ط´ط± ظ…ط­طھظˆظ‰ ط§ظ„ظƒطھظٹظ‘ط¨ ط¹ظ„ظ‰ ط§ظ„ظ…ظˆظ‚ط¹ ط¨ط¹ط¯. ظٹظ…ظƒظ†ظƒ ط§ظ„ط¹ظˆط¯ط© ط¥ظ„ظ‰ ظ…ظƒطھط¨ط© آ«ط£ط­ط¨ طµظ„ط§طھظٹآ» ظ„ط§ط³طھط¹ط±ط§ط¶ ط¨ظ‚ظٹط© ط§ظ„ظƒطھظٹظ‘ط¨ط§طھ.";
+  showPage("unavailablePage");
+}));
+document.getElementById("brandHome").addEventListener("click", event => {
+  event.preventDefault();
+  showPage("homePage");
+});
+document.querySelectorAll("#bookletOnePage .booklet-answer").forEach((placeholder, index) => {
+  const field = document.createElement("textarea");
+  field.className = "booklet-answer-input";
+  field.rows = 2;
+  field.setAttribute("aria-label", `ظ…ط³ط§ط­ط© ط§ظ„ط¥ط¬ط§ط¨ط© ${index + 1}`);
+  field.placeholder = "ط§ظƒطھط¨ ط¥ط¬ط§ط¨طھظƒ ظ‡ظ†ط§...";
+  placeholder.replaceWith(field);
+});
+showPage("homePage");
+renderQuestion();
+</script>
 
-  <footer>
-    <p><strong>أحب صلاتي</strong></p>
-    <p>نتعلم الصلاة ونحبها، خطوة جميلة كل يوم.</p>
-    <p>مورد تعليمي مجاني للأطفال وأسرهم.</p>
-  </footer>
-
+<!--sites-preview-theme:start-->
+<style data-sites-preview-theme></style>
+<script type="application/json" data-sites-preview-theme>{"appearance":"custom","primary":"#70452b","secondary":"#ddb45f","background":"#fbf5ea","typography":"original","spacing":1,"roundness":1,"headingScale":1,"decorationOpacity":1}</script>
+<!--sites-preview-theme:end-->
 </body>
 </html>
