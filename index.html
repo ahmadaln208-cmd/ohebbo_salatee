@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" type="x-/image" href="faction.png">
-<title>ط£ط­ط¨ طµظ„ط§طھظٹ â€” ظ…ظƒطھط¨ط© ط§ظ„ظƒطھظٹظ‘ط¨ط§طھ</title>
+<title>أحب صلاتي || اقرأ وتعلم الصلاة</title>
 <style>
 :root {
   --site-primary: #70452B;
@@ -26,7 +26,7 @@ body { margin: 0; font-family: var(--site-font-body); background: var(--site-bac
 #app { min-height: 100vh; width: 100%; background-color: var(--site-background); color: var(--site-on-background); padding: calc(24px * var(--site-spacing-scale)) 16px calc(40px * var(--site-spacing-scale)); }
 .shell { max-width: 780px; margin: 0 auto; }
 .hero { background: var(--site-primary); color: var(--site-on-primary); padding: calc(28px * var(--site-spacing-scale)); border-radius: calc(22px * var(--site-radius-scale)); position: relative; overflow: hidden; }
-.hero::after { content: "âœ¦"; position: absolute; left: 24px; top: 4px; font-size: 5rem; opacity: calc(.12 * var(--site-decoration-opacity)); pointer-events: none; }
+.hero::after { content: "✦"; position: absolute; left: 24px; top: 4px; font-size: 5rem; opacity: calc(.12 * var(--site-decoration-opacity)); pointer-events: none; }
 .kicker { color: var(--site-secondary); font-weight: 700; margin: 0 0 6px; }
 h1 { font-family: var(--site-font-heading); font-size: calc(2rem * var(--site-heading-scale)); line-height: 1.35; margin: 0 0 8px; }
 .hero p { margin: 0; max-width: 560px; }
@@ -69,7 +69,7 @@ footer { text-align: center; margin-top: 20px; font-size: .9rem; color: #806B56;
 .page { animation:pageIn .18s ease-out; }
 @keyframes pageIn { from { opacity:.75; transform:translateY(4px); } to { opacity:1; transform:translateY(0); } }
 .home-hero { background:linear-gradient(135deg,#70452B 0%,#4A2C1B 100%); color:#FFFCF6; padding:calc(34px * var(--site-spacing-scale)); border-radius:calc(22px * var(--site-radius-scale)); position:relative; overflow:hidden; margin-bottom:26px; }
-.home-hero::after { content:"âœ¦"; position:absolute; left:25px; top:-18px; font-size:8rem; line-height:1; color:var(--site-secondary); opacity:calc(.15 * var(--site-decoration-opacity)); pointer-events:none; }
+.home-hero::after { content:"✦"; position:absolute; left:25px; top:-18px; font-size:8rem; line-height:1; color:var(--site-secondary); opacity:calc(.15 * var(--site-decoration-opacity)); pointer-events:none; }
 .home-hero .kicker { color:#F1D18B; }
 .home-hero h1 { font-size:calc(2.35rem * var(--site-heading-scale)); max-width:600px; }
 .home-hero p { max-width:590px; }
@@ -105,7 +105,7 @@ footer { text-align: center; margin-top: 20px; font-size: .9rem; color: #806B56;
 .unavailable-panel p { color:#705B46; }
 .page .hero { margin-bottom:20px; }
 .booklet-cover { background:linear-gradient(135deg,#70452B,#4A2C1B); color:#FFFCF6; border-radius:22px; padding:30px; margin-bottom:20px; position:relative; overflow:hidden; }
-.booklet-cover::after { content:"âک¾"; position:absolute; left:24px; top:4px; font-size:6rem; opacity:.13; pointer-events:none; }
+.booklet-cover::after { content:"☾"; position:absolute; left:24px; top:4px; font-size:6rem; opacity:.13; pointer-events:none; }
 .booklet-cover .kicker { color:#F1D18B; }
 .booklet-content { display:grid; gap:16px; }
 .booklet-section { background:#FFFCF6; border:1px solid #E8D8BE; border-radius:18px; padding:22px; box-shadow:0 6px 20px rgba(80,48,25,.04); }
@@ -128,6 +128,12 @@ footer { text-align: center; margin-top: 20px; font-size: .9rem; color: #806B56;
 #quizPage .feedback.bad { border-right-color:#70452B; background:#F8EBDD; color:#3B2A1E; }
 #quizPage .primary { background:#70452B; color:#FFFFFF; }
 #quizPage .secondary { background:#DDB45F; color:#3B281B; }
+#quizThreePage .option.correct { border-color:#A77B32; background:#F2E2C7; color:#3B2A1E; }
+#quizThreePage .option.wrong { border-color:#8B5D3D; background:#F8EBDD; color:#3B2A1E; }
+#quizThreePage .feedback.good { border-right-color:#A77B32; background:#F2E2C7; color:#3B2A1E; }
+#quizThreePage .feedback.bad { border-right-color:#70452B; background:#F8EBDD; color:#3B2A1E; }
+#quizThreePage .primary { background:#70452B; color:#FFFFFF; }
+#quizThreePage .secondary { background:#DDB45F; color:#3B281B; }
 @media (max-width: 620px) { .site-header { align-items:flex-start; flex-direction:column; } .top-nav { width:100%; } .top-nav button, .top-nav a { flex:1; text-align:center; } .home-hero { padding:24px 19px; } .home-hero h1 { font-size:calc(1.8rem * var(--site-heading-scale)); } .group-card-head { align-items:flex-start; flex-direction:column; } .sitemap-list { grid-template-columns:1fr; } }
 @media (max-width: 520px) { #app { padding: 12px 10px 28px; } .hero { padding: 22px 18px; } h1 { font-size: calc(1.65rem * var(--site-heading-scale)); } .card { padding: 17px; } .actions button { flex: 1 1 100%; } }
 </style>
@@ -136,216 +142,299 @@ footer { text-align: center; margin-top: 20px; font-size: .9rem; color: #806B56;
 <main id="app">
   <div class="shell">
     <header class="site-header">
-      <a class="brand-lockup" href="#" id="brandHome" aria-label="ط£ط­ط¨ طµظ„ط§طھظٹ - ط§ظ„ط±ط¦ظٹط³ظٹط©">
-        <span class="brand-mark" aria-hidden="true">ط£</span>
-        <span><span class="brand-title">ط£ط­ط¨ طµظ„ط§طھظٹ</span><span class="brand-subtitle">ظƒطھظٹظ‘ط¨ط§طھ ظˆط£ظ†ط´ط·ط© طھط¹ظ„ظٹظ…ظٹط©</span></span>
+      <a class="brand-lockup" href="#" id="brandHome" aria-label="أحب صلاتي - الرئيسية">
+        <span class="brand-mark" aria-hidden="true">أ</span>
+        <span><span class="brand-title">أحب صلاتي</span><span class="brand-subtitle">كتيّبات وأنشطة تعليمية</span></span>
       </a>
-      <nav class="top-nav" aria-label="ط§ظ„طھظ†ظ‚ظ„ ط§ظ„ط±ط¦ظٹط³ظٹ">
-        <button type="button" class="nav-active" data-page="homePage" aria-current="page">ط§ظ„ط±ط¦ظٹط³ظٹط©</button>
-        <a href="#siteMap">ط®ط±ظٹط·ط© ط§ظ„ظ…ظˆظ‚ط¹</a>
+      <nav class="top-nav" aria-label="التنقل الرئيسي">
+        <button type="button" class="nav-active" data-page="homePage" aria-current="page">الرئيسية</button>
+        <a href="#siteMap">خريطة الموقع</a>
       </nav>
     </header>
+
     <section id="homePage" class="page">
       <header class="home-hero">
-        <p class="kicker">ط±ط­ظ„ط© طھط¹ظ„ظ‘ظ… ظ…ظ† ط³ظ„ط³ظ„ط© ط£ط­ط¨ طµظ„ط§طھظٹ</p>
-        <h1>ظ†طھط¹ظ„ظ‘ظ… ط§ظ„طµظ„ط§ط© ط¨ظ…ط­ط¨ط© ظˆظپظ‡ظ…</h1>
-        <p>ظ…ط±ط­ط¨ظ‹ط§ ط¨ظƒ ظپظٹ ظ…ظƒطھط¨ط© آ«ط£ط­ط¨ طµظ„ط§طھظٹآ». طھطµظپظ‘ط­ ط§ظ„ظ…ط¬ظ…ظˆط¹ط§طھ ظ„ظ…ط¹ط±ظپط© ط§ظ„ظƒطھظٹظ‘ط¨ط§طھ ط§ظ„ظ…طھظˆظپط±ط©طŒ ط£ظˆ ط¬ط±ظ‘ط¨ ط§ظ„ط§ط®طھط¨ط§ط± ط§ظ„طھظپط§ط¹ظ„ظٹ.</p>
-        <button type="button" class="primary" id="browseGroups">طھطµظپظ‘ط­ ظ…ط¬ظ…ظˆط¹ط§طھ ط§ظ„ظƒطھظٹظ‘ط¨ط§طھ</button>
+        <p class="kicker">رحلة تعلّم من سلسلة أحب صلاتي</p>
+        <h1>نتعلّم الصلاة بمحبة وفهم</h1>
+        <p>مرحبًا بك في مكتبة «أحب صلاتي». تصفّح المجموعات والكتيّبات المتوفرة، وتعلّم الصلاة خطوةً خطوةً بالمحبة والفهم.</p>
+        <button type="button" class="primary" id="browseGroups">تصفّح مجموعات الكتيّبات</button>
       </header>
+
       <section aria-labelledby="libraryHeading">
-        <h2 id="libraryHeading" class="section-heading">ظ…ظƒطھط¨ط© ط§ظ„ظƒطھظٹظ‘ط¨ط§طھ</h2>
-        <p class="section-intro">ط§ط¶ط؛ط· ط¹ظ„ظ‰ ط§ط³ظ… ط£ظٹ ظƒطھظٹظ‘ط¨ ظ„ظپطھط­ ظ…ط­طھظˆط§ظ‡ ط¥ظ† ظƒط§ظ† ظ…طھظˆظپط±ظ‹ط§ ط¹ظ„ظ‰ ط§ظ„ظ…ظˆظ‚ط¹طŒ ط£ظˆ ظ„ظ…ط¹ط±ظپط© ط­ط§ظ„ط© طھظˆظپط±ظ‡.</p>
+        <h2 id="libraryHeading" class="section-heading">مكتبة الكتيّبات</h2>
+        <p class="section-intro">اضغط على اسم أي كتيّب لفتح محتواه إن كان متوفرًا على الموقع، أو لمعرفة حالة توفره.</p>
+
         <article class="group-card" id="group-1">
-          <div class="group-card-head"><h3>ط§ظ„ظ…ط¬ظ…ظˆط¹ط© ط§ظ„ط£ظˆظ„ظ‰: ط£طھط¹ط±ظپ ط¹ظ„ظ‰ ط§ظ„طµظ„ط§ط©</h3><span class="group-count">ط§ظ„طھط£ط³ظٹط³ ط§ظ„ط¥ظٹظ…ط§ظ†ظٹ ظˆظ…ط¹ط±ظپط© ظ…ظƒط§ظ†ط© ط§ظ„طµظ„ط§ط© آ· 3 ظƒطھظٹظ‘ط¨ط§طھ</span></div>
+          <div class="group-card-head"><h3>المجموعة الأولى: أتعرف على الصلاة</h3><span class="group-count">التأسيس الإيماني ومعرفة مكانة الصلاة · 3 كتيّبات</span></div>
           <div class="table-wrap"><table class="library-table">
-            <thead><tr><th scope="col">ط§ط³ظ… ط§ظ„ظƒطھظٹظ‘ط¨</th><th scope="col">ط§ظ„طھظˆظپط±</th></tr></thead>
+            <thead><tr><th scope="col">اسم الكتيّب</th><th scope="col">التوفر</th></tr></thead>
             <tbody>
-              <tr><td><a class="book-link" href="#bookletOnePage" id="bookletOneLink">ظ„ظ…ط§ط°ط§ ط£طµظ„ظٹطں â€” ط£ط­ط¨ طµظ„ط§طھظٹ.</a><p class="book-description">ظ…ط¯ط®ظ„ ط¥ظ„ظ‰ ظ…ط¹ظ†ظ‰ ط§ظ„طµظ„ط§ط© ظˆظ…ظƒط§ظ†طھظ‡ط§ ظˆط¹ظ„ط§ظ‚طھظ‡ط§ ط¨ط¹ط¨ظˆط¯ظٹط© ط§ظ„ظ…ط³ظ„ظ… ظ„ظ„ظ‡.</p></td><td><span class="status available">ظ…طھظˆظپط± ظ„ظ„ظ‚ط±ط§ط،ط©</span></td></tr>
-              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="ط§ظ„طµظ„ط§ط© ظ‡ط¯ظٹط© ط¹ط¸ظٹظ…ط© ظ…ظ† ط§ظ„ظ„ظ‡." data-description="ط§ظ„طھط¹ط±ظپ ط¥ظ„ظ‰ ط§ظ„طµظ„ط§ط© ط¨ظˆطµظپظ‡ط§ ظ†ط¹ظ…ط© ط¹ط¸ظٹظ…ط©طŒ ظˆظپظ‡ظ… ظ…ط§ طھظ…ظ†ط­ظ‡ ظ„ظ„ظ…ط³ظ„ظ… ظ…ظ† ط°ظƒط± ظˆظ‚ط±ط¨ ظ…ظ† ط§ظ„ظ„ظ‡.">ط§ظ„طµظ„ط§ط© ظ‡ط¯ظٹط© ط¹ط¸ظٹظ…ط© ظ…ظ† ط§ظ„ظ„ظ‡.</a><p class="book-description">ط§ظ„طھط¹ط±ظپ ط¥ظ„ظ‰ ط§ظ„طµظ„ط§ط© ط¨ظˆطµظپظ‡ط§ ظ‡ط¯ظٹط© ط¹ط¸ظٹظ…ط© ظ…ظ† ط§ظ„ظ„ظ‡.</p></td><td><span class="status preparing">ط؛ظٹط± ظ…طھظˆظپط± ط¹ظ„ظ‰ ط§ظ„ظ…ظˆظ‚ط¹ ط§ظ„ط¢ظ†</span></td></tr>
-              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="ظ…ط§ط°ط§ طھط¹ظ„ظ…ظ†ظٹ ط§ظ„طµظ„ط§ط©طں" data-description="ط§ظ„طھط¹ط±ظپ ط¥ظ„ظ‰ ظ…ط§ طھط¹ظ„ظ‘ظ…ظ‡ ط§ظ„طµظ„ط§ط© ظ„ظ„ظ…ط³ظ„ظ… ظ…ظ† ط¹ط¨ط§ط¯ط© ظˆط°ظƒط± ظˆط·ظ…ط£ظ†ظٹظ†ط© ظˆط£ط®ظ„ط§ظ‚.">ظ…ط§ط°ط§ طھط¹ظ„ظ…ظ†ظٹ ط§ظ„طµظ„ط§ط©طں</a><p class="book-description">ظ…ط§ ظ†طھط¹ظ„ظ…ظ‡ ظ…ظ† ط§ظ„طµظ„ط§ط© ظ…ظ† ظ…ط¹ط§ظ†ظچ ط¥ظٹظ…ط§ظ†ظٹط© ظˆطھط±ط¨ظˆظٹط©.</p></td><td><span class="status preparing">ط؛ظٹط± ظ…طھظˆظپط± ط¹ظ„ظ‰ ط§ظ„ظ…ظˆظ‚ط¹ ط§ظ„ط¢ظ†</span></td></tr>
+              <tr><td><a class="book-link" href="#bookletOnePage" id="bookletOneLink">لماذا أصلي؟ — أحب صلاتي.</a><p class="book-description">مدخل إلى معنى الصلاة ومكانتها وعلاقتها بعبودية المسلم لله.</p></td><td><span class="status available">متوفر للقراءة</span></td></tr>
+              <tr><td><a class="book-link" href="#bookletTwoPage" id="bookletTwoLink">الصلاة هدية عظيمة من الله.</a><p class="book-description">التعرف إلى الصلاة بوصفها نعمة عظيمة، وفهم معاني الذكر والدعاء والشكر في حياتنا.</p></td><td><span class="status available">متوفر للقراءة</span></td></tr>
+              <tr><td><a class="book-link" href="#bookletThreePage" id="bookletThreeLink">ماذا تعلمني الصلاة؟</a><p class="book-description">دروس نتعلمها من الصلاة في الخشوع والصبر وتنظيم الوقت وحسن السلوك.</p></td><td><span class="status available">متوفر للقراءة</span></td></tr>
             </tbody>
           </table></div>
         </article>
+
         <article class="group-card" id="group-2">
-          <div class="group-card-head"><h3>ط§ظ„ظ…ط¬ظ…ظˆط¹ط© ط§ظ„ط«ط§ظ†ظٹط©: ط£طھط¹ظ„ظ… ظƒظٹظپ ط£طµظ„ظٹ</h3><span class="group-count">طھط¹ظ„ظ… ط§ظ„طµظ„ط§ط© ظˆط£ط­ظƒط§ظ…ظ‡ط§ ط¨ط·ط±ظٹظ‚ط© ط¹ظ…ظ„ظٹط© آ· 4 ظƒطھظٹظ‘ط¨ط§طھ</span></div>
+          <div class="group-card-head"><h3>المجموعة الثانية: أتعلم كيف أصلي</h3><span class="group-count">تعلم الصلاة وأحكامها بطريقة عملية · 4 كتيّبات</span></div>
           <div class="table-wrap"><table class="library-table">
-            <thead><tr><th scope="col">ط§ط³ظ… ط§ظ„ظƒطھظٹظ‘ط¨</th><th scope="col">ط§ظ„طھظˆظپط±</th></tr></thead>
+            <thead><tr><th scope="col">اسم الكتيّب</th><th scope="col">التوفر</th></tr></thead>
             <tbody>
-              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="ط£طھظˆط¶ط£ ظ„ط£طµظ„ظٹ." data-description="ط§ظ„طھط¹ط±ظپ ط¥ظ„ظ‰ ط§ظ„ظˆط¶ظˆط، ط¨ظˆطµظپظ‡ ط§ط³طھط¹ط¯ط§ط¯ظ‹ط§ ظ„ظ„طµظ„ط§ط© ظˆطھط¹ظ„ظ‘ظ… ط®ط·ظˆط§طھظ‡ ط§ظ„ط£ط³ط§ط³ظٹط©.">ط£طھظˆط¶ط£ ظ„ط£طµظ„ظٹ.</a><p class="book-description">طھط¹ظ„ظ‘ظ… ط§ظ„ظˆط¶ظˆط، ظˆط§ظ„ط§ط³طھط¹ط¯ط§ط¯ ظ„ظ„ط·ظ‡ط§ط±ط© ظ‚ط¨ظ„ ط§ظ„طµظ„ط§ط©.</p></td><td><span class="status preparing">ط؛ظٹط± ظ…طھظˆظپط± ط¹ظ„ظ‰ ط§ظ„ظ…ظˆظ‚ط¹ ط§ظ„ط¢ظ†</span></td></tr>
-              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="ط£ط³طھط¹ط¯ ظ„طµظ„ط§طھظٹ." data-description="ط§ظ„ط§ط³طھط¹ط¯ط§ط¯ ظ„ظ„طµظ„ط§ط© ظˆطھظ†ط¸ظٹظ… ظ…ط§ ظٹط­طھط§ط¬ ط¥ظ„ظٹظ‡ ط§ظ„ظ…طµظ„ظٹ ظ‚ط¨ظ„ ظˆظ‚طھظ‡ط§.">ط£ط³طھط¹ط¯ ظ„طµظ„ط§طھظٹ.</a><p class="book-description">ط§ظ„طھظ‡ظٹط¤ ظ„ظ„طµظ„ط§ط© ظˆطھط¬ظ‡ظٹط² ط§ظ„ظ†ظپط³ ظˆط§ظ„ظˆظ‚طھ ظ„ظ‡ط§.</p></td><td><span class="status preparing">ط؛ظٹط± ظ…طھظˆظپط± ط¹ظ„ظ‰ ط§ظ„ظ…ظˆظ‚ط¹ ط§ظ„ط¢ظ†</span></td></tr>
-              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="طµظ„ط§طھظٹ ط®ط·ظˆط© ط¨ط®ط·ظˆط©." data-description="طھط¹ظ„ظ‘ظ… ط£ط¯ط§ط، ط§ظ„طµظ„ط§ط© ط¨طھط±طھظٹط¨ ط¹ظ…ظ„ظٹطŒ ط®ط·ظˆط© ط¨ط®ط·ظˆط©طŒ ظ…ظ† ط§ظ„ط¨ط¯ط§ظٹط© ط¥ظ„ظ‰ ط§ظ„طھط³ظ„ظٹظ….">طµظ„ط§طھظٹ ط®ط·ظˆط© ط¨ط®ط·ظˆط©.</a><p class="book-description">ط¯ظ„ظٹظ„ ط¹ظ…ظ„ظٹ ظ„ظ„طھط¹ط±ظ‘ظپ ط¥ظ„ظ‰ ط®ط·ظˆط§طھ ط§ظ„طµظ„ط§ط© ظˆطھط±طھظٹط¨ظ‡ط§.</p></td><td><span class="status preparing">ط؛ظٹط± ظ…طھظˆظپط± ط¹ظ„ظ‰ ط§ظ„ظ…ظˆظ‚ط¹ ط§ظ„ط¢ظ†</span></td></tr>
-              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="ظ…ط§ط°ط§ ط£ظ‚ظˆظ„ ظˆط£ظ†ط§ ط£طµظ„ظٹطں" data-description="ط§ظ„طھط¹ط±ظپ ط¥ظ„ظ‰ ط§ظ„ط£ظ‚ظˆط§ظ„ ظˆط§ظ„ط£ط°ظƒط§ط± ط§ظ„طھظٹ طھظ‚ط§ظ„ ظپظٹ ط§ظ„طµظ„ط§ط© ظˆظ…ظˆط§ط¶ط¹ظ‡ط§.">ظ…ط§ط°ط§ ط£ظ‚ظˆظ„ ظˆط£ظ†ط§ ط£طµظ„ظٹطں</a><p class="book-description">ط£ط°ظƒط§ط± ط§ظ„طµظ„ط§ط© ظˆط§ظ„ط£ظ‚ظˆط§ظ„ ط§ظ„طھظٹ ظٹط±ط¯ط¯ظ‡ط§ ط§ظ„ظ…طµظ„ظٹ ظپظٹ ظ…ظˆط§ط¶ط¹ظ‡ط§.</p></td><td><span class="status preparing">ط؛ظٹط± ظ…طھظˆظپط± ط¹ظ„ظ‰ ط§ظ„ظ…ظˆظ‚ط¹ ط§ظ„ط¢ظ†</span></td></tr>
+              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="أتوضأ لأصلي." data-description="التعرف إلى الوضوء بوصفه استعدادًا للصلاة وتعلّم خطواته الأساسية.">أتوضأ لأصلي.</a><p class="book-description">تعلّم الوضوء والاستعداد للطهارة قبل الصلاة.</p></td><td><span class="status preparing">غير متوفر على الموقع الآن</span></td></tr>
+              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="أستعد لصلاتي." data-description="الاستعداد للصلاة وتنظيم ما يحتاج إليه المصلي قبل وقتها.">أستعد لصلاتي.</a><p class="book-description">التهيؤ للصلاة وتجهيز النفس والوقت لها.</p></td><td><span class="status preparing">غير متوفر على الموقع الآن</span></td></tr>
+              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="صلاتي خطوة بخطوة." data-description="تعلّم أداء الصلاة بترتيب عملي، خطوة بخطوة، من البداية إلى التسليم.">صلاتي خطوة بخطوة.</a><p class="book-description">دليل عملي للتعرّف إلى خطوات الصلاة وترتيبها.</p></td><td><span class="status preparing">غير متوفر على الموقع الآن</span></td></tr>
+              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="ماذا أقول وأنا أصلي؟" data-description="التعرف إلى الأقوال والأذكار التي تقال في الصلاة ومواضعها.">ماذا أقول وأنا أصلي؟</a><p class="book-description">أذكار الصلاة والأقوال التي يرددها المصلي في مواضعها.</p></td><td><span class="status preparing">غير متوفر على الموقع الآن</span></td></tr>
             </tbody>
           </table></div>
         </article>
+
         <article class="group-card" id="group-3">
-          <div class="group-card-head"><h3>ط§ظ„ظ…ط¬ظ…ظˆط¹ط© ط§ظ„ط«ط§ظ„ط«ط©: ط£ط¹ظٹط´ ط§ظ„طµظ„ط§ط© ط¨ظ‚ظ„ط¨ظٹ</h3><span class="group-count">ظپظ‡ظ… ظ…ط¹ط§ظ†ظٹ ط§ظ„طµظ„ط§ط© ظˆط§ظ„ط®ط´ظˆط¹ ظپظٹظ‡ط§ آ· 3 ظƒطھظٹظ‘ط¨ط§طھ</span></div>
+          <div class="group-card-head"><h3>المجموعة الثالثة: أعيش الصلاة بقلبي</h3><span class="group-count">فهم معاني الصلاة والخشوع فيها · 3 كتيّبات</span></div>
           <div class="table-wrap"><table class="library-table">
-            <thead><tr><th scope="col">ط§ط³ظ… ط§ظ„ظƒطھظٹظ‘ط¨</th><th scope="col">ط§ظ„طھظˆظپط±</th></tr></thead>
+            <thead><tr><th scope="col">اسم الكتيّب</th><th scope="col">التوفر</th></tr></thead>
             <tbody>
-              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="ظƒظٹظپ ط£ط®ط´ط¹ ظپظٹ طµظ„ط§طھظٹطں" data-description="ط§ظ„طھط¹ط±ظپ ط¥ظ„ظ‰ ط§ظ„ط®ط´ظˆط¹ ظˆط£ظ‡ظ…ظٹطھظ‡ ظˆط®ط·ظˆط§طھ ط¹ظ…ظ„ظٹط© طھط³ط§ط¹ط¯ ط¹ظ„ظ‰ ط­ط¶ظˆط± ط§ظ„ظ‚ظ„ط¨ ط£ط«ظ†ط§ط، ط§ظ„طµظ„ط§ط©.">ظƒظٹظپ ط£ط®ط´ط¹ ظپظٹ طµظ„ط§طھظٹطں</a><p class="book-description">ط§ظ„طھط¹ط±ظ‘ظپ ط¥ظ„ظ‰ ط§ظ„ط®ط´ظˆط¹ ظˆظˆط³ط§ط¦ظ„ ط§ط³طھط­ط¶ط§ط± ط§ظ„ظ‚ظ„ط¨ ظپظٹ ط§ظ„طµظ„ط§ط©.</p></td><td><span class="status preparing">ط؛ظٹط± ظ…طھظˆظپط± ط¹ظ„ظ‰ ط§ظ„ظ…ظˆظ‚ط¹ ط§ظ„ط¢ظ†</span></td></tr>
-              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="ط£ظپظ‡ظ… ظ…ط§ ط£ظ‚ط±ط£ ظپظٹ طµظ„ط§طھظٹ." data-description="ظپظ‡ظ… ظ…ط¹ط§ظ†ظٹ ظ…ط§ ظ†ظ‚ط±ط£ظ‡ ظپظٹ ط§ظ„طµظ„ط§ط©طŒ ظˆظƒظٹظپ ظٹط¹ظٹظ† ط§ظ„ظپظ‡ظ… ط¹ظ„ظ‰ ط§ظ„ط®ط´ظˆط¹ ظˆط§ظ„ط§ظ†طھط¨ط§ظ‡.">ط£ظپظ‡ظ… ظ…ط§ ط£ظ‚ط±ط£ ظپظٹ طµظ„ط§طھظٹ.</a><p class="book-description">ظپظ‡ظ… ط§ظ„ظ…ط¹ط§ظ†ظٹ ط§ظ„ظ…ظ‚ط±ظˆط،ط© ظپظٹ ط§ظ„طµظ„ط§ط© ظˆط£ط«ط±ظ‡ط§ ظپظٹ ط§ظ„ط®ط´ظˆط¹.</p></td><td><span class="status preparing">ط؛ظٹط± ظ…طھظˆظپط± ط¹ظ„ظ‰ ط§ظ„ظ…ظˆظ‚ط¹ ط§ظ„ط¢ظ†</span></td></tr>
-              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="ظƒظٹظپ ط£طھط؛ظ„ط¨ ط¹ظ„ظ‰ ط§ظ„ط³ط±ط­ط§ظ† ظپظٹ ط§ظ„طµظ„ط§ط©طں" data-description="ط§ظ„طھط¹ط±ظپ ط¥ظ„ظ‰ ط£ط³ط¨ط§ط¨ طھط´طھطھ ط§ظ„ط°ظ‡ظ† ظˆظˆط³ط§ط¦ظ„ ط¹ظ…ظ„ظٹط© ظ„ظ„ط¹ظˆط¯ط© ط¥ظ„ظ‰ ط§ظ„طھط±ظƒظٹط² ط£ط«ظ†ط§ط، ط§ظ„طµظ„ط§ط©.">ظƒظٹظپ ط£طھط؛ظ„ط¨ ط¹ظ„ظ‰ ط§ظ„ط³ط±ط­ط§ظ† ظپظٹ ط§ظ„طµظ„ط§ط©طں</a><p class="book-description">ط£ظپظƒط§ط± ط¹ظ…ظ„ظٹط© ظ„ظ…ظˆط§ط¬ظ‡ط© طھط´طھطھ ط§ظ„ط°ظ‡ظ† ظˆط§ط³طھط¹ط§ط¯ط© ط§ظ„طھط±ظƒظٹط².</p></td><td><span class="status preparing">ط؛ظٹط± ظ…طھظˆظپط± ط¹ظ„ظ‰ ط§ظ„ظ…ظˆظ‚ط¹ ط§ظ„ط¢ظ†</span></td></tr>
+              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="كيف أخشع في صلاتي؟" data-description="التعرف إلى الخشوع وأهميته وخطوات عملية تساعد على حضور القلب أثناء الصلاة.">كيف أخشع في صلاتي؟</a><p class="book-description">التعرّف إلى الخشوع ووسائل استحضار القلب في الصلاة.</p></td><td><span class="status preparing">غير متوفر على الموقع الآن</span></td></tr>
+              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="أفهم ما أقرأ في صلاتي." data-description="فهم معاني ما نقرأه في الصلاة، وكيف يعين الفهم على الخشوع والانتباه.">أفهم ما أقرأ في صلاتي.</a><p class="book-description">فهم المعاني المقروءة في الصلاة وأثرها في الخشوع.</p></td><td><span class="status preparing">غير متوفر على الموقع الآن</span></td></tr>
+              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="كيف أتغلب على السرحان في الصلاة؟" data-description="التعرف إلى أسباب تشتت الذهن ووسائل عملية للعودة إلى التركيز أثناء الصلاة.">كيف أتغلب على السرحان في الصلاة؟</a><p class="book-description">أفكار عملية لمواجهة تشتت الذهن واستعادة التركيز.</p></td><td><span class="status preparing">غير متوفر على الموقع الآن</span></td></tr>
             </tbody>
           </table></div>
         </article>
+
         <article class="group-card" id="group-4">
-          <div class="group-card-head"><h3>ط§ظ„ظ…ط¬ظ…ظˆط¹ط© ط§ظ„ط±ط§ط¨ط¹ط©: ط£ط­ط§ظپط¸ ط¹ظ„ظ‰ طµظ„ط§طھظٹ</h3><span class="group-count">طھظ†ط¸ظٹظ… ط§ظ„ظˆظ‚طھ ظˆط§ظ„طھط¹ط§ظ…ظ„ ظ…ط¹ ط§ظ„ظ…ظˆط§ظ‚ظپ ط§ظ„ظٹظˆظ…ظٹط© آ· 4 ظƒطھظٹظ‘ط¨ط§طھ</span></div>
+          <div class="group-card-head"><h3>المجموعة الرابعة: أحافظ على صلاتي</h3><span class="group-count">تنظيم الوقت والتعامل مع المواقف اليومية · 4 كتيّبات</span></div>
           <div class="table-wrap"><table class="library-table">
-            <thead><tr><th scope="col">ط§ط³ظ… ط§ظ„ظƒطھظٹظ‘ط¨</th><th scope="col">ط§ظ„طھظˆظپط±</th></tr></thead>
+            <thead><tr><th scope="col">اسم الكتيّب</th><th scope="col">التوفر</th></tr></thead>
             <tbody>
-              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="ط§ظ„طµظ„ظˆط§طھ ط§ظ„ط®ظ…ط³ ظپظٹ ظٹظˆظ…ظٹ." data-description="ط§ظ„طھط¹ط±ظپ ط¥ظ„ظ‰ ط§ظ„طµظ„ظˆط§طھ ط§ظ„ط®ظ…ط³ ظˆظƒظٹظپظٹط© طھظ†ط¸ظٹظ… ط§ظ„ظٹظˆظ… ظ„ظ„ظ…ط­ط§ظپط¸ط© ط¹ظ„ظ‰ ط£ط¯ط§ط¦ظ‡ط§.">ط§ظ„طµظ„ظˆط§طھ ط§ظ„ط®ظ…ط³ ظپظٹ ظٹظˆظ…ظٹ.</a><p class="book-description">طھظ†ط¸ظٹظ… ط§ظ„ظٹظˆظ… ط­ظˆظ„ ط£ظˆظ‚ط§طھ ط§ظ„طµظ„ظˆط§طھ ط§ظ„ط®ظ…ط³.</p></td><td><span class="status preparing">ط؛ظٹط± ظ…طھظˆظپط± ط¹ظ„ظ‰ ط§ظ„ظ…ظˆظ‚ط¹ ط§ظ„ط¢ظ†</span></td></tr>
-              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="ط¹ظ†ط¯ظ…ط§ ط£ط´ط¹ط± ط¨ط§ظ„ظƒط³ظ„ ط¹ظ† ط§ظ„طµظ„ط§ط©." data-description="ط§ظ„طھط¹ط§ظ…ظ„ ظ…ط¹ ط§ظ„ظƒط³ظ„ ظˆط§ظ„طھط±ط¯ط¯ ظˆطھط¹ظ„ظ‘ظ… ط®ط·ظˆط§طھ طھط³ط§ط¹ط¯ ط¹ظ„ظ‰ ط§ظ„ظ…ط¨ط§ط¯ط±ط© ط¥ظ„ظ‰ ط§ظ„طµظ„ط§ط©.">ط¹ظ†ط¯ظ…ط§ ط£ط´ط¹ط± ط¨ط§ظ„ظƒط³ظ„ ط¹ظ† ط§ظ„طµظ„ط§ط©.</a><p class="book-description">ط£ظپظƒط§ط± ط¹ظ…ظ„ظٹط© ظ„طھط¬ط§ظˆط² ط§ظ„ظƒط³ظ„ ظˆط§ظ„ط§ط³طھط¬ط§ط¨ط© ظ„ظ„طµظ„ط§ط©.</p></td><td><span class="status preparing">ط؛ظٹط± ظ…طھظˆظپط± ط¹ظ„ظ‰ ط§ظ„ظ…ظˆظ‚ط¹ ط§ظ„ط¢ظ†</span></td></tr>
-              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="ط£طµظ„ظٹ ظپظٹ ط§ظ„ط¨ظٹطھ ظˆط§ظ„ظ…ط¯ط±ط³ط© ظˆط§ظ„ظ…ط³ط¬ط¯." data-description="ط§ظ„ظ…ط­ط§ظپط¸ط© ط¹ظ„ظ‰ ط§ظ„طµظ„ط§ط© ظپظٹ ط§ظ„ط£ظ…ط§ظƒظ† ط§ظ„ظ…ط®طھظ„ظپط© ظˆط§ظ„طھط¹ط§ظ…ظ„ ظ…ط¹ ط¸ط±ظˆظپ ط§ظ„ظٹظˆظ….">ط£طµظ„ظٹ ظپظٹ ط§ظ„ط¨ظٹطھ ظˆط§ظ„ظ…ط¯ط±ط³ط© ظˆط§ظ„ظ…ط³ط¬ط¯.</a><p class="book-description">طھط·ط¨ظٹظ‚ ط§ظ„ظ…ط­ط§ظپط¸ط© ط¹ظ„ظ‰ ط§ظ„طµظ„ط§ط© ظپظٹ ط§ظ„ط¨ظٹطھ ظˆط§ظ„ظ…ط¯ط±ط³ط© ظˆط§ظ„ظ…ط³ط¬ط¯.</p></td><td><span class="status preparing">ط؛ظٹط± ظ…طھظˆظپط± ط¹ظ„ظ‰ ط§ظ„ظ…ظˆظ‚ط¹ ط§ظ„ط¢ظ†</span></td></tr>
-              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="ط¥ط°ط§ ط£ط®ط·ط£طھ ظپظٹ طµظ„ط§طھظٹطŒ ظپظ…ط§ط°ط§ ط£ظپط¹ظ„طں" data-description="ط§ظ„طھط¹ط±ظپ ط¥ظ„ظ‰ ظƒظٹظپظٹط© ط§ظ„طھطµط±ظپ ط¹ظ†ط¯ ط§ظ„ط®ط·ط£ ظپظٹ ط§ظ„طµظ„ط§ط© ظˆط·ظ„ط¨ ط§ظ„طھظˆط¬ظٹظ‡ ط§ظ„ظ…ظˆط«ظˆظ‚ ط¹ظ†ط¯ ط§ظ„ط­ط§ط¬ط©.">ط¥ط°ط§ ط£ط®ط·ط£طھ ظپظٹ طµظ„ط§طھظٹطŒ ظپظ…ط§ط°ط§ ط£ظپط¹ظ„طں</a><p class="book-description">ظƒظٹظپظٹط© ط§ظ„طھط¹ط§ظ…ظ„ ظ…ط¹ ط§ظ„ط®ط·ط£ ظپظٹ ط§ظ„طµظ„ط§ط© ظˆظ…ط¹ط±ظپط© ظ…ط§ ظٹظ„ط²ظ… ظپط¹ظ„ظ‡.</p></td><td><span class="status preparing">ط؛ظٹط± ظ…طھظˆظپط± ط¹ظ„ظ‰ ط§ظ„ظ…ظˆظ‚ط¹ ط§ظ„ط¢ظ†</span></td></tr>
+              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="الصلوات الخمس في يومي." data-description="التعرف إلى الصلوات الخمس وكيفية تنظيم اليوم للمحافظة على أدائها.">الصلوات الخمس في يومي.</a><p class="book-description">تنظيم اليوم حول أوقات الصلوات الخمس.</p></td><td><span class="status preparing">غير متوفر على الموقع الآن</span></td></tr>
+              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="عندما أشعر بالكسل عن الصلاة." data-description="التعامل مع الكسل والتردد وتعلّم خطوات تساعد على المبادرة إلى الصلاة.">عندما أشعر بالكسل عن الصلاة.</a><p class="book-description">أفكار عملية لتجاوز الكسل والاستجابة للصلاة.</p></td><td><span class="status preparing">غير متوفر على الموقع الآن</span></td></tr>
+              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="أصلي في البيت والمدرسة والمسجد." data-description="المحافظة على الصلاة في الأماكن المختلفة والتعامل مع ظروف اليوم.">أصلي في البيت والمدرسة والمسجد.</a><p class="book-description">تطبيق المحافظة على الصلاة في البيت والمدرسة والمسجد.</p></td><td><span class="status preparing">غير متوفر على الموقع الآن</span></td></tr>
+              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="إذا أخطأت في صلاتي، فماذا أفعل؟" data-description="التعرف إلى كيفية التصرف عند الخطأ في الصلاة وطلب التوجيه الموثوق عند الحاجة.">إذا أخطأت في صلاتي، فماذا أفعل؟</a><p class="book-description">كيفية التعامل مع الخطأ في الصلاة ومعرفة ما يلزم فعله.</p></td><td><span class="status preparing">غير متوفر على الموقع الآن</span></td></tr>
             </tbody>
           </table></div>
         </article>
+
         <article class="group-card" id="group-5">
-          <div class="group-card-head"><h3>ط§ظ„ظ…ط¬ظ…ظˆط¹ط© ط§ظ„ط®ط§ظ…ط³ط©: ط£ظ†ظ…ظˆ ظ…ط¹ طµظ„ط§طھظٹ</h3><span class="group-count">ط§ظ„ط£ط³ط±ط© ظˆط§ظ„ظ…ط³ط¬ط¯ ظˆط§ظ„ط¹ط¨ط§ط¯ط§طھ ط§ظ„ظ…ط±طھط¨ط·ط© ط¨ط§ظ„طµظ„ط§ط© آ· 4 ظƒطھظٹظ‘ط¨ط§طھ</span></div>
+          <div class="group-card-head"><h3>المجموعة الخامسة: أنمو مع صلاتي</h3><span class="group-count">الأسرة والمسجد والعبادات المرتبطة بالصلاة · 4 كتيّبات</span></div>
           <div class="table-wrap"><table class="library-table">
-            <thead><tr><th scope="col">ط§ط³ظ… ط§ظ„ظƒطھظٹظ‘ط¨</th><th scope="col">ط§ظ„طھظˆظپط±</th></tr></thead>
+            <thead><tr><th scope="col">اسم الكتيّب</th><th scope="col">التوفر</th></tr></thead>
             <tbody>
-              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="ط£ط­ط¨ ط§ظ„ظ…ط³ط¬ط¯ ظˆطµظ„ط§ط© ط§ظ„ط¬ظ…ط§ط¹ط©." data-description="ط§ظ„طھط¹ط±ظپ ط¥ظ„ظ‰ ط¢ط¯ط§ط¨ ط§ظ„ظ…ط³ط¬ط¯ ظˆظ…ط¹ط§ظ†ظٹ طµظ„ط§ط© ط§ظ„ط¬ظ…ط§ط¹ط© ظˆظƒظٹظپظٹط© ط§ظ„ظ…ط´ط§ط±ظƒط© ظپظٹظ‡ط§.">ط£ط­ط¨ ط§ظ„ظ…ط³ط¬ط¯ ظˆطµظ„ط§ط© ط§ظ„ط¬ظ…ط§ط¹ط©.</a><p class="book-description">ط¢ط¯ط§ط¨ ط§ظ„ظ…ط³ط¬ط¯ ظˆطµظ„ط§ط© ط§ظ„ط¬ظ…ط§ط¹ط© ظˆط§ظ„ط£ظ†ظ…ظˆط°ط¬ ط§ظ„ط¹ظ…ظ„ظٹ ظ„ظ„ظ…ط´ط§ط±ظƒط© ظپظٹظ‡ظ…ط§.</p></td><td><span class="status preparing">ط؛ظٹط± ظ…طھظˆظپط± ط¹ظ„ظ‰ ط§ظ„ظ…ظˆظ‚ط¹ ط§ظ„ط¢ظ†</span></td></tr>
-              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="ط£طµظ„ظٹ ظ…ط¹ ط£ط³ط±طھظٹ." data-description="طھط¹ط²ظٹط² ط§ظ„ظ…ط´ط§ط±ظƒط© ط§ظ„ط£ط³ط±ظٹط© ظپظٹ ط§ظ„طµظ„ط§ط© ظˆط§ظ„طھط´ط¬ظٹط¹ ط§ظ„ظ…طھط¨ط§ط¯ظ„ ط¹ظ„ظ‰ ط§ظ„ظ…ط­ط§ظپط¸ط© ط¹ظ„ظٹظ‡ط§.">ط£طµظ„ظٹ ظ…ط¹ ط£ط³ط±طھظٹ.</a><p class="book-description">ط¯ظˆط± ط§ظ„ط£ط³ط±ط© ظپظٹ ط§ظ„طھط´ط¬ظٹط¹ ط¹ظ„ظ‰ ط§ظ„طµظ„ط§ط© ظˆط§ظ„ظ…ط­ط§ظپط¸ط© ط¹ظ„ظٹظ‡ط§.</p></td><td><span class="status preparing">ط؛ظٹط± ظ…طھظˆظپط± ط¹ظ„ظ‰ ط§ظ„ظ…ظˆظ‚ط¹ ط§ظ„ط¢ظ†</span></td></tr>
-              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="طµظ„ط§ط© ط§ظ„ط¬ظ…ط¹ط© ظˆط§ظ„ط£ط¹ظٹط§ط¯." data-description="ط§ظ„طھط¹ط±ظپ ط¥ظ„ظ‰ طµظ„ط§ط© ط§ظ„ط¬ظ…ط¹ط© ظˆطµظ„ط§ط© ط§ظ„ط¹ظٹط¯ظٹظ† ظˆظ…ط§ ظٹظ…ظٹط²ظ‡ط§ ظ…ظ† ط£ط­ظƒط§ظ… ظˆط¢ط¯ط§ط¨.">طµظ„ط§ط© ط§ظ„ط¬ظ…ط¹ط© ظˆط§ظ„ط£ط¹ظٹط§ط¯.</a><p class="book-description">ظ…ط¯ط®ظ„ ط¥ظ„ظ‰ طµظ„ط§ط© ط§ظ„ط¬ظ…ط¹ط© ظˆط§ظ„ط¹ظٹط¯ظٹظ† ظˆط¢ط¯ط§ط¨ظ‡ظ…ط§.</p></td><td><span class="status preparing">ط؛ظٹط± ظ…طھظˆظپط± ط¹ظ„ظ‰ ط§ظ„ظ…ظˆظ‚ط¹ ط§ظ„ط¢ظ†</span></td></tr>
-              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="طµظ„ط§ط© ط§ظ„ظ…ط³ط§ظپط± ظˆط§ظ„ظ…ط±ظٹط¶: ط£طھط¹ظ„ظ… ظƒظٹظپ ط£طµظ„ظٹ ظپظٹ ط§ظ„ط¸ط±ظˆظپ ط§ظ„ظ…ط®طھظ„ظپط©." data-description="طھط¹ط±ظپ ظ…ط¨ط¯ط¦ظٹ ط¥ظ„ظ‰ ظƒظٹظپظٹط© ط§ظ„طµظ„ط§ط© ظپظٹ ط§ظ„ط³ظپط± ظˆط§ظ„ظ…ط±ط¶ ظˆط§ظ„ط¸ط±ظˆظپ ط§ظ„طھظٹ طھط®طھظ„ظپ ظپظٹظ‡ط§ ط§ظ„ط§ط³طھط·ط§ط¹ط©.">طµظ„ط§ط© ط§ظ„ظ…ط³ط§ظپط± ظˆط§ظ„ظ…ط±ظٹط¶: ط£طھط¹ظ„ظ… ظƒظٹظپ ط£طµظ„ظٹ ظپظٹ ط§ظ„ط¸ط±ظˆظپ ط§ظ„ظ…ط®طھظ„ظپط©.</a><p class="book-description">ط§ظ„طھط¹ط±ظپ ط¥ظ„ظ‰ ط£ط­ظƒط§ظ… ط§ظ„طµظ„ط§ط© ط¹ظ†ط¯ ط§ظ„ط³ظپط± ظˆط§ظ„ظ…ط±ط¶ ظˆط§ظ„ط¸ط±ظˆظپ ط§ظ„ظ…ط®طھظ„ظپط©.</p></td><td><span class="status preparing">ط؛ظٹط± ظ…طھظˆظپط± ط¹ظ„ظ‰ ط§ظ„ظ…ظˆظ‚ط¹ ط§ظ„ط¢ظ†</span></td></tr>
+              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="أحب المسجد وصلاة الجماعة." data-description="التعرف إلى آداب المسجد ومعاني صلاة الجماعة وكيفية المشاركة فيها.">أحب المسجد وصلاة الجماعة.</a><p class="book-description">آداب المسجد وصلاة الجماعة والأنموذج العملي للمشاركة فيهما.</p></td><td><span class="status preparing">غير متوفر على الموقع الآن</span></td></tr>
+              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="أصلي مع أسرتي." data-description="تعزيز المشاركة الأسرية في الصلاة والتشجيع المتبادل على المحافظة عليها.">أصلي مع أسرتي.</a><p class="book-description">دور الأسرة في التشجيع على الصلاة والمحافظة عليها.</p></td><td><span class="status preparing">غير متوفر على الموقع الآن</span></td></tr>
+              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="صلاة الجمعة والأعياد." data-description="التعرف إلى صلاة الجمعة وصلاة العيدين وما يميزها من أحكام وآداب.">صلاة الجمعة والأعياد.</a><p class="book-description">مدخل إلى صلاة الجمعة والعيدين وآدابهما.</p></td><td><span class="status preparing">غير متوفر على الموقع الآن</span></td></tr>
+              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="صلاة المسافر والمريض: أتعلم كيف أصلي في الظروف المختلفة." data-description="تعرف مبدئي إلى كيفية الصلاة في السفر والمرض والظروف التي تختلف فيها الاستطاعة.">صلاة المسافر والمريض: أتعلم كيف أصلي في الظروف المختلفة.</a><p class="book-description">التعرف إلى أحكام الصلاة عند السفر والمرض والظروف المختلفة.</p></td><td><span class="status preparing">غير متوفر على الموقع الآن</span></td></tr>
             </tbody>
           </table></div>
         </article>
+
         <article class="group-card" id="group-6">
-          <div class="group-card-head"><h3>ط§ظ„ظ…ط¬ظ…ظˆط¹ط© ط§ظ„ط³ط§ط¯ط³ط©: ط£ظڈظ‚ط±ظ‘ط¨ ط§ظ„طµظ„ط§ط© ط¥ظ„ظ‰ ظ‚ظ„ط¨ظٹ</h3><span class="group-count">ظ…ط¬ظ…ظˆط¹ط© طھط±ط¨ظˆظٹط© ط¥ظٹظ…ط§ظ†ظٹط© ظ„ظ…ط¹ط§ظ„ط¬ط© ط§ظ„ظ†ظپظˆط± ظˆط§ظ„طھظƒط§ط³ظ„ ظˆط¨ظ†ط§ط، ط§ظ„ظ…ط­ط¨ط© آ· 6 ظƒطھظٹظ‘ط¨ط§طھ</span></div>
+          <div class="group-card-head"><h3>المجموعة السادسة: أُقرّب الصلاة إلى قلبي</h3><span class="group-count">مجموعة تربوية إيمانية لمعالجة النفور والتكاسل وبناء المحبة · 6 كتيّبات</span></div>
           <div class="table-wrap"><table class="library-table">
-            <thead><tr><th scope="col">ط§ط³ظ… ط§ظ„ظƒطھظٹظ‘ط¨</th><th scope="col">ط§ظ„طھظˆظپط±</th></tr></thead>
+            <thead><tr><th scope="col">اسم الكتيّب</th><th scope="col">التوفر</th></tr></thead>
             <tbody>
-              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="19. ظ„ظ…ط§ط°ط§ ظ„ط§ ط£ط´ط¹ط± ط¨ط§ظ„ط±ط؛ط¨ط© ظپظٹ ط§ظ„طµظ„ط§ط© ط£ط­ظٹط§ظ†ظ‹ط§طں" data-description="ظ†ظپظ‡ظ… ط£ط³ط¨ط§ط¨ ط§ظ„طھظƒط§ط³ظ„ ظˆط§ظ„ظ…ظ„ظ„ ظˆط§ظ„طھط´طھطھ ط¹ظ†ط¯ ط§ظ„ط·ظپظ„طŒ ظˆظ†ط³ط§ط¹ط¯ظ‡ ط¹ظ„ظ‰ ط§ظ„طھط¹ط±ظپ ط¥ظ„ظ‰ ظ…ط´ط§ط¹ط±ظ‡ ظˆط§ظ„طھط¹ط§ظ…ظ„ ظ…ط¹ظ‡ط§ ط¯ظˆظ† ط¥ط´ط¹ط§ط±ظ‡ ط¨ط£ظ†ظ‡ ط·ظپظ„ ط³ظٹط¦.">19. ظ„ظ…ط§ط°ط§ ظ„ط§ ط£ط´ط¹ط± ط¨ط§ظ„ط±ط؛ط¨ط© ظپظٹ ط§ظ„طµظ„ط§ط© ط£ط­ظٹط§ظ†ظ‹ط§طں</a><p class="book-description">ظ†ظپظ‡ظ… ط£ط³ط¨ط§ط¨ ط§ظ„طھظƒط§ط³ظ„ ظˆط§ظ„ظ…ظ„ظ„ ظˆط§ظ„طھط´طھطھطŒ ظˆظ†طھط¹ط§ظ…ظ„ ظ…ط¹ ط§ظ„ظ…ط´ط§ط¹ط± ط¯ظˆظ† ط¥ط´ط¹ط§ط± ط§ظ„ط·ظپظ„ ط¨ط£ظ†ظ‡ ط³ظٹط¦.</p></td><td><span class="status preparing">ط؛ظٹط± ظ…طھظˆظپط± ط¹ظ„ظ‰ ط§ظ„ظ…ظˆظ‚ط¹ ط§ظ„ط¢ظ†</span></td></tr>
-              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="20. ظƒظٹظپ ط£ط¬ط¹ظ„ ط§ظ„طµظ„ط§ط© ط£ط­ط¨ ط¥ظ„ظ‰ ظ‚ظ„ط¨ظٹطں" data-description="ظ†طھط¹ط±ظپ ط¹ظ„ظ‰ ظ…ط¹ط§ظ†ظٹ ط§ظ„ظˆظ‚ظˆظپ ط¨ظٹظ† ظٹط¯ظٹ ط§ظ„ظ„ظ‡طŒ ظˆط´ظƒط± ط§ظ„ظ†ط¹ظ…طŒ ظˆط§ظ„ط¯ط¹ط§ط،طŒ ظˆط§ظ„ط·ظ…ط£ظ†ظٹظ†ط©طŒ ظˆظƒظٹظپ ظ†ظ†ظ…ظ‘ظٹ ظ…ط­ط¨ط© ط§ظ„طµظ„ط§ط© ظ…ظ† ط®ظ„ط§ظ„ ط§ظ„ظپظ‡ظ… ظˆط§ظ„طھط¬ط±ط¨ط©.">20. ظƒظٹظپ ط£ط¬ط¹ظ„ ط§ظ„طµظ„ط§ط© ط£ط­ط¨ ط¥ظ„ظ‰ ظ‚ظ„ط¨ظٹطں</a><p class="book-description">طھظ†ظ…ظٹط© ظ…ط­ط¨ط© ط§ظ„طµظ„ط§ط© ظ…ظ† ط®ظ„ط§ظ„ ط§ظ„ظپظ‡ظ… ظˆط§ظ„ط¯ط¹ط§ط، ظˆط´ظƒط± ط§ظ„ظ†ط¹ظ… ظˆط§ظ„ط·ظ…ط£ظ†ظٹظ†ط©.</p></td><td><span class="status preparing">ط؛ظٹط± ظ…طھظˆظپط± ط¹ظ„ظ‰ ط§ظ„ظ…ظˆظ‚ط¹ ط§ظ„ط¢ظ†</span></td></tr>
-              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="21. ط¹ظ†ط¯ظ…ط§ ط£ظƒظˆظ† ظ…ط´ط؛ظˆظ„ظ‹ط§ ط£ظˆ ط£ظ„ط¹ط¨طŒ ظƒظٹظپ ط£ط³طھط¬ظٹط¨ ظ„ظ„طµظ„ط§ط©طں" data-description="ط§ظ„طھط¹ط§ظ…ظ„ ظ…ط¹ ط§ظ„ط±ط؛ط¨ط© ظپظٹ ظ…ظˆط§طµظ„ط© ط§ظ„ظ„ط¹ط¨طŒ ظˆظ…ط´ط§ظ‡ط¯ط© ط§ظ„ط´ط§ط´ط§طھطŒ ظˆطھط£ط¬ظٹظ„ ط§ظ„طµظ„ط§ط©طŒ ظ…ط¹ طھط¹ظ„ظ… ط§ظ„ط§ظ†طھظ‚ط§ظ„ ط¥ظ„ظٹظ‡ط§ ط¯ظˆظ† ظ…ظ…ط§ط·ظ„ط©.">21. ط¹ظ†ط¯ظ…ط§ ط£ظƒظˆظ† ظ…ط´ط؛ظˆظ„ظ‹ط§ ط£ظˆ ط£ظ„ط¹ط¨طŒ ظƒظٹظپ ط£ط³طھط¬ظٹط¨ ظ„ظ„طµظ„ط§ط©طں</a><p class="book-description">ط§ظ„طھط¹ط§ظ…ظ„ ظ…ط¹ ط§ظ„ظ„ط¹ط¨ ظˆط§ظ„ط´ط§ط´ط§طھ ظˆطھط£ط¬ظٹظ„ ط§ظ„طµظ„ط§ط©طŒ ظˆط§ظ„طھط¯ط±ظ‘ط¨ ط¹ظ„ظ‰ ط§ظ„ط§ط³طھط¬ط§ط¨ط© ط¯ظˆظ† ظ…ظ…ط§ط·ظ„ط©.</p></td><td><span class="status preparing">ط؛ظٹط± ظ…طھظˆظپط± ط¹ظ„ظ‰ ط§ظ„ظ…ظˆظ‚ط¹ ط§ظ„ط¢ظ†</span></td></tr>
-              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="22. ظƒظٹظپ ط£ط¨ط¯ط£ ط§ظ„طµظ„ط§ط© ط¨ظ†ظپط³ظٹ ط¯ظˆظ† ط£ظ† ظٹط°ظƒط±ظ†ظٹ ط£ط­ط¯طں" data-description="ط¨ظ†ط§ط، ط§ظ„ط§ط³طھظ‚ظ„ط§ظ„ظٹط© طھط¯ط±ظٹط¬ظٹظ‹ط§طŒ ظˆط§ط³طھط®ط¯ط§ظ… ط§ظ„طھط°ظƒظٹط±ط§طھ ط§ظ„ظ…ظ†ط§ط³ط¨ط©طŒ ظˆطھظ†ط¸ظٹظ… ط§ظ„ظٹظˆظ…طŒ ظˆطھط­ظˆظٹظ„ ط§ظ„ط§ط³طھط¹ط¯ط§ط¯ ظ„ظ„طµظ„ط§ط© ط¥ظ„ظ‰ ط¹ط§ط¯ط© ط«ط§ط¨طھط©.">22. ظƒظٹظپ ط£ط¨ط¯ط£ ط§ظ„طµظ„ط§ط© ط¨ظ†ظپط³ظٹ ط¯ظˆظ† ط£ظ† ظٹط°ظƒط±ظ†ظٹ ط£ط­ط¯طں</a><p class="book-description">طھظ†ظ…ظٹط© ط§ظ„ط§ط³طھظ‚ظ„ط§ظ„ظٹط© ط¨ط§ظ„طھط¯ط±ظٹط¬ ظˆط¨ظ†ط§ط، ط¹ط§ط¯ط© ط«ط§ط¨طھط© ظ„ظ„ط§ط³طھط¹ط¯ط§ط¯ ظ„ظ„طµظ„ط§ط©.</p></td><td><span class="status preparing">ط؛ظٹط± ظ…طھظˆظپط± ط¹ظ„ظ‰ ط§ظ„ظ…ظˆظ‚ط¹ ط§ظ„ط¢ظ†</span></td></tr>
-              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="23. ط¹ظ†ط¯ظ…ط§ ظٹط¯ط¹ظˆظ†ظٹ ط£ط¨ظٹ ط£ظˆ ط£ظ…ظٹ ط¥ظ„ظ‰ ط§ظ„طµظ„ط§ط©طŒ ظƒظٹظپ ط£ط³طھط¬ظٹط¨ ط¨ظ…ط­ط¨ط©طں" data-description="ظپظ‡ظ… ط£ظ‡ظ…ظٹط© ط¨ط± ط§ظ„ظˆط§ظ„ط¯ظٹظ† ظˆط§ظ„ط§ط³طھط¬ط§ط¨ط© ظ„ظ„طµظ„ط§ط©طŒ ظˆط§ظ„طھط¹ط§ظ…ظ„ ظ…ط¹ ط§ظ„ط§ظ†ط²ط¹ط§ط¬ ظ…ظ† ط§ظ„طھط°ظƒظٹط± ط§ظ„ظ…طھظƒط±ط±طŒ ظˆطھط¹ظ„ظ… ط§ظ„ط§ط³طھط¬ط§ط¨ط© ط§ظ„ظ‡ط§ط¯ط¦ط© ط¯ظˆظ† ط¬ط¯ط§ظ„.">23. ط¹ظ†ط¯ظ…ط§ ظٹط¯ط¹ظˆظ†ظٹ ط£ط¨ظٹ ط£ظˆ ط£ظ…ظٹ ط¥ظ„ظ‰ ط§ظ„طµظ„ط§ط©طŒ ظƒظٹظپ ط£ط³طھط¬ظٹط¨ ط¨ظ…ط­ط¨ط©طں</a><p class="book-description">ط§ظ„ط§ط³طھط¬ط§ط¨ط© ط§ظ„ظ‡ط§ط¯ط¦ط© ظˆط§ظ„ظ…ط­ط¨ط© ظ„طھط°ظƒظٹط± ط§ظ„ظˆط§ظ„ط¯ظٹظ† ظˆطھط¬ظ†ط¨ ط§ظ„ط¬ط¯ط§ظ„.</p></td><td><span class="status preparing">ط؛ظٹط± ظ…طھظˆظپط± ط¹ظ„ظ‰ ط§ظ„ظ…ظˆظ‚ط¹ ط§ظ„ط¢ظ†</span></td></tr>
-              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="24. ط±ط­ظ„طھظٹ ط¥ظ„ظ‰ ط§ظ„ظ…ط­ط§ظپط¸ط© ط¹ظ„ظ‰ ط§ظ„طµظ„ط§ط©: ط®ط·ط© 30 ظٹظˆظ…ظ‹ط§" data-description="ط¨ط±ظ†ط§ظ…ط¬ ط¹ظ…ظ„ظٹ ظ…طھط¯ط±ط¬ ظٹط³ط§ط¹ط¯ ط§ظ„ط·ظپظ„ ط¹ظ„ظ‰ ط§ظ„ط§ط³طھط¹ط¯ط§ط¯ ظ„ظ„طµظ„ط§ط©طŒ ظˆط§ظ„طھط؛ظ„ط¨ ط¹ظ„ظ‰ ط§ظ„طھظƒط§ط³ظ„طŒ ظˆظ…ظ„ط§ط­ط¸ط© طھظ‚ط¯ظ…ظ‡طŒ ظˆط§ظ„ط§ط³طھظ…ط±ط§ط± ط¨ظ…ط³ط§ظ†ط¯ط© ط£ط³ط±طھظ‡.">24. ط±ط­ظ„طھظٹ ط¥ظ„ظ‰ ط§ظ„ظ…ط­ط§ظپط¸ط© ط¹ظ„ظ‰ ط§ظ„طµظ„ط§ط©: ط®ط·ط© 30 ظٹظˆظ…ظ‹ط§</a><p class="book-description">ط¨ط±ظ†ط§ظ…ط¬ طھط¯ط±ظٹط¬ظٹ ظ„ظ…ط¯ط© 30 ظٹظˆظ…ظ‹ط§ ظ„ظ„ط§ط³طھط¹ط¯ط§ط¯ ظ„ظ„طµظ„ط§ط© ظˆظ…ظ„ط§ط­ط¸ط© ط§ظ„طھظ‚ط¯ظ… ط¨ظ…ط³ط§ظ†ط¯ط© ط§ظ„ط£ط³ط±ط©.</p></td><td><span class="status preparing">ط؛ظٹط± ظ…طھظˆظپط± ط¹ظ„ظ‰ ط§ظ„ظ…ظˆظ‚ط¹ ط§ظ„ط¢ظ†</span></td></tr>
+              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="19. لماذا لا أشعر بالرغبة في الصلاة أحيانًا؟" data-description="نفهم أسباب التكاسل والملل والتشتت عند الطفل، ونساعده على التعرف إلى مشاعره والتعامل معها دون إشعاره بأنه طفل سيئ.">19. لماذا لا أشعر بالرغبة في الصلاة أحيانًا؟</a><p class="book-description">نفهم أسباب التكاسل والملل والتشتت، ونتعامل مع المشاعر دون إشعار الطفل بأنه سيئ.</p></td><td><span class="status preparing">غير متوفر على الموقع الآن</span></td></tr>
+              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="20. كيف أجعل الصلاة أحب إلى قلبي؟" data-description="نتعرف على معاني الوقوف بين يدي الله، وشكر النعم، والدعاء، والطمأنينة، وكيف ننمّي محبة الصلاة من خلال الفهم والتجربة.">20. كيف أجعل الصلاة أحب إلى قلبي؟</a><p class="book-description">تنمية محبة الصلاة من خلال الفهم والدعاء وشكر النعم والطمأنينة.</p></td><td><span class="status preparing">غير متوفر على الموقع الآن</span></td></tr>
+              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="21. عندما أكون مشغولًا أو ألعب، كيف أستجيب للصلاة؟" data-description="التعامل مع الرغبة في مواصلة اللعب، ومشاهدة الشاشات، وتأجيل الصلاة، مع تعلم الانتقال إليها دون مماطلة.">21. عندما أكون مشغولًا أو ألعب، كيف أستجيب للصلاة؟</a><p class="book-description">التعامل مع اللعب والشاشات وتأجيل الصلاة، والتدرّب على الاستجابة دون مماطلة.</p></td><td><span class="status preparing">غير متوفر على الموقع الآن</span></td></tr>
+              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="22. كيف أبدأ الصلاة بنفسي دون أن يذكرني أحد؟" data-description="بناء الاستقلالية تدريجيًا، واستخدام التذكيرات المناسبة، وتنظيم اليوم، وتحويل الاستعداد للصلاة إلى عادة ثابتة.">22. كيف أبدأ الصلاة بنفسي دون أن يذكرني أحد؟</a><p class="book-description">تنمية الاستقلالية بالتدريج وبناء عادة ثابتة للاستعداد للصلاة.</p></td><td><span class="status preparing">غير متوفر على الموقع الآن</span></td></tr>
+              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="23. عندما يدعوني أبي أو أمي إلى الصلاة، كيف أستجيب بمحبة؟" data-description="فهم أهمية بر الوالدين والاستجابة للصلاة، والتعامل مع الانزعاج من التذكير المتكرر، وتعلم الاستجابة الهادئة دون جدال.">23. عندما يدعوني أبي أو أمي إلى الصلاة، كيف أستجيب بمحبة؟</a><p class="book-description">الاستجابة الهادئة والمحبة لتذكير الوالدين وتجنب الجدال.</p></td><td><span class="status preparing">غير متوفر على الموقع الآن</span></td></tr>
+              <tr><td><a class="book-link" href="#unavailablePage" data-booklet="24. رحلتي إلى المحافظة على الصلاة: خطة 30 يومًا" data-description="برنامج عملي متدرج يساعد الطفل على الاستعداد للصلاة، والتغلب على التكاسل، وملاحظة تقدمه، والاستمرار بمساندة أسرته.">24. رحلتي إلى المحافظة على الصلاة: خطة 30 يومًا</a><p class="book-description">برنامج تدريجي لمدة 30 يومًا للاستعداد للصلاة وملاحظة التقدم بمساندة الأسرة.</p></td><td><span class="status preparing">غير متوفر على الموقع الآن</span></td></tr>
             </tbody>
           </table></div>
         </article>
+
         <section class="sitemap" id="siteMap" aria-labelledby="siteMapHeading">
-          <h2 id="siteMapHeading">ط®ط±ظٹط·ط© ط§ظ„ظ…ظˆظ‚ط¹</h2>
+          <h2 id="siteMapHeading">خريطة الموقع</h2>
           <ul class="sitemap-list">
-            <li><a href="#top">ط§ظ„طµظپط­ط© ط§ظ„ط±ط¦ظٹط³ظٹط©</a></li>
-            <li><a href="#libraryHeading">ظ…ظƒطھط¨ط© ط§ظ„ظƒطھظٹظ‘ط¨ط§طھ</a></li>
-            <li><a href="#group-1">ط§ظ„ظ…ط¬ظ…ظˆط¹ط© ط§ظ„ط£ظˆظ„ظ‰: ط£طھط¹ط±ظپ ط¹ظ„ظ‰ ط§ظ„طµظ„ط§ط©</a></li>
-            <li><a href="#group-2">ط§ظ„ظ…ط¬ظ…ظˆط¹ط© ط§ظ„ط«ط§ظ†ظٹط©: ط£طھط¹ظ„ظ… ظƒظٹظپ ط£طµظ„ظٹ</a></li>
-            <li><a href="#group-3">ط§ظ„ظ…ط¬ظ…ظˆط¹ط© ط§ظ„ط«ط§ظ„ط«ط©: ط£ط¹ظٹط´ ط§ظ„طµظ„ط§ط© ط¨ظ‚ظ„ط¨ظٹ</a></li>
-            <li><a href="#group-4">ط§ظ„ظ…ط¬ظ…ظˆط¹ط© ط§ظ„ط±ط§ط¨ط¹ط©: ط£ط­ط§ظپط¸ ط¹ظ„ظ‰ طµظ„ط§طھظٹ</a></li>
-            <li><a href="#group-5">ط§ظ„ظ…ط¬ظ…ظˆط¹ط© ط§ظ„ط®ط§ظ…ط³ط©: ط£ظ†ظ…ظˆ ظ…ط¹ طµظ„ط§طھظٹ</a></li>
-            <li><a href="#group-6">ط§ظ„ظ…ط¬ظ…ظˆط¹ط© ط§ظ„ط³ط§ط¯ط³ط©: ط£ظڈظ‚ط±ظ‘ط¨ ط§ظ„طµظ„ط§ط© ط¥ظ„ظ‰ ظ‚ظ„ط¨ظٹ</a></li>
-            <li><a href="#quizPage" id="sitemapQuizLink">ط§ظ„ط§ط®طھط¨ط§ط± ط§ظ„طھظپط§ط¹ظ„ظٹ</a></li>
+            <li><a href="#top">الصفحة الرئيسية</a></li>
+            <li><a href="#libraryHeading">مكتبة الكتيّبات</a></li>
+            <li><a href="#group-1">المجموعة الأولى: أتعرف على الصلاة</a></li>
+            <li><a href="#group-2">المجموعة الثانية: أتعلم كيف أصلي</a></li>
+            <li><a href="#group-3">المجموعة الثالثة: أعيش الصلاة بقلبي</a></li>
+            <li><a href="#group-4">المجموعة الرابعة: أحافظ على صلاتي</a></li>
+            <li><a href="#group-5">المجموعة الخامسة: أنمو مع صلاتي</a></li>
+            <li><a href="#group-6">المجموعة السادسة: أُقرّب الصلاة إلى قلبي</a></li>
           </ul>
         </section>
       </section>
     </section>
+
     <section id="bookletOnePage" class="page hidden booklet-page">
-      <header class="booklet-cover"><p class="kicker">ط³ظ„ط³ظ„ط© ط£ط­ط¨ طµظ„ط§طھظٹ آ· ط§ظ„ظƒطھظٹظ‘ط¨ ط§ظ„ط£ظˆظ„</p><h1>ظ„ظ…ط§ط°ط§ ط£ظڈطµظ„ظ‘ظٹطں</h1><p>ط±ط­ظ„ط© ظ„ظپظ‡ظ… ط§ظ„طµظ„ط§ط© ظˆظ…ظƒط§ظ†طھظ‡ط§ ظپظٹ ط­ظٹط§طھظ†ط§طŒ ظˆط§ظ„طھط¹ط±ظ‘ظپ ط¥ظ„ظ‰ ط§ظ„طµظ„ظˆط§طھ ط§ظ„ط®ظ…ط³ ظˆظƒظٹظپ ظ†ط­ط§ظپط¸ ط¹ظ„ظٹظ‡ط§.</p></header>
-      <div class="booklet-toolbar actions"><button type="button" class="secondary" data-page="homePage">ط§ظ„ط¹ظˆط¯ط© ط¥ظ„ظ‰ ط§ظ„ظ…ظƒطھط¨ط©</button><button type="button" class="primary" id="printBooklet">ط·ط¨ط§ط¹ط© ط§ظ„ظƒطھظٹظ‘ط¨</button></div>
+      <header class="booklet-cover"><p class="kicker">سلسلة أحب صلاتي · الكتيّب الأول</p><h1>لماذا أُصلّي؟</h1><p>رحلة لفهم الصلاة ومكانتها في حياتنا، والتعرّف إلى الصلوات الخمس وكيف نحافظ عليها.</p></header>
+      <div class="booklet-toolbar actions"><button type="button" class="secondary" data-page="homePage">العودة إلى المكتبة</button><button type="button" class="primary" id="printBooklet">طباعة الكتيّب</button></div>
       <div class="booklet-content">
-        <article class="booklet-section"><h2>ط¹ظ† ظ‡ط°ط§ ط§ظ„ظƒطھط§ط¨</h2><p>ط§ظ„طµظ„ط§ط© ظ…ظ† ط£ط¹ط¸ظ… ط§ظ„ط¹ط¨ط§ط¯ط§طھ ظپظٹ ط§ظ„ط¥ط³ظ„ط§ظ…طŒ ظˆظ‡ظٹ طµظ„ط© ط¨ظٹظ† ط§ظ„ط¹ط¨ط¯ ظˆط±ط¨ظ‡طŒ ظٹظ‚ظپ ظپظٹظ‡ط§ ط§ظ„ظ…ط³ظ„ظ… ظ„ط¹ط¨ط§ط¯ط© ط§ظ„ظ„ظ‡ ظˆط°ظƒط±ظ‡طŒ ظˆظٹظ‚ط±ط£ ط§ظ„ظ‚ط±ط¢ظ†طŒ ظˆظٹط±ظƒط¹ ظˆظٹط³ط¬ط¯ ظƒظ…ط§ ط¹ظ„ظ‘ظ…ظ†ط§ ط±ط³ظˆظ„ ط§ظ„ظ„ظ‡ ï·؛.</p><p>ظپظٹ ظ‡ط°ط§ ط§ظ„ظƒطھط§ط¨ ط³ظ†ط¨ط­ط« ظ…ط¹ظ‹ط§ ط¹ظ† ط¥ط¬ط§ط¨ط§طھ ظ„ط£ط³ط¦ظ„ط© ظ…ظ‡ظ…ط©: ظ„ظ…ط§ط°ط§ ط®ظ„ظ‚ظ†ط§ ط§ظ„ظ„ظ‡طں ظ…ط§ ظ…ط¹ظ†ظ‰ ط£ظ† ظ†ط¹ط¨ط¯ظ‡طں ظ„ظ…ط§ط°ط§ ظ†طµظ„ظ‘ظٹطں ظ…ط§ ط§ظ„طµظ„ظˆط§طھ ط§ظ„ط®ظ…ط³طں ظˆظƒظٹظپ طھط³ط§ط¹ط¯ظ†ط§ ط§ظ„طµظ„ط§ط© ط¹ظ„ظ‰ طھط°ظƒظ‘ط± ط§ظ„ظ„ظ‡ ظˆط§ظ„ط­ط±طµ ط¹ظ„ظ‰ ط§ظ„ط®ظٹط±طں</p><p>ظ„ظ† ظ†ظƒطھظپظٹ ط¨ط­ظپط¸ ط§ظ„ظ…ط¹ظ„ظˆظ…ط§طھطŒ ط¨ظ„ ط³ظ†ط­ط§ظˆظ„ ظپظ‡ظ… ظ…ط¹ط§ظ†ظٹظ‡ط§ ظ…ظ† ط®ظ„ط§ظ„ ط¢ظٹط§طھ ط§ظ„ظ‚ط±ط¢ظ† ط§ظ„ظƒط±ظٹظ… ظˆط£ط­ط§ط¯ظٹط« طµط­ظٹط­ط© ظˆط£ظ†ط´ط·ط© طھط³ط§ط¹ط¯ظ†ط§ ط¹ظ„ظ‰ ط§ظ„طھط¹ظ„ظ‘ظ…. ط§ظ‚ط±ط£ ط¨ظ‡ط¯ظˆط،طŒ ظˆطھظˆظ‚ظ‘ظپ ط¹ظ†ط¯ ط§ظ„ط£ط³ط¦ظ„ط©طŒ ظˆط§ظƒطھط¨ ط¥ط¬ط§ط¨ط§طھظƒطŒ ظˆط§ط³ط£ظ„ ظˆط§ظ„ط¯ظٹظƒ ط£ظˆ ظ…ط¹ظ„ظ‘ظ…ظƒ ط¹ظ†ط¯ظ…ط§ طھط­طھط§ط¬ ط¥ظ„ظ‰ ظ…ط³ط§ط¹ط¯ط©.</p></article>
-        <article class="booklet-section"><h2>ط¥ظ‡ط¯ط§ط، ظˆط±ط³ط§ظ„ط© ط¥ظ„ظٹظƒ</h2><p>ط¥ظ„ظ‰ ظƒظ„ ط·ظپظ„ ظٹطھط¹ظ„ظ‘ظ… ط§ظ„طµظ„ط§ط©طŒ ظˆط¥ظ„ظ‰ ظƒظ„ ظ‚ظ„ط¨ طµط؛ظٹط± ظٹط±ظٹط¯ ط£ظ† ظٹط¹ط±ظپ ط±ط¨ظ‘ظ‡ ظˆظٹط¹ط¨ط¯ظ‡طŒ ظˆط¥ظ„ظ‰ ظƒظ„ ط£ط³ط±ط© طھط³ط§ط¹ط¯ ط£ط¨ظ†ط§ط،ظ‡ط§ ط¹ظ„ظ‰ طھط¹ظ„ظ‘ظ… ط§ظ„طµظ„ط§ط© ط¨ط§ظ„ظ…ط­ط¨ط© ظˆط§ظ„طµط¨ط± ظˆط§ظ„ظ‚ط¯ظˆط© ط§ظ„ط­ط³ظ†ط©.</p><p>ط£ظ‡ظ„ظ‹ط§ ط¨ظƒ ظپظٹ ط±ط­ظ„طھظ†ط§ ظ…ط¹ ط§ظ„طµظ„ط§ط©! ط±ط¨ظ…ط§ طھط¹ط±ظپ ط£ط³ظ…ط§ط، ط§ظ„طµظ„ظˆط§طھ ط§ظ„ط®ظ…ط³طŒ ظˆط±ط¨ظ…ط§ ط¨ط¯ط£طھ طھطھط¹ظ„ظ‘ظ… ط§ظ„ظˆط¶ظˆط، ظˆط§ظ„طµظ„ط§ط©طŒ ظˆط±ط¨ظ…ط§ ظ„ط¯ظٹظƒ ط£ط³ط¦ظ„ط© ظƒط«ظٹط±ط©. ظ„ط§ طھط­طھط§ط¬ ط¥ظ„ظ‰ ظ…ط¹ط±ظپط© ظƒظ„ ط´ظٹط، ظ…ظ† ط§ظ„ط¨ط¯ط§ظٹط©ط› ط®ط° ظˆظ‚طھظƒ ظپظٹ ط§ظ„ظ‚ط±ط§ط،ط©طŒ ظˆط­ط§ظˆظ„ ط£ظ† طھظپظ‡ظ… ط§ظ„ظ…ط¹ظ†ظ‰ ظ‚ط¨ظ„ ط§ظ„ط§ظ†طھظ‚ط§ظ„ ط¥ظ„ظ‰ ط§ظ„طµظپط­ط© ط§ظ„طھط§ظ„ظٹط©. ظˆط¥ط°ط§ ظˆط¬ط¯طھ ط³ط¤ط§ظ„ظ‹ط§ ظ„ط§ طھط¹ط±ظپ ط¥ط¬ط§ط¨طھظ‡طŒ ظپط§ظƒطھط¨ظ‡ ظˆط§ط³ط£ظ„ ط´ط®طµظ‹ط§ ظ…ظˆط«ظˆظ‚ظ‹ط§.</p><p>ظ†ط³ط£ظ„ ط§ظ„ظ„ظ‡ ط£ظ† ظٹط¹ظ„ظ‘ظ…ظ†ط§ ظ…ط§ ظٹظ†ظپط¹ظ†ط§طŒ ظˆط£ظ† ظٹط¹ظٹظ†ظ†ط§ ط¹ظ„ظ‰ ط°ظƒط±ظ‡ ظˆط´ظƒط±ظ‡ ظˆط­ط³ظ† ط¹ط¨ط§ط¯طھظ‡طŒ ظˆط£ظ† ظٹط¬ط¹ظ„ ط§ظ„طµظ„ط§ط© ظ‚ط±ط© ط¹ظٹظ† ظ„ظ†ط§.</p></article>
-        <article class="booklet-section"><h2>ظ„ظ…ط§ط°ط§ ط®ظ„ظ‚ظ†ط§ ط§ظ„ظ„ظ‡طں</h2><p>ط®ظ„ظ‚ ط§ظ„ظ„ظ‡ ط§ظ„ط¥ظ†ط³ط§ظ† ظˆط±ط²ظ‚ظ‡ ظˆط£ظ†ط¹ظ… ط¹ظ„ظٹظ‡ ط¨ظ†ط¹ظ… ظƒط«ظٹط±ط©. ظˆظ†ط­ظ† ظ†ط¤ظ…ظ† ط¨ط£ظ† ط§ظ„ظ„ظ‡ ظ‡ظˆ ط®ط§ظ„ظ‚ظ†ط§طŒ ظˆط£ظ†ظ‡ ظˆط­ط¯ظ‡ ط§ظ„ظ…ط³طھط­ظ‚ ظ„ظ„ط¹ط¨ط§ط¯ط©.</p><div class="booklet-verse">ï´؟ظˆظژظ…ظژط§ ط®ظژظ„ظژظ‚ظ’طھظڈ ط§ظ„ظ’ط¬ظگظ†ظ‘ظژ ظˆظژط§ظ„ظ’ط¥ظگظ†ظ’ط³ظژ ط¥ظگظ„ظ‘ظژط§ ظ„ظگظٹظژط¹ظ’ط¨ظڈط¯ظڈظˆظ†ظگï´¾<br><small>ط³ظˆط±ط© ط§ظ„ط°ط§ط±ظٹط§طھطŒ ط§ظ„ط¢ظٹط© 56</small></div><p>طھط¹ظ„ظ‘ظ…ظ†ط§ ظ‡ط°ظ‡ ط§ظ„ط¢ظٹط© ط£ظ† ط¹ط¨ط§ط¯ط© ط§ظ„ظ„ظ‡ ط؛ط§ظٹط© ط¹ط¸ظٹظ…ط© ظ…ظ† ط§ظ„ط؛ط§ظٹط§طھ ط§ظ„طھظٹ ط®ظ„ظ‚ ط§ظ„ظ„ظ‡ ط§ظ„ط¬ظ† ظˆط§ظ„ط¥ظ†ط³ ظ…ظ† ط£ط¬ظ„ظ‡ط§. ظˆط¹ط¨ط§ط¯ط© ط§ظ„ظ„ظ‡ طھط¹ظ†ظٹ ط£ظ† ظ†طھظ‚ط±ظ‘ط¨ ط¥ظ„ظٹظ‡ ط¨ظ…ط§ ط´ط±ط¹ظ‡ ظˆط£ظ…ط± ط¨ظ‡طŒ ظپظ†ط·ظٹط¹ظ‡ ط¨ط¥ط®ظ„ط§طµطŒ ظˆظ†طµظ„ظ‘ظٹ ظ„ظ‡طŒ ظˆظ†ط¯ط¹ظˆظ‡طŒ ظˆظ†ظ‚ط±ط£ ظƒطھط§ط¨ظ‡طŒ ظˆظ†ط­ط±طµ ط¹ظ„ظ‰ ط§ظ„ط£ط¹ظ…ط§ظ„ ط§ظ„طµط§ظ„ط­ط©.</p><p>ط§ظ„ظ„ظ‡ ط؛ظ†ظٹظ‘ ط¹ظ† ط¹ط¨ط§ط¯طھظ†ط§طŒ ظˆظ†ط­ظ† ط§ظ„ط°ظٹظ† ظ†ط­طھط§ط¬ ط¥ظ„ظٹظ‡ ظˆط¥ظ„ظ‰ ظ‡ط¯ط§ظٹطھظ‡ ظˆط±ط­ظ…طھظ‡.</p><div class="booklet-activity"><strong>ظپظƒظ‘ط± ظˆط£ط¬ط¨</strong><p>ظ…ظ† ط§ظ„ط°ظٹ ط®ظ„ظ‚ظ†ط§ ظˆط±ط²ظ‚ظ†ط§طں <span class="booklet-answer"></span></p><p>ظ…ط§ ط§ظ„ط¹ط¨ط§ط¯ط© ط§ظ„طھظٹ ط³ظ†طھط¹ظ„ظ…ظ‡ط§ ظپظٹ ظ‡ط°ط§ ط§ظ„ظƒطھط§ط¨طں <span class="booklet-answer"></span></p><p>ط§ط°ظƒط± ط¹ظ…ظ„ظ‹ط§ طµط§ظ„ط­ظ‹ط§ ط؛ظٹط± ط§ظ„طµظ„ط§ط©. <span class="booklet-answer"></span></p></div></article>
-        <article class="booklet-section"><h2>ط§ظ„ظ„ظ‡ ط£ظ†ط¹ظ… ط¹ظ„ظٹظ‘ ط¨ظ†ط¹ظ… ظƒط«ظٹط±ط©</h2><p>طھط£ظ…ظ‘ظ„ ظٹظˆظ…ظƒ ظ…ظ†ط° ط£ظ† طھط³طھظٹظ‚ط¸. طھط³طھط·ظٹط¹ ط£ظ† طھط±ظ‰ ظˆطھط³ظ…ط¹ ظˆطھطھط­ط±ظƒ ظˆطھطھط¹ظ„ظ… ظˆطھط£ظƒظ„ ظˆطھط´ط±ط¨. ظˆظ‚ط¯ طھط¬ط¯ ط£ط³ط±ط© طھط­ط¨ظƒ ظˆط£ط´ط®ط§طµظ‹ط§ ظٹط³ط§ط¹ط¯ظˆظ†ظƒ. ظƒظ„ ظ‡ط°ظ‡ ط§ظ„ظ†ط¹ظ… طھط°ظƒظ‘ط±ظ†ط§ ط¨ظپط¶ظ„ ط§ظ„ظ„ظ‡ ط¹ظ„ظٹظ†ط§.</p><div class="booklet-verse">ï´؟ظˆظژط¥ظگظ†ظ’ طھظژط¹ظڈط¯ظ‘ظڈظˆط§ ظ†ظگط¹ظ’ظ…ظژطھظژ ط§ظ„ظ„ظ‘ظژظ‡ظگ ظ„ظژط§ طھظڈط­ظ’طµظڈظˆظ‡ظژط§ï´¾<br><small>ط³ظˆط±ط© ط¥ط¨ط±ط§ظ‡ظٹظ…طŒ ط§ظ„ط¢ظٹط© 34</small></div><p>ظ…ظ† ط´ظƒط± ط§ظ„ظ„ظ‡ ط£ظ† ظ†ط­ظ…ط¯ظ‡طŒ ظˆظ†ط³طھط®ط¯ظ… ظ…ط§ ظˆظ‡ط¨ظ†ط§ ط¥ظٹط§ظ‡ ظپظٹ ط§ظ„ط®ظٹط±طŒ ظˆظ†ط­ط§ظپط¸ ط¹ظ„ظ‰ ط§ظ„ظ†ط¹ظ…طŒ ظˆظ†ط­ط³ظ† ظ…ط¹ط§ظ…ظ„ط© ط§ظ„ط¢ط®ط±ظٹظ†طŒ ظˆظ†ط¤ط¯ظٹ ط§ظ„ط¹ط¨ط§ط¯ط§طھ ط§ظ„طھظٹ ط£ظ…ط±ظ†ط§ ط¨ظ‡ط§طŒ ظˆظ…ظ†ظ‡ط§ ط§ظ„طµظ„ط§ط©.</p><div class="booklet-activity"><strong>ظ†ط´ط§ط·: ط£ظƒطھط´ظپ ط§ظ„ظ†ط¹ظ… ظ…ظ† ط­ظˆظ„ظٹ</strong><p>ط§ظƒطھط¨ ط«ظ„ط§ط« ظ†ط¹ظ… طھط´ظƒط± ط§ظ„ظ„ظ‡ ط¹ظ„ظٹظ‡ط§:</p><p>ظ،. <span class="booklet-answer"></span>ظ¢. <span class="booklet-answer"></span>ظ£. <span class="booklet-answer"></span></p><p>ظƒظٹظپ ط£ط³طھط®ط¯ظ… ط¥ط­ط¯ظ‰ ظ‡ط°ظ‡ ط§ظ„ظ†ط¹ظ… ظپظٹ ط§ظ„ط®ظٹط±طں <span class="booklet-answer"></span></p></div></article>
-        <article class="booklet-section"><h2>ظ…ط§ ط§ظ„طµظ„ط§ط©طں</h2><p>ط§ظ„طµظ„ط§ط© ط¹ط¨ط§ط¯ط© ط¹ط¸ظٹظ…ط© ظپط±ط¶ظ‡ط§ ط§ظ„ظ„ظ‡ ط¹ظ„ظ‰ ط§ظ„ظ…ط³ظ„ظ…ظٹظ†طŒ ظˆظ„ظ‡ط§ ط£ظ‚ظˆط§ظ„ ظˆط£ظپط¹ط§ظ„ ظ…ط®طµظˆطµط© ظ†طھط¹ظ„ظ…ظ‡ط§ ظ…ظ† ظ‡ط¯ظٹ ط§ظ„ظ†ط¨ظٹ ظ…ط­ظ…ط¯ ï·؛. ظ†ط¨ط¯ط£ ط§ظ„طµظ„ط§ط© ط¨طھظƒط¨ظٹط±ط© ط§ظ„ط¥ط­ط±ط§ظ… ظپظ†ظ‚ظˆظ„ آ«ط§ظ„ظ„ظ‡ ط£ظƒط¨ط±آ»طŒ ط«ظ… ظ†ط¤ط¯ظٹ ط£ظپط¹ط§ظ„ ط§ظ„طµظ„ط§ط© ط¨ط§ظ„طھط±طھظٹط¨ ط§ظ„ظ…ط¹ط±ظˆظپطŒ ظˆظ†ط®طھظ…ظ‡ط§ ط¨ط§ظ„طھط³ظ„ظٹظ….</p><div class="booklet-verse">ï´؟ظˆظژط£ظژظ‚ظگظٹظ…ظڈظˆط§ ط§ظ„طµظ‘ظژظ„ظژط§ط©ظژ ظˆظژط¢طھظڈظˆط§ ط§ظ„ط²ظ‘ظژظƒظژط§ط©ظژ ظˆظژط§ط±ظ’ظƒظژط¹ظڈظˆط§ ظ…ظژط¹ظژ ط§ظ„ط±ظ‘ظژط§ظƒظگط¹ظگظٹظ†ظژï´¾<br><small>ط³ظˆط±ط© ط§ظ„ط¨ظ‚ط±ط©طŒ ط§ظ„ط¢ظٹط© 43</small></div><p>ط¥ظ‚ط§ظ…ط© ط§ظ„طµظ„ط§ط© طھط¹ظ†ظٹ ط§ظ„ظ…ط­ط§ظپط¸ط© ط¹ظ„ظٹظ‡ط§ ظˆط£ط¯ط§ط،ظ‡ط§ ط¹ظ„ظ‰ ط§ظ„ظˆط¬ظ‡ ط§ظ„ظ…ط´ط±ظˆط¹. ظˆظ†طھط¹ظ„ظ‘ظ… طµظپطھظ‡ط§ ظ…ظ† ط§ظ„ظ‚ط±ط¢ظ† ط§ظ„ظƒط±ظٹظ… ظˆط³ظ†ط© ط§ظ„ظ†ط¨ظٹ ï·؛طŒ ظˆظ…ظ† طھط¹ظ„ظٹظ… ط§ظ„ظˆط§ظ„ط¯ظٹظ† ظˆط§ظ„ظ…ط¹ظ„ظ…ظٹظ† ط§ظ„ظ…ظˆط«ظˆظ‚ظٹظ†.</p><div class="booklet-verse">آ«طµظژظ„ظ‘ظڈظˆط§ ظƒظژظ…ظژط§ ط±ظژط£ظژظٹظ’طھظڈظ…ظڈظˆظ†ظگظٹ ط£ظڈطµظژظ„ظ‘ظگظٹآ»<br><small>ط±ظˆط§ظ‡ ط§ظ„ط¨ط®ط§ط±ظٹ ط¹ظ† ظ…ط§ظ„ظƒ ط¨ظ† ط§ظ„ط­ظˆظٹط±ط« ط±ط¶ظٹ ط§ظ„ظ„ظ‡ ط¹ظ†ظ‡طŒ ط§ظ„ط­ط¯ظٹط« ط±ظ‚ظ… 631</small></div><div class="booklet-activity"><strong>ظپظƒظ‘ط± ظˆط£ط¬ط¨</strong><p>ظ…ظ† ط§ظ„ط°ظٹ ظپط±ط¶ ط§ظ„طµظ„ط§ط©طں <span class="booklet-answer"></span></p><p>ظ…ظ† ط£ظٹظ† ظ†طھط¹ظ„ظ‘ظ… طµظپط© ط§ظ„طµظ„ط§ط©طں <span class="booklet-answer"></span></p></div></article>
-        <article class="booklet-section"><h2>ظ„ظ…ط§ط°ط§ ط£ظڈطµظ„ظ‘ظٹطں</h2><p>ط£طµظ„ظ‘ظٹ ظ„ط£ظ† ط§ظ„ظ„ظ‡ ط£ظ…ط±ظ†ظٹ ط¨ط§ظ„طµظ„ط§ط©طŒ ظˆظ„ط£ظ†ظ‡ط§ ط¹ط¨ط§ط¯ط© ط£طھظ‚ط±ظ‘ط¨ ط¨ظ‡ط§ ط¥ظ„ظٹظ‡. ظˆظپظٹ ط§ظ„طµظ„ط§ط© ط£ط°ظƒط± ط§ظ„ظ„ظ‡طŒ ظˆط£ظ‚ط±ط£ ط§ظ„ظ‚ط±ط¢ظ†طŒ ظˆط£ط¯ط¹ظˆظ‡طŒ ظˆط£ط®طµظ‘طµ ظˆظ‚طھظ‹ط§ ظ„ط¹ط¨ط§ط¯طھظ‡ ظپظٹ ظٹظˆظ…ظٹ.</p><div class="booklet-verse">ï´؟ظˆظژط£ظژظ‚ظگظ…ظگ ط§ظ„طµظ‘ظژظ„ظژط§ط©ظژ ظ„ظگط°ظگظƒظ’ط±ظگظٹï´¾<br><small>ط³ظˆط±ط© ط·ظ‡طŒ ط§ظ„ط¢ظٹط© 14</small></div><p>ط§ظ„طµظ„ط§ط© ظ„ظٹط³طھ ظ…ط¬ط±ط¯ ط¹ط§ط¯ط© ظ†ط¤ط¯ظٹظ‡ط§ ظ„ط£ظ†ظ†ط§ ط§ط¹طھط¯ظ†ط§ ط¹ظ„ظٹظ‡ط§ط› ط¨ظ„ ظ‡ظٹ ط¹ط¨ط§ط¯ط© ظ†ظ‚طµط¯ ط¨ظ‡ط§ ط·ط§ط¹ط© ط§ظ„ظ„ظ‡ ظˆط§ظ„طھظ‚ط±ظ‘ط¨ ط¥ظ„ظٹظ‡. ظˆظ‚ط¯ ط£ط´ط¹ط± ط¨ط§ظ„ط·ظ…ط£ظ†ظٹظ†ط© ط£ط«ظ†ط§ط، ط§ظ„طµظ„ط§ط©طŒ ظˆظ‚ط¯ ط£ط­طھط§ط¬ ط£ط­ظٹط§ظ†ظ‹ط§ ط¥ظ„ظ‰ ظ…ط²ظٹط¯ ظ…ظ† ط§ظ„طھط¯ط±ظٹط¨ ط¹ظ„ظ‰ ط§ظ„طھط±ظƒظٹط². ظ„ط§ ط£ط¬ط¹ظ„ ط°ظ„ظƒ ط³ط¨ط¨ظ‹ط§ ظ„ظ„ظٹط£ط³طŒ ط¨ظ„ ط£طھط¹ظ„ظ… ظ…ط¹ط§ظ†ظٹ ظ…ط§ ط£ظ‚ط±ط£ ظˆط£ط­ط§ظˆظ„ ط§ظ„ط§ظ†طھط¨ط§ظ‡ ط¥ظ„ظ‰ طµظ„ط§طھظٹ.</p><div class="booklet-activity"><strong>ط£ظƒظ…ظ„ ط§ظ„ط¹ط¨ط§ط±ط©</strong><p>ط£طµظ„ظ‘ظٹ ظ„ط£ظ† <span class="booklet-answer"></span></p><p>ظˆط£ط±ظٹط¯ ط£ظ† ط£طھط¹ظ„ظ‘ظ… ط£ظƒط«ط± ط¹ظ† <span class="booklet-answer"></span></p></div></article>
-        <article class="booklet-section"><h2>ط§ظ„طµظ„ظˆط§طھ ط§ظ„ط®ظ…ط³</h2><p>ظپط±ط¶ ط§ظ„ظ„ظ‡ ط¹ظ„ظ‰ ط§ظ„ظ…ط³ظ„ظ…ظٹظ† ط®ظ…ط³ طµظ„ظˆط§طھ ظپظٹ ط§ظ„ظٹظˆظ… ظˆط§ظ„ظ„ظٹظ„ط©طŒ ظˆظ„ظƒظ„ طµظ„ط§ط© ظˆظ‚طھظ‡ط§ ط§ظ„ط°ظٹ طھط¤ط¯ظ‘ظ‰ ظپظٹظ‡:</p><ol><li><strong>ط§ظ„ظپط¬ط±:</strong> ظ‚ط¨ظ„ ط´ط±ظˆظ‚ ط§ظ„ط´ظ…ط³.</li><li><strong>ط§ظ„ط¸ظ‡ط±:</strong> ط¨ط¹ط¯ ط²ظˆط§ظ„ ط§ظ„ط´ظ…ط³ ط¹ظ† ظˆط³ط· ط§ظ„ط³ظ…ط§ط،.</li><li><strong>ط§ظ„ط¹طµط±:</strong> ظپظٹ ظˆظ‚طھ ط§ظ„ط¹طµط± ط§ظ„ظ…ط¹ط±ظˆظپ.</li><li><strong>ط§ظ„ظ…ط؛ط±ط¨:</strong> ط¨ط¹ط¯ ط؛ط±ظˆط¨ ط§ظ„ط´ظ…ط³.</li><li><strong>ط§ظ„ط¹ط´ط§ط،:</strong> ط¨ط¹ط¯ ط؛ظٹط§ط¨ ط§ظ„ط´ظپظ‚طŒ ظˆظپظ‚ ط£ط­ظƒط§ظ… ط§ظ„ظ…ظˆط§ظ‚ظٹطھ.</li></ol><p>طھط®طھظ„ظپ ظ…ظˆط§ظ‚ظٹطھ ط§ظ„طµظ„ط§ط© ط¨ط§ط®طھظ„ط§ظپ ط§ظ„ظ…ظƒط§ظ† ظˆط§ظ„طھط§ط±ظٹط®طŒ ظˆظ„ط°ظ„ظƒ ظ†ط³طھط¹ظٹظ† ط¨طھظ‚ظˆظٹظ… ظ…ظˆط«ظˆظ‚ ظٹظ†ط§ط³ط¨ ظ…ط¯ظٹظ†طھظ†ط§ ظˆظ†طھط¹ظ„ظ… ظ…ظ† ط£ط³ط±طھظ†ط§ ظƒظٹظپظٹط© ظ…ط¹ط±ظپط© ط§ظ„ظˆظ‚طھ.</p><div class="booklet-activity"><strong>ظ†ط´ط§ط·: ط§ظƒطھط¨ ط£ط³ظ…ط§ط، ط§ظ„طµظ„ظˆط§طھ ط§ظ„ط®ظ…ط³ ط¨ط§ظ„طھط±طھظٹط¨</strong><ol><li><span class="booklet-answer"></span></li><li><span class="booklet-answer"></span></li><li><span class="booklet-answer"></span></li><li><span class="booklet-answer"></span></li><li><span class="booklet-answer"></span></li></ol></div></article>
-        <article class="booklet-section"><h2>ط£ط­ط§ظپط¸ ط¹ظ„ظ‰ ط§ظ„طµظ„ط§ط© ظپظٹ ظˆظ‚طھظ‡ط§</h2><div class="booklet-verse">ï´؟ط¥ظگظ†ظ‘ظژ ط§ظ„طµظ‘ظژظ„ظژط§ط©ظژ ظƒظژط§ظ†ظژطھظ’ ط¹ظژظ„ظژظ‰ ط§ظ„ظ’ظ…ظڈط¤ظ’ظ…ظگظ†ظگظٹظ†ظژ ظƒظگطھظژط§ط¨ظ‹ط§ ظ…ظژظˆظ’ظ‚ظڈظˆطھظ‹ط§ï´¾<br><small>ط³ظˆط±ط© ط§ظ„ظ†ط³ط§ط،طŒ ط§ظ„ط¢ظٹط© 103</small></div><p>طھط¹ظ†ظٹ ط§ظ„ط¢ظٹط© ط£ظ† ط§ظ„طµظ„ط§ط© ظپظڈط±ط¶طھ ظپظٹ ط£ظˆظ‚ط§طھ ظ…ط­ط¯ط¯ط©. ظˆظ…ظ† ط§ظ„ظ…ظ‡ظ… ط£ظ† ط£ظ†ط¸ظ… ظˆظ‚طھ ط§ظ„ظ„ط¹ط¨ ظˆط§ظ„ط¯ط±ط§ط³ط©طŒ ظˆط£ظ† ط£ط³طھط¹ط¯ ظ„ظ„طµظ„ط§ط© ط¹ظ†ط¯ظ…ط§ ظٹط­ظٹظ† ظˆظ‚طھظ‡ط§طŒ ظˆط£ظ† ط£ط·ظ„ط¨ ط§ظ„ظ…ط³ط§ط¹ط¯ط© ط¥ط°ط§ ظ„ظ… ط£ط¹ط±ظپ ظˆظ‚طھظ‡ط§.</p><p>ط¹ظ† ط¹ط¨ط¯ ط§ظ„ظ„ظ‡ ط¨ظ† ظ…ط³ط¹ظˆط¯ ط±ط¶ظٹ ط§ظ„ظ„ظ‡ ط¹ظ†ظ‡ ط£ظ†ظ‡ ط³ط£ظ„ ط§ظ„ظ†ط¨ظٹ ï·؛: ط£ظٹ ط§ظ„ط¹ظ…ظ„ ط£ط­ط¨ ط¥ظ„ظ‰ ط§ظ„ظ„ظ‡طں ظ‚ط§ظ„: آ«ط§ظ„طµظ‘ظژظ„ظژط§ط©ظڈ ط¹ظژظ„ظژظ‰ ظˆظژظ‚ظ’طھظگظ‡ظژط§آ»طŒ ط«ظ… ط°ظƒط± ط¨ط± ط§ظ„ظˆط§ظ„ط¯ظٹظ†طŒ ط«ظ… ط§ظ„ط¬ظ‡ط§ط¯ ظپظٹ ط³ط¨ظٹظ„ ط§ظ„ظ„ظ‡.</p><p class="booklet-note">ط§ظ„ظ…طµط¯ط±: طµط­ظٹط­ ط§ظ„ط¨ط®ط§ط±ظٹطŒ ط§ظ„ط­ط¯ظٹط« ط±ظ‚ظ… 527طŒ ظˆطµط­ظٹط­ ظ…ط³ظ„ظ…طŒ ط§ظ„ط­ط¯ظٹط« ط±ظ‚ظ… 85.</p><div class="booklet-activity"><strong>ط®ط·طھظٹ ظ„ظ„ظ…ط­ط§ظپط¸ط© ط¹ظ„ظ‰ ظˆظ‚طھ ط§ظ„طµظ„ط§ط©</strong><p>ط£ظƒط«ط± ظˆظ‚طھ ط£ظ†ط´ط؛ظ„ ظپظٹظ‡ ط¹ط§ط¯ط©ظ‹ ظ‡ظˆ: <span class="booklet-answer"></span></p><p>ظ…ط§ ط§ظ„ط°ظٹ ط³ظٹط³ط§ط¹ط¯ظ†ظٹ ط¹ظ„ظ‰ ط§ظ„ط§ط³طھط¹ط¯ط§ط¯ ظ„ظ„طµظ„ط§ط©طں <span class="booklet-answer"></span></p></div></article>
-        <article class="booklet-section"><h2>ط§ظ„طµظ„ط§ط© ظ…ط«ظ„ ظ†ظ‡ط± ظ…طھط¬ط¯ط¯</h2><p>ط¶ط±ط¨ ط§ظ„ظ†ط¨ظٹ ï·؛ ظ…ط«ط§ظ„ظ‹ط§ ظٹظ‚ط±ظ‘ط¨ ط¥ظ„ظٹظ†ط§ ظ…ط¹ظ†ظ‰ طھظƒط±ط§ط± ط§ظ„طµظ„ظˆط§طھ ظˆط£ط«ط±ظ‡ط§.</p><div class="booklet-verse">آ«ظ…ظژط«ظژظ„ظڈ ط§ظ„طµظ‘ظژظ„ظژظˆظژط§طھظگ ط§ظ„ظ’ط®ظژظ…ظ’ط³ظگ ظƒظژظ…ظژط«ظژظ„ظگ ظ†ظژظ‡ظژط±ظچ ط¬ظژط§ط±ظچ ط؛ظژظ…ظ’ط±ظچ ط¹ظژظ„ظژظ‰ ط¨ظژط§ط¨ظگ ط£ظژط­ظژط¯ظگظƒظڈظ…ظ’ ظٹظژط؛ظ’طھظژط³ظگظ„ظڈ ظ…ظگظ†ظ’ظ‡ظڈ ظƒظڈظ„ظ‘ظژ ظٹظژظˆظ’ظ…ظچ ط®ظژظ…ظ’ط³ظژ ظ…ظژط±ظ‘ظژط§طھظچآ»<br><small>ط±ظˆط§ظ‡ ط¬ط§ط¨ط± ط¨ظ† ط¹ط¨ط¯ ط§ظ„ظ„ظ‡ ط±ط¶ظٹ ط§ظ„ظ„ظ‡ ط¹ظ†ظ‡ظ…ط§طŒ ظپظٹ طµط­ظٹط­ ظ…ط³ظ„ظ…طŒ ط§ظ„ط­ط¯ظٹط« ط±ظ‚ظ… 668</small></div><p>ظƒظ…ط§ ط£ظ† ط§ظ„ط§ط؛طھط³ط§ظ„ ط§ظ„ظ…طھظƒط±ط± ظٹظ†ط¸ظپ ط§ظ„ط¬ط³ظ…طŒ ظپط¥ظ† ط§ظ„طµظ„ظˆط§طھ ط§ظ„ط®ظ…ط³ ط³ط¨ط¨ ظ„طھظƒظپظٹط± ط§ظ„ط®ط·ط§ظٹط§ ط¨ط¥ط°ظ† ط§ظ„ظ„ظ‡. ظˆظ‡ط°ط§ ظ„ط§ ظٹط¹ظ†ظٹ ط£ظ† ط§ظ„ط¥ظ†ط³ط§ظ† ظ„ط§ ظٹط®ط·ط¦طŒ ط¨ظ„ ظ†طھط¹ظ„ظ… ط£ظ† ظ†ط³طھط؛ظپط± ط§ظ„ظ„ظ‡ ظˆظ†طµظ„ط­ ط£ط®ط·ط§ط،ظ†ط§ ظˆظ†طھظˆط¨ ط¥ظ„ظٹظ‡.</p><div class="booklet-activity"><strong>ظپظƒظ‘ط± ظˆط£ط¬ط¨</strong><p>ط¨ظ…ط§ط°ط§ ط´ط¨ظ‘ظ‡ ط§ظ„ظ†ط¨ظٹ ï·؛ ط§ظ„طµظ„ظˆط§طھ ط§ظ„ط®ظ…ط³طں <span class="booklet-answer"></span></p><p>ظ…ط§ط°ط§ ط£ظپط¹ظ„ ط¥ط°ط§ ط£ط®ط·ط£طھطں <span class="booklet-answer"></span></p></div></article>
-        <article class="booklet-section"><h2>ط£ظ‚ظپ ط¨ظٹظ† ظٹط¯ظٹ ط§ظ„ظ„ظ‡</h2><p>ط¹ظ†ط¯ظ…ط§ ط£ظ‚ظپ ظ„ظ„طµظ„ط§ط©طŒ ط£ظ‚ظپ ظ„ط¹ط¨ط§ط¯ط© ط§ظ„ظ„ظ‡ ظˆط­ط¯ظ‡. ط£طھط±ظƒ ظ…ط§ ظٹط´ط؛ظ„ظ†ظٹ ظ‚ظ„ظٹظ„ظ‹ط§طŒ ظˆط£طھظˆط¬ظ‡ ط¥ظ„ظ‰ ط§ظ„ظ„ظ‡ ط¨ظ‚ظ„ط¨ظٹ ظˆط¬ط³ط¯ظٹطŒ ظˆط£ظ‚ط±ط£ ط§ظ„ظ‚ط±ط¢ظ† ظˆط£ط°ظƒط± ط±ط¨ظٹ ظˆط£ط¯ط¹ظˆظ‡.</p><div class="booklet-verse">ï´؟ظپظژط§ط°ظ’ظƒظڈط±ظڈظˆظ†ظگظٹ ط£ظژط°ظ’ظƒظڈط±ظ’ظƒظڈظ…ظ’ ظˆظژط§ط´ظ’ظƒظڈط±ظڈظˆط§ ظ„ظگظٹ ظˆظژظ„ظژط§ طھظژظƒظ’ظپظڈط±ظڈظˆظ†ظگï´¾<br><small>ط³ظˆط±ط© ط§ظ„ط¨ظ‚ط±ط©طŒ ط§ظ„ط¢ظٹط© 152</small></div><p>ط§ظ„ظ„ظ‡ ظٹط¹ظ„ظ… ظ…ط§ ظپظٹ ظ‚ظ„ط¨ظٹ ظˆظٹط³ظ…ط¹ ط¯ط¹ط§ط¦ظٹ. ط£ط³طھط·ظٹط¹ ط£ظ† ط£ط¯ط¹ظˆظ‡ ط¨ظ…ط§ ط£ط­طھط§ط¬ ط¥ظ„ظٹظ‡طŒ ظˆط£ظ† ط£ط´ظƒط±ظ‡ ط¹ظ„ظ‰ ظ†ط¹ظ…ظ‡طŒ ظˆط£ظ† ط£ط·ظ„ط¨ ظ…ظ†ظ‡ ط§ظ„ط¹ظˆظ† ط¹ظ„ظ‰ ط§ظ„ط®ظٹط±.</p><div class="booklet-activity"><strong>ظپظƒظ‘ط± ظˆط£ط¬ط¨</strong><p>ط¥ظ„ظ‰ ظ…ظ† ط£طھظˆط¬ظ‡ ط¨طµظ„ط§طھظٹطں <span class="booklet-answer"></span></p><p>ط§ط°ظƒط± ظ†ط¹ظ…ط© طھط´ظƒط± ط§ظ„ظ„ظ‡ ط¹ظ„ظٹظ‡ط§. <span class="booklet-answer"></span></p></div></article>
-        <article class="booklet-section"><h2>ط£ط¬طھظ‡ط¯ ط£ظ† ظٹط¸ظ‡ط± ط£ط«ط± ط§ظ„طµظ„ط§ط© ظپظٹ ط³ظ„ظˆظƒظٹ</h2><p>ط£ط­ط±طµ ط£ظ† طھط³ط§ط¹ط¯ظ†ظٹ ط§ظ„طµظ„ط§ط© ط¹ظ„ظ‰ ط·ط§ط¹ط© ط§ظ„ظ„ظ‡ ظˆط­ط³ظ† ط§ظ„طھط¹ط§ظ…ظ„ ظ…ط¹ ط§ظ„ظ†ط§ط³. ط£ط­ط§ظˆظ„ ط£ظ† ط£ظƒظˆظ† طµط§ط¯ظ‚ظ‹ط§طŒ ظˆط£ط­ظپط¸ ط§ظ„ط£ظ…ط§ظ†ط©طŒ ظˆط£ط­طھط±ظ… ط§ظ„ط¢ط®ط±ظٹظ†طŒ ظˆط£ط¨طھط¹ط¯ ط¹ظ† ط¥ظٹط°ط§ط¦ظ‡ظ…. ظˆط¥ط°ط§ ط£ط®ط·ط£طھطŒ ط£ط³طھط؛ظپط± ط§ظ„ظ„ظ‡ ظˆط£طµظ„ط­ ط®ط·ط¦ظٹ ظˆط£ط¬طھظ‡ط¯ ظپظٹ ط§ظ„ط®ظٹط±.</p><div class="booklet-verse">ï´؟ط¥ظگظ†ظ‘ظژ ط§ظ„ظ„ظ‘ظژظ‡ظژ ظٹظژط£ظ’ظ…ظڈط±ظڈ ط¨ظگط§ظ„ظ’ط¹ظژط¯ظ’ظ„ظگ ظˆظژط§ظ„ظ’ط¥ظگط­ظ’ط³ظژط§ظ†ظگ ظˆظژط¥ظگظٹطھظژط§ط،ظگ ط°ظگظٹ ط§ظ„ظ’ظ‚ظڈط±ظ’ط¨ظژظ‰ظ°ï´¾<br><small>ط³ظˆط±ط© ط§ظ„ظ†ط­ظ„طŒ ط§ظ„ط¢ظٹط© 90</small></div><div class="booklet-activity"><strong>ظ…ط§ط°ط§ ط£ظپط¹ظ„ ظپظٹ ظ‡ط°ظ‡ ط§ظ„ظ…ظˆط§ظ‚ظپطں</strong><p>ظˆط¬ط¯طھ ظ‚ظ„ظ…ظ‹ط§ ظ„ظٹط³ ظ„ظٹ. ظ…ط§ ط§ظ„طھطµط±ظپ ط§ظ„طµط­ظٹط­طں <span class="booklet-answer"></span></p><p>ط£ط®ط·ط£ طµط¯ظٹظ‚ظٹ ظپظٹ ط­ظ‚ظٹ. ظƒظٹظپ ط£ط­ط§ظˆظ„ ط­ظ„ ط§ظ„ظ…ط´ظƒظ„ط©طں <span class="booklet-answer"></span></p><p>ط·ظ„ط¨ ظ…ظ†ظٹ ط£ط­ط¯ ط£ظپط±ط§ط¯ ط£ط³ط±طھظٹ ط§ظ„ظ…ط³ط§ط¹ط¯ط©. ظƒظٹظپ ط£ط³طھط¬ظٹط¨طں <span class="booklet-answer"></span></p></div></article>
-        <article class="booklet-section"><h2>ط§ظ„طµظ„ط§ط© ظپط±طµط© ظ„ظ„ط°ظƒط± ظˆط§ظ„ط¯ط¹ط§ط،</h2><p>ظ‚ط¯ ط£ط´ط¹ط± ط¨ط§ظ„ظپط±ط­ ظپظٹ ط¨ط¹ط¶ ط§ظ„ط£ظٹط§ظ…طŒ ظˆظ‚ط¯ ط£ط´ط¹ط± ط¨ط§ظ„ط­ط²ظ† ط£ظˆ ط§ظ„ظ‚ظ„ظ‚ ظپظٹ ط£ظٹط§ظ… ط£ط®ط±ظ‰. ظˆظپظٹ ظƒظ„ ط§ظ„ط£ط­ظˆط§ظ„ ط£ط³طھط·ظٹط¹ ط£ظ† ط£طھظˆط¬ظ‡ ط¥ظ„ظ‰ ط§ظ„ظ„ظ‡ ط¨ط§ظ„ط¯ط¹ط§ط، ظˆط£ط°ظƒط±ظ‡ ظˆط£ط·ظ„ط¨ ظ…ظ†ظ‡ ط§ظ„ط¹ظˆظ†.</p><div class="booklet-verse">ï´؟ط£ظژظ„ظژط§ ط¨ظگط°ظگظƒظ’ط±ظگ ط§ظ„ظ„ظ‘ظژظ‡ظگ طھظژط·ظ’ظ…ظژط¦ظگظ†ظ‘ظڈ ط§ظ„ظ’ظ‚ظڈظ„ظڈظˆط¨ظڈï´¾<br><small>ط³ظˆط±ط© ط§ظ„ط±ط¹ط¯طŒ ط§ظ„ط¢ظٹط© 28</small></div><p>ظ‚ط¯ ط£ط¸ظ„ ط£ط´ط¹ط± ط¨ط§ظ„ط­ط²ظ† ط£ظˆ ط§ظ„ظ‚ظ„ظ‚ ط£ط­ظٹط§ظ†ظ‹ط§طŒ ظˆظ‡ط°ط§ ظ„ط§ ظٹط¹ظ†ظٹ ط£ظ† طµظ„ط§طھظٹ ط¨ظ„ط§ ظ‚ظٹظ…ط©ط› ط¨ظ„ ظٹظ…ظƒظ†ظ†ظٹ ط£ظٹط¶ظ‹ط§ ط§ظ„طھط­ط¯ط« ظ…ط¹ ظˆط§ظ„ط¯ظٹظ‘ ط£ظˆ ط´ط®طµ ظ…ظˆط«ظˆظ‚ ط¹ظ†ط¯ظ…ط§ ط£ط­طھط§ط¬ ط¥ظ„ظ‰ ط§ظ„ظ…ط³ط§ط¹ط¯ط©.</p><div class="booklet-activity"><strong>ظ†ط´ط§ط·</strong><p>ظ…ط§ ط§ظ„ط£ظ…ظˆط± ط§ظ„ظ†ط§ظپط¹ط© ط§ظ„طھظٹ ظٹظ…ظƒظ† ط£ظ† طھط³ط§ط¹ط¯ظ†ظٹ ط¹ظ†ط¯ظ…ط§ ط£ط´ط¹ط± ط¨ط§ظ„ظ‚ظ„ظ‚طں <span class="booklet-answer"></span></p><p>ط§ظƒطھط¨ ط¯ط¹ط§ط،ظ‹ طھط­ط¨ ط£ظ† طھط¯ط¹ظˆ ط§ظ„ظ„ظ‡ ط¨ظ‡. <span class="booklet-answer"></span></p></div></article>
-        <article class="booklet-section"><h2>ط®ظ„ط§طµط© ط§ظ„ظƒطھظٹظ‘ط¨</h2><ul><li>ط§ظ„ظ„ظ‡ ط®ظ„ظ‚ظ†ط§ ظ„ط¹ط¨ط§ط¯طھظ‡طŒ ظˆظ‡ظˆ ط§ظ„ط°ظٹ ط£ظ†ط¹ظ… ط¹ظ„ظٹظ†ط§ ط¨ظ†ط¹ظ… ظƒط«ظٹط±ط©.</li><li>ط§ظ„طµظ„ط§ط© ط¹ط¨ط§ط¯ط© ط¹ط¸ظٹظ…ط© ظ†طھط¹ظ„ظ‘ظ… طµظپطھظ‡ط§ ظ…ظ† ظ‡ط¯ظٹ ط§ظ„ظ†ط¨ظٹ ï·؛.</li><li>ط§ظ„طµظ„ظˆط§طھ ط§ظ„ظ…ظپط±ظˆط¶ط© ط®ظ…ط³ ظپظٹ ط§ظ„ظٹظˆظ… ظˆط§ظ„ظ„ظٹظ„ط©طŒ ظˆظ„ظƒظ„ طµظ„ط§ط© ظˆظ‚طھظ‡ط§.</li><li>ظپظٹ ط§ظ„طµظ„ط§ط© ظ†ط°ظƒط± ط§ظ„ظ„ظ‡ ظˆظ†طھظ„ظˆ ط§ظ„ظ‚ط±ط¢ظ† ظˆظ†ط¯ط¹ظˆظ‡.</li><li>ظ†ط­ط±طµ ط¹ظ„ظ‰ ط§ظ„طµظ„ط§ط© ظپظٹ ظˆظ‚طھظ‡ط§طŒ ظˆظ†ط¬طھظ‡ط¯ ط£ظ† ظٹط¸ظ‡ط± ط£ط«ط± ط¹ط¨ط§ط¯طھظ†ط§ ظپظٹ ط£ط®ظ„ط§ظ‚ظ†ط§.</li><li>ط¥ط°ط§ ظ„ظ… ظ†ظپظ‡ظ… ط£ظ…ط±ظ‹ط§طŒ ظ†ط³ط£ظ„ ط§ظ„ظˆط§ظ„ط¯ظٹظ† ط£ظˆ ظ…ط¹ظ„ظ‘ظ…ظ‹ط§ ظ…ظˆط«ظˆظ‚ظ‹ط§.</li></ul><p><strong>ط¹ظ‡ط¯ظٹ ظ…ط¹ ظ†ظپط³ظٹ:</strong> ط³ط£ظˆط§طµظ„ طھط¹ظ„ظ‘ظ… ط§ظ„طµظ„ط§ط©طŒ ظˆط£ط³ط£ظ„ ط¹ظ…ظ‘ط§ ظ„ط§ ط£ظپظ‡ظ…ظ‡طŒ ظˆط£ط¬طھظ‡ط¯ ظپظٹ ط§ظ„ظ…ط­ط§ظپط¸ط© ط¹ظ„ظٹظ‡ط§ ط¨ظ…ط³ط§ط¹ط¯ط© ط£ط³ط±طھظٹ.</p><span class="booklet-answer"></span><p class="booklet-note">طھظ†ط¨ظٹظ‡: ظ‡ط°ط§ ط§ظ„ظƒطھظٹظ‘ط¨ ظ…ط¯ط®ظ„ طھط¹ظ„ظٹظ…ظٹ ظ…ط¨ط³ظ‘ط·طŒ ظˆظ„ط§ ظٹط؛ظ†ظٹ ط¹ظ† طھط¹ظ„ظ‘ظ… ط£ط­ظƒط§ظ… ط§ظ„طµظ„ط§ط© ط¨ط§ظ„طھظپطµظٹظ„ ظ…ظ† ط§ظ„ظˆط§ظ„ط¯ظٹظ† ط£ظˆ ط§ظ„ظ…ط¹ظ„ظ‘ظ…ظٹظ† ط§ظ„ظ…ظˆط«ظˆظ‚ظٹظ†.</p></article>
+        <article class="booklet-section"><h2>عن هذا الكتاب</h2><p>الصلاة من أعظم العبادات في الإسلام، وهي صلة بين العبد وربه، يقف فيها المسلم لعبادة الله وذكره، ويقرأ القرآن، ويركع ويسجد كما علّمنا رسول الله ﷺ.</p><p>في هذا الكتاب سنبحث معًا عن إجابات لأسئلة مهمة: لماذا خلقنا الله؟ ما معنى أن نعبده؟ لماذا نصلّي؟ ما الصلوات الخمس؟ وكيف تساعدنا الصلاة على تذكّر الله والحرص على الخير؟</p><p>لن نكتفي بحفظ المعلومات، بل سنحاول فهم معانيها من خلال آيات القرآن الكريم وأحاديث صحيحة وأنشطة تساعدنا على التعلّم. اقرأ بهدوء، وتوقّف عند الأسئلة، واكتب إجاباتك، واسأل والديك أو معلّمك عندما تحتاج إلى مساعدة.</p></article>
+        <article class="booklet-section"><h2>إهداء ورسالة إليك</h2><p>إلى كل طفل يتعلّم الصلاة، وإلى كل قلب صغير يريد أن يعرف ربّه ويعبده، وإلى كل أسرة تساعد أبناءها على تعلّم الصلاة بالمحبة والصبر والقدوة الحسنة.</p><p>أهلًا بك في رحلتنا مع الصلاة! ربما تعرف أسماء الصلوات الخمس، وربما بدأت تتعلّم الوضوء والصلاة، وربما لديك أسئلة كثيرة. لا تحتاج إلى معرفة كل شيء من البداية؛ خذ وقتك في القراءة، وحاول أن تفهم المعنى قبل الانتقال إلى الصفحة التالية. وإذا وجدت سؤالًا لا تعرف إجابته، فاكتبه واسأل شخصًا موثوقًا.</p><p>نسأل الله أن يعلّمنا ما ينفعنا، وأن يعيننا على ذكره وشكره وحسن عبادته، وأن يجعل الصلاة قرة عين لنا.</p></article>
+        <article class="booklet-section"><h2>لماذا خلقنا الله؟</h2><p>خلق الله الإنسان ورزقه وأنعم عليه بنعم كثيرة. ونحن نؤمن بأن الله هو خالقنا، وأنه وحده المستحق للعبادة.</p><div class="booklet-verse">﴿وَمَا خَلَقْتُ الْجِنَّ وَالْإِنْسَ إِلَّا لِيَعْبُدُونِ﴾<br><small>سورة الذاريات، الآية 56</small></div><p>تعلّمنا هذه الآية أن عبادة الله غاية عظيمة من الغايات التي خلق الله الجن والإنس من أجلها. وعبادة الله تعني أن نتقرّب إليه بما شرعه وأمر به، فنطيعه بإخلاص، ونصلّي له، وندعوه، ونقرأ كتابه، ونحرص على الأعمال الصالحة.</p><p>الله غنيّ عن عبادتنا، ونحن الذين نحتاج إليه وإلى هدايته ورحمته.</p><div class="booklet-activity"><strong>فكّر وأجب</strong><p>من الذي خلقنا ورزقنا؟ <span class="booklet-answer"></span></p><p>ما العبادة التي سنتعلمها في هذا الكتاب؟ <span class="booklet-answer"></span></p><p>اذكر عملًا صالحًا غير الصلاة. <span class="booklet-answer"></span></p></div></article>
+        <article class="booklet-section"><h2>الله أنعم عليّ بنعم كثيرة</h2><p>تأمّل يومك منذ أن تستيقظ. تستطيع أن ترى وتسمع وتتحرك وتتعلم وتأكل وتشرب. وقد تجد أسرة تحبك وأشخاصًا يساعدونك. كل هذه النعم تذكّرنا بفضل الله علينا.</p><div class="booklet-verse">﴿وَإِنْ تَعُدُّوا نِعْمَتَ اللَّهِ لَا تُحْصُوهَا﴾<br><small>سورة إبراهيم، الآية 34</small></div><p>من شكر الله أن نحمده، ونستخدم ما وهبنا إياه في الخير، ونحافظ على النعم، ونحسن معاملة الآخرين، ونؤدي العبادات التي أمرنا بها، ومنها الصلاة.</p><div class="booklet-activity"><strong>نشاط: أكتشف النعم من حولي</strong><p>اكتب ثلاث نعم تشكر الله عليها:</p><p>١. <span class="booklet-answer"></span>٢. <span class="booklet-answer"></span>٣. <span class="booklet-answer"></span></p><p>كيف أستخدم إحدى هذه النعم في الخير؟ <span class="booklet-answer"></span></p></div></article>
+        <article class="booklet-section"><h2>ما الصلاة؟</h2><p>الصلاة عبادة عظيمة فرضها الله على المسلمين، ولها أقوال وأفعال مخصوصة نتعلمها من هدي النبي محمد ﷺ. نبدأ الصلاة بتكبيرة الإحرام فنقول «الله أكبر»، ثم نؤدي أفعال الصلاة بالترتيب المعروف، ونختمها بالتسليم.</p><div class="booklet-verse">﴿وَأَقِيمُوا الصَّلَاةَ وَآتُوا الزَّكَاةَ وَارْكَعُوا مَعَ الرَّاكِعِينَ﴾<br><small>سورة البقرة، الآية 43</small></div><p>إقامة الصلاة تعني المحافظة عليها وأداءها على الوجه المشروع. ونتعلّم صفتها من القرآن الكريم وسنة النبي ﷺ، ومن تعليم الوالدين والمعلمين الموثوقين.</p><div class="booklet-verse">«صَلُّوا كَمَا رَأَيْتُمُونِي أُصَلِّي»<br><small>رواه البخاري عن مالك بن الحويرث رضي الله عنه، الحديث رقم 631</small></div><div class="booklet-activity"><strong>فكّر وأجب</strong><p>من الذي فرض الصلاة؟ <span class="booklet-answer"></span></p><p>من أين نتعلّم صفة الصلاة؟ <span class="booklet-answer"></span></p></div></article>
+        <article class="booklet-section"><h2>لماذا أُصلّي؟</h2><p>أصلّي لأن الله أمرني بالصلاة، ولأنها عبادة أتقرّب بها إليه. وفي الصلاة أذكر الله، وأقرأ القرآن، وأدعوه، وأخصّص وقتًا لعبادته في يومي.</p><div class="booklet-verse">﴿وَأَقِمِ الصَّلَاةَ لِذِكْرِي﴾<br><small>سورة طه، الآية 14</small></div><p>الصلاة ليست مجرد عادة نؤديها لأننا اعتدنا عليها؛ بل هي عبادة نقصد بها طاعة الله والتقرّب إليه. وقد أشعر بالطمأنينة أثناء الصلاة، وقد أحتاج أحيانًا إلى مزيد من التدريب على التركيز. لا أجعل ذلك سببًا لليأس، بل أتعلم معاني ما أقرأ وأحاول الانتباه إلى صلاتي.</p><div class="booklet-activity"><strong>أكمل العبارة</strong><p>أصلّي لأن <span class="booklet-answer"></span></p><p>وأريد أن أتعلّم أكثر عن <span class="booklet-answer"></span></p></div></article>
+        <article class="booklet-section"><h2>الصلوات الخمس</h2><p>فرض الله على المسلمين خمس صلوات في اليوم والليلة، ولكل صلاة وقتها الذي تؤدّى فيه:</p><ol><li><strong>الفجر:</strong> قبل شروق الشمس.</li><li><strong>الظهر:</strong> بعد زوال الشمس عن وسط السماء.</li><li><strong>العصر:</strong> في وقت العصر المعروف.</li><li><strong>المغرب:</strong> بعد غروب الشمس.</li><li><strong>العشاء:</strong> بعد غياب الشفق، وفق أحكام المواقيت.</li></ol><p>تختلف مواقيت الصلاة باختلاف المكان والتاريخ، ولذلك نستعين بتقويم موثوق يناسب مدينتنا ونتعلم من أسرتنا كيفية معرفة الوقت.</p><div class="booklet-activity"><strong>نشاط: اكتب أسماء الصلوات الخمس بالترتيب</strong><ol><li><span class="booklet-answer"></span></li><li><span class="booklet-answer"></span></li><li><span class="booklet-answer"></span></li><li><span class="booklet-answer"></span></li><li><span class="booklet-answer"></span></li></ol></div></article>
+        <article class="booklet-section"><h2>أحافظ على الصلاة في وقتها</h2><div class="booklet-verse">﴿إِنَّ الصَّلَاةَ كَانَتْ عَلَى الْمُؤْمِنِينَ كِتَابًا مَوْقُوتًا﴾<br><small>سورة النساء، الآية 103</small></div><p>تعني الآية أن الصلاة فُرضت في أوقات محددة. ومن المهم أن أنظم وقت اللعب والدراسة، وأن أستعد للصلاة عندما يحين وقتها، وأن أطلب المساعدة إذا لم أعرف وقتها.</p><p>عن عبد الله بن مسعود رضي الله عنه أنه سأل النبي ﷺ: أي العمل أحب إلى الله؟ قال: «الصَّلَاةُ عَلَى وَقْتِهَا»، ثم ذكر بر الوالدين، ثم الجهاد في سبيل الله.</p><p class="booklet-note">المصدر: صحيح البخاري، الحديث رقم 527، وصحيح مسلم، الحديث رقم 85.</p><div class="booklet-activity"><strong>خطتي للمحافظة على وقت الصلاة</strong><p>أكثر وقت أنشغل فيه عادةً هو: <span class="booklet-answer"></span></p><p>ما الذي سيساعدني على الاستعداد للصلاة؟ <span class="booklet-answer"></span></p></div></article>
+        <article class="booklet-section"><h2>الصلاة مثل نهر متجدد</h2><p>ضرب النبي ﷺ مثالًا يقرّب إلينا معنى تكرار الصلوات وأثرها.</p><div class="booklet-verse">«مَثَلُ الصَّلَوَاتِ الْخَمْسِ كَمَثَلِ نَهَرٍ جَارٍ غَمْرٍ عَلَى بَابِ أَحَدِكُمْ يَغْتَسِلُ مِنْهُ كُلَّ يَوْمٍ خَمْسَ مَرَّاتٍ»<br><small>رواه جابر بن عبد الله رضي الله عنهما، في صحيح مسلم، الحديث رقم 668</small></div><p>كما أن الاغتسال المتكرر ينظف الجسم، فإن الصلوات الخمس سبب لتكفير الخطايا بإذن الله. وهذا لا يعني أن الإنسان لا يخطئ، بل نتعلم أن نستغفر الله ونصلح أخطاءنا ونتوب إليه.</p><div class="booklet-activity"><strong>فكّر وأجب</strong><p>بماذا شبّه النبي ﷺ الصلوات الخمس؟ <span class="booklet-answer"></span></p><p>ماذا أفعل إذا أخطأت؟ <span class="booklet-answer"></span></p></div></article>
+        <article class="booklet-section"><h2>أقف بين يدي الله</h2><p>عندما أقف للصلاة، أقف لعبادة الله وحده. أترك ما يشغلني قليلًا، وأتوجه إلى الله بقلبي وجسدي، وأقرأ القرآن وأذكر ربي وأدعوه.</p><div class="booklet-verse">﴿فَاذْكُرُونِي أَذْكُرْكُمْ وَاشْكُرُوا لِي وَلَا تَكْفُرُونِ﴾<br><small>سورة البقرة، الآية 152</small></div><p>الله يعلم ما في قلبي ويسمع دعائي. أستطيع أن أدعوه بما أحتاج إليه، وأن أشكره على نعمه، وأن أطلب منه العون على الخير.</p><div class="booklet-activity"><strong>فكّر وأجب</strong><p>إلى من أتوجه بصلاتي؟ <span class="booklet-answer"></span></p><p>اذكر نعمة تشكر الله عليها. <span class="booklet-answer"></span></p></div></article>
+        <article class="booklet-section"><h2>أجتهد أن يظهر أثر الصلاة في سلوكي</h2><p>أحرص أن تساعدني الصلاة على طاعة الله وحسن التعامل مع الناس. أحاول أن أكون صادقًا، وأحفظ الأمانة، وأحترم الآخرين، وأبتعد عن إيذائهم. وإذا أخطأت، أستغفر الله وأصلح خطئي وأجتهد في الخير.</p><div class="booklet-verse">﴿إِنَّ اللَّهَ يَأْمُرُ بِالْعَدْلِ وَالْإِحْسَانِ وَإِيتَاءِ ذِي الْقُرْبَىٰ﴾<br><small>سورة النحل، الآية 90</small></div><div class="booklet-activity"><strong>ماذا أفعل في هذه المواقف؟</strong><p>وجدت قلمًا ليس لي. ما التصرف الصحيح؟ <span class="booklet-answer"></span></p><p>أخطأ صديقي في حقي. كيف أحاول حل المشكلة؟ <span class="booklet-answer"></span></p><p>طلب مني أحد أفراد أسرتي المساعدة. كيف أستجيب؟ <span class="booklet-answer"></span></p></div></article>
+        <article class="booklet-section"><h2>الصلاة فرصة للذكر والدعاء</h2><p>قد أشعر بالفرح في بعض الأيام، وقد أشعر بالحزن أو القلق في أيام أخرى. وفي كل الأحوال أستطيع أن أتوجه إلى الله بالدعاء وأذكره وأطلب منه العون.</p><div class="booklet-verse">﴿أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ﴾<br><small>سورة الرعد، الآية 28</small></div><p>قد أظل أشعر بالحزن أو القلق أحيانًا، وهذا لا يعني أن صلاتي بلا قيمة؛ بل يمكنني أيضًا التحدث مع والديّ أو شخص موثوق عندما أحتاج إلى المساعدة.</p><div class="booklet-activity"><strong>نشاط</strong><p>ما الأمور النافعة التي يمكن أن تساعدني عندما أشعر بالقلق؟ <span class="booklet-answer"></span></p><p>اكتب دعاءً تحب أن تدعو الله به. <span class="booklet-answer"></span></p></div></article>
+        <article class="booklet-section"><h2>خلاصة الكتيّب</h2><ul><li>الله خلقنا لعبادته، وهو الذي أنعم علينا بنعم كثيرة.</li><li>الصلاة عبادة عظيمة نتعلّم صفتها من هدي النبي ﷺ.</li><li>الصلوات المفروضة خمس في اليوم والليلة، ولكل صلاة وقتها.</li><li>في الصلاة نذكر الله ونتلو القرآن وندعوه.</li><li>نحرص على الصلاة في وقتها، ونجتهد أن يظهر أثر عبادتنا في أخلاقنا.</li><li>إذا لم نفهم أمرًا، نسأل الوالدين أو معلّمًا موثوقًا.</li></ul><p><strong>عهدي مع نفسي:</strong> سأواصل تعلّم الصلاة، وأسأل عمّا لا أفهمه، وأجتهد في المحافظة عليها بمساعدة أسرتي.</p><span class="booklet-answer"></span><p class="booklet-note">تنبيه: هذا الكتيّب مدخل تعليمي مبسّط، ولا يغني عن تعلّم أحكام الصلاة بالتفصيل من الوالدين أو المعلّمين الموثوقين.</p></article>
       </div>
       <article class="booklet-section" id="bookletQuizLink">
-        <h2>ظ‡ظ„ ط£ظ†طھ ظ…ط³طھط¹ط¯ ظ„ط§ط®طھط¨ط§ط± ظ…ط§ طھط¹ظ„ظ‘ظ…طھظ‡طں</h2>
-        <p>ط£ط­ط³ظ†طھ! ط¨ط¹ط¯ ظ‚ط±ط§ط،ط© ط§ظ„ظƒطھظٹظ‘ط¨طŒ ط¬ط±ظ‘ط¨ ط§ظ„ط¥ط¬ط§ط¨ط© ط¹ظ† ط§ظ„ط£ط³ط¦ظ„ط© ظ„طھطھط°ظƒظ‘ط± ط£ظ‡ظ… ظ…ط§ طھط¹ظ„ظ‘ظ…طھظ‡ ط¹ظ† ط§ظ„طµظ„ط§ط©.</p>
-        <div class="actions"><button type="button" class="primary" id="startBookletQuiz">ط§ط¨ط¯ط£ ط§ظ„ط§ط®طھط¨ط§ط± ط§ظ„طھظپط§ط¹ظ„ظٹ</button></div>
+        <h2>هل أنت مستعد لاختبار ما تعلّمته؟</h2>
+        <p>أحسنت! بعد قراءة الكتيّب، جرّب الإجابة عن الأسئلة لتتذكّر أهم ما تعلّمته عن الصلاة.</p>
+        <div class="actions"><button type="button" class="primary" id="startBookletQuiz">ابدأ الاختبار التفاعلي</button></div>
       </article>
-      <div class="booklet-toolbar actions"><button type="button" class="secondary" data-page="homePage">ط§ظ„ط¹ظˆط¯ط© ط¥ظ„ظ‰ ط§ظ„ظ…ظƒطھط¨ط©</button><button type="button" class="primary" id="printBookletBottom">ط·ط¨ط§ط¹ط© ط§ظ„ظƒطھظٹظ‘ط¨</button></div>
-      <footer>ط£ط­ط¨ طµظ„ط§طھظٹ آ· ط§ظ„ظƒطھظٹظ‘ط¨ ط§ظ„ط£ظˆظ„: ظ„ظ…ط§ط°ط§ ط£ظڈطµظ„ظ‘ظٹطں</footer>
+      <div class="booklet-toolbar actions"><button type="button" class="secondary" data-page="homePage">العودة إلى المكتبة</button><button type="button" class="primary" id="printBookletBottom">طباعة الكتيّب</button></div>
+      <footer>أحب صلاتي · الكتيّب الأول: لماذا أُصلّي؟</footer>
     </section>
+
+    <section id="bookletTwoPage" class="page hidden booklet-page">
+      <header class="booklet-cover"><p class="kicker">سلسلة أحب صلاتي · الكتيّب الثاني</p><h1>الصلاة هدية عظيمة من الله</h1><p>نتعرّف إلى نعمة الصلاة، ولماذا نعتز بها، وكيف نعيش معاني الذكر والدعاء والشكر في يومنا.</p></header>
+      <div class="booklet-toolbar actions"><button type="button" class="secondary" data-page="homePage">العودة إلى المكتبة</button><button type="button" class="primary" id="printBookletTwo">طباعة الكتيّب</button></div>
+      <div class="booklet-content">
+        <article class="booklet-section"><h2>عن هذا الكتاب</h2><p>أحيانًا نعرف أن الصلاة مهمة، لكننا نحتاج إلى أن نفهم لماذا هي نعمة عظيمة، وكيف يمكن أن تكون جزءًا محببًا من يومنا. في هذا الكتيّب سنتأمل بعض المعاني التي أخبرنا بها القرآن الكريم والسنة النبوية الصحيحة.</p><p>سنقرأ عن فرض الصلاة في ليلة الإسراء والمعراج، ونتعلّم أن الصلاة ذكر لله، وأن السجود موضع عظيم للدعاء، وأننا نستعين بالصبر والصلاة، ونجتهد أن يظهر أثر عبادتنا في أخلاقنا.</p><p>استخدمنا كلمة «هدية» في عنوان الكتيّب للتقريب إلى ذهن الطفل والتعبير عن قيمة الصلاة ونعمتها؛ وليست هذه الكلمة اقتباسًا من لفظ حديث الإسراء. أمّا المعلومات الشرعية في الفصول فسنذكر نصوصها ومراجعها.</p><p>اقرأ بهدوء، وتوقّف عند الأنشطة لتكتب ما فهمته. وإذا كان لديك سؤال في حكم من أحكام الصلاة، فاسأل والديك أو معلّمًا موثوقًا.</p></article>
+        <article class="booklet-section"><h2>1. ما معنى النعمة؟</h2><p>النعمة هي خيرٌ ينعم الله به علينا. حولنا نعم كثيرة: نعمة الحياة، والعقل، والسمع، والبصر، والطعام، والأسرة، وفرص التعلّم. ومن أعظم ما أنعم الله به علينا أن دلّنا على عبادته وعلّمنا كيف نتقرّب إليه.</p><div class="booklet-verse">﴿وَإِنْ تَعُدُّوا نِعْمَتَ اللَّهِ لَا تُحْصُوهَا﴾<br><small>سورة إبراهيم، الآية 34</small></div><p>لا نستطيع أن نحصي جميع نعم الله، لكن يمكننا أن نلاحظ بعضها ونشكر الله عليها. والشكر لا يكون بالكلام فقط؛ بل نحمد الله، ونستخدم نعمه في الخير، ونتجنّب إيذاء الآخرين بها.</p><div class="booklet-activity"><strong>نشاط: ألاحظ النعم</strong><p>اكتب ثلاث نعم تشكر الله عليها:</p><p>1. <span class="booklet-answer"></span></p><p>2. <span class="booklet-answer"></span></p><p>3. <span class="booklet-answer"></span></p><p>كيف أستعمل إحدى هذه النعم في الخير؟ <span class="booklet-answer"></span></p></div></article>
+        <article class="booklet-section"><h2>2. لماذا الصلاة نعمة عظيمة؟</h2><p>الصلاة عبادة فرضها الله علينا، وفيها نتوجّه إليه وحده، ونقرأ القرآن، ونذكره، ونركع ونسجد كما علّمنا رسول الله ﷺ. وهي تتكرّر في يومنا، فتذكّرنا أن علاقتنا بالله ليست أمرًا ننساه وسط اللعب والدراسة والانشغال.</p><p>الصلاة ليست لأن الله يحتاج إلى عبادتنا؛ فالله غنيّ عن العالمين، ونحن المحتاجون إلى هدايته ورحمته. ومن رحمة الله بنا أن شرع لنا عبادة نلتزم بها في أوقات معلومة، ونرجع بها إلى ذكره وطاعته.</p><div class="booklet-verse">﴿وَأَقِمِ الصَّلَاةَ لِذِكْرِي﴾<br><small>سورة طه، الآية 14</small></div><p>إذن، من معاني نعمة الصلاة أنها تعلّمنا عبادة الله، وتمنح يومنا محطات متكررة للذكر والطاعة. ولا يعني ذلك أننا سنشعر دائمًا بالشعور نفسه في كل صلاة؛ بل نتعلّم ونحاول ونستعين بالله.</p><div class="booklet-activity"><strong>فكّر وأجب</strong><p>اذكر أمرين نفعلهما في الصلاة. <span class="booklet-answer"></span></p><p>لماذا لا ينبغي أن أنظر إلى الصلاة على أنها مجرد حركات؟ <span class="booklet-answer"></span></p></div></article>
+        <article class="booklet-section"><h2>3. الصلاة في ليلة الإسراء والمعراج</h2><p>أسرى الله بنبيّه محمد ﷺ وعرج به، وفي حديث الإسراء والمعراج ورد أن الله فرض على أمة النبي ﷺ خمسين صلاة، ثم خُفّفت إلى خمس صلوات في اليوم والليلة، وجعل الله فضلها عظيمًا.</p><div class="booklet-verse">«هِيَ خَمْسٌ وَهِيَ خَمْسُونَ، لَا يُبَدَّلُ الْقَوْلُ لَدَيَّ»<br><small>من حديث الإسراء والمعراج، صحيح البخاري، رقم 349</small></div><p>نتعلّم من هذا الحديث أن الصلوات المفروضة خمس في اليوم والليلة، وأن فضل الله واسع. ولا نغيّر ألفاظ الحديث أو ننسب إليه كلمات لم ترد فيه. ووصف الصلاة بأنها «هدية» في هذا الكتيّب هو تعبير تعليمي عن كونها نعمة عظيمة شرعها الله لنا.</p><p>كل صلاة فرصة لطاعة الله وذكره، ولذلك نحرص على تعلّمها والمحافظة عليها، ونطلب من الله أن يعيننا على أدائها كما يحب ويرضى.</p><div class="booklet-activity"><strong>تثبيت المعلومة</strong><p>كم صلاة فرض الله على هذه الأمة في اليوم والليلة؟ <span class="booklet-answer"></span></p><p>في أي حدث عظيم فُرضت الصلاة؟ <span class="booklet-answer"></span></p></div></article>
+        <article class="booklet-section"><h2>4. خمس صلوات تذكّرني بالله</h2><p>نصلّي الفجر والظهر والعصر والمغرب والعشاء. وتتوزع هذه الصلوات على اليوم والليلة، فنستعد لها ونرتّب وقتنا بحيث لا يشغلنا اللعب أو الدراسة عن الاهتمام بها.</p><p>تساعدنا الصلوات المتكررة على أن نتذكّر أن الله ربّنا في كل أوقات يومنا: عند بداية الصباح، وفي أثناء أعمال النهار، وعند المساء والليل. ونتعلّم أوقات الصلاة من تقويم موثوق يناسب مدينتنا، لأن المواقيت تختلف باختلاف المكان والتاريخ.</p><p>إذا كنت تتعلم تنظيم وقتك، فاستعن بوالديك في معرفة وقت الصلاة والاستعداد لها. ضع خطتك مع الأسرة، ولا تعتمد على التخمين في معرفة المواقيت.</p><div class="booklet-activity"><strong>نشاط: أرتّب يومي</strong><p>اكتب أسماء الصلوات الخمس بالترتيب:</p><p>1. <span class="booklet-answer"></span></p><p>2. <span class="booklet-answer"></span></p><p>3. <span class="booklet-answer"></span></p><p>4. <span class="booklet-answer"></span></p><p>5. <span class="booklet-answer"></span></p><p>ما الشيء الذي يساعدني على الاستعداد للصلاة في وقتها؟ <span class="booklet-answer"></span></p></div></article>
+        <article class="booklet-section"><h2>5. في الصلاة أذكر الله</h2><div class="booklet-verse">﴿إِنَّنِي أَنَا اللَّهُ لَا إِلَهَ إِلَّا أَنَا فَاعْبُدْنِي وَأَقِمِ الصَّلَاةَ لِذِكْرِي﴾<br><small>سورة طه، الآية 14</small></div><p>نقرأ في الصلاة كلام الله، ونسبّحه، ونكبّره، وندعوه. ومعرفة معاني ما نقوله تساعدنا على الانتباه؛ فحين نقول «الله أكبر» نتذكّر أن الله أعظم من كل ما يشغلنا، وحين نقرأ الفاتحة نتوجّه إلى الله بالعبادة والاستعانة والهداية.</p><p>قد تسرح أفكارنا أحيانًا. إذا لاحظت أن ذهنك ابتعد، فلا تيأس ولا تنشغل بلوم نفسك؛ حاول أن تعود بهدوء إلى ما تقرأه وتفعله. ويمكنك أن تتعلّم معاني الأذكار تدريجيًا بمساعدة الأسرة أو معلّمك.</p><div class="booklet-activity"><strong>أربط القول بمعناه</strong><p>«الله أكبر» تذكّرني بأن: <span class="booklet-answer"></span></p><p>تعلّم معنى ذكر واحد أقوله في الصلاة، ثم اكتبه هنا: <span class="booklet-answer"></span></p></div></article>
+        <article class="booklet-section"><h2>6. في السجود أدعو الله</h2><p>السجود من أفعال الصلاة العظيمة، وفيه يضع المسلم جبهته على الأرض تعظيمًا لله وخضوعًا له. وقد علّمنا النبي ﷺ أن نكثر الدعاء في السجود.</p><div class="booklet-verse">«أَقْرَبُ مَا يَكُونُ الْعَبْدُ مِنْ رَبِّهِ وَهُوَ سَاجِدٌ، فَأَكْثِرُوا الدُّعَاءَ»<br><small>رواه مسلم في صحيحه، رقم 482</small></div><p>هذا حديث صحيح يبيّن فضل الدعاء في السجود. نتعلّم منه أن ندعو الله بإخلاص، وأن نطلب منه الهداية والعون والخير. ولأن الصلاة عبادة لها أحكام، نتعلّم من والدينا أو المعلّم الموثوق ما يصح قوله في مواضع الصلاة وكيفية أدائه.</p><p>يمكنك أن تتعلّم أدعية نافعة وتحفظها، وأن تسأل الله ما تحتاج إليه من خير الدنيا والآخرة وفق ما تتعلمه من أهل العلم. ولا تجعل الدعاء وسيلة لترك العمل؛ بل ادع الله، وابذل السبب، واستعن بمن يستطيع مساعدتك.</p><div class="booklet-activity"><strong>أفكّر في دعائي</strong><p>ما الخير الذي أود أن أسأل الله أن يعينني عليه؟ <span class="booklet-answer"></span></p><p>من الشخص الموثوق الذي يمكنني أن أسأله عن أدعية الصلاة؟ <span class="booklet-answer"></span></p></div></article>
+        <article class="booklet-section"><h2>7. أستعين بالصبر والصلاة</h2><div class="booklet-verse">﴿يَا أَيُّهَا الَّذِينَ آمَنُوا اسْتَعِينُوا بِالصَّبْرِ وَالصَّلَاةِ إِنَّ اللَّهَ مَعَ الصَّابِرِينَ﴾<br><small>سورة البقرة، الآية 153</small></div><p>تعلّمنا الآية أن نستعين بالصبر والصلاة. قد يواجه الطفل امتحانًا صعبًا، أو خلافًا مع صديق، أو شعورًا بالقلق. يمكنه أن يصلي، ويدعو الله، ويتدرّب على الصبر، ثم يأخذ بالأسباب المناسبة؛ فيراجع دروسه، أو يحاور صديقه بهدوء، أو يطلب المساعدة من والديه أو معلّمه.</p><p>لا تعني الآية أن كل مشكلة ستختفي فورًا بعد الصلاة، ولا أن طلب المساعدة من الناس أمر غير مطلوب. بل نجمع بين العبادة وبذل الجهد وطلب العون المناسب، ونصبر عند مواجهة الصعوبات.</p><div class="booklet-activity"><strong>ماذا أفعل في هذه المواقف؟</strong><p>أشعر بالقلق قبل الامتحان. ما خطوتان نافعتان أستطيع القيام بهما؟ <span class="booklet-answer"></span></p><p>أختلف مع صديقي. كيف أتصرف بهدوء وأطلب المساعدة إن احتجت؟ <span class="booklet-answer"></span></p></div></article>
+        <article class="booklet-section"><h2>8. الصلاة تعينني على اختيار الخير</h2><div class="booklet-verse">﴿إِنَّ الصَّلَاةَ تَنْهَىٰ عَنِ الْفَحْشَاءِ وَالْمُنْكَرِ﴾<br><small>سورة العنكبوت، الآية 45</small></div><p>من معاني هذه الآية أن الصلاة التي يقيمها المسلم كما شرع الله تعينه على تذكّر طاعته والابتعاد عن الأعمال السيئة. لذلك أجتهد أن أكون صادقًا، وأحفظ الأمانة، وأحترم الآخرين، ولا أؤذيهم بيدي أو لساني.</p><p>لكن المسلم قد يخطئ؛ فالصلاة لا تعني أن الإنسان لن يخطئ أبدًا. إذا أخطأت، فلا أبرّر الخطأ ولا أيأس، بل أستغفر الله، وأعتذر لمن آذيته، وأحاول إصلاح ما أفسدته، وأتعلّم كيف أتصرف بشكل أفضل.</p><div class="booklet-activity"><strong>أصل الصلاة بسلوكي</strong><p>وجدت شيئًا ليس لي. ماذا أفعل؟ <span class="booklet-answer"></span></p><p>قلت كلامًا جرح صديقي. كيف أصلح خطئي؟ <span class="booklet-answer"></span></p><p>أستطيع أن أطبّق معنى الأمانة اليوم من خلال: <span class="booklet-answer"></span></p></div></article>
+        <article class="booklet-section"><h2>9. كيف أشكر الله على نعمة الصلاة؟</h2><p>أشكر الله على نعمة الصلاة بأن أحرص على تعلّمها، وأؤديها في أوقاتها، وأتعلّم أقوالها وأفعالها، وأسأل عمّا لا أفهمه. وأحاول أن أهيّئ نفسي لها بدل أن أؤجّل الاستعداد كل مرة.</p><p>ومن الشكر أيضًا أن أتعامل مع الصلاة بجدّ واحترام، وأتعلّم من أخطائي، وأشجّع أفراد أسرتي بلطف دون أن أتكبّر على أحد أو أحكم على نيات الناس. فكلنا نتعلّم ونحتاج إلى التذكير والنصيحة الحسنة.</p><div class="booklet-activity"><strong>خطتي الصغيرة</strong><p>شيء واحد سأفعله لأتعلم الصلاة أكثر: <span class="booklet-answer"></span></p><p>من سيستطيع مساعدتي في هذه الخطوة؟ <span class="booklet-answer"></span></p><p>كيف سأذكّر نفسي بوقت الصلاة؟ <span class="booklet-answer"></span></p></div></article>
+        <article class="booklet-section"><h2>10. إذا لم أشعر بالخشوع أو الراحة دائمًا</h2><p>قد يشعر الإنسان في بعض الصلوات بالتركيز والطمأنينة، وقد تأتيه أفكار كثيرة في صلوات أخرى. لا ينبغي أن نربط قيمة الصلاة بوجود شعور معيّن في كل مرة؛ فالصلاة عبادة نؤديها طاعةً لله، ونتدرّب على الخشوع ونتعلّم معاني ما نقول.</p><p>إذا تشتّت ذهني، أعود إلى قراءتي وحركات صلاتي بهدوء. ويمكنني أن أستعد قبل الصلاة، وأخفّف ما يشتّتني، وأتعلّم معاني الفاتحة والأذكار بالتدريج. وإذا شعرت بحزن أو قلق مستمر، فيمكنني أيضًا التحدث مع والديّ أو شخص موثوق.</p><div class="booklet-activity"><strong>ما الذي يساعدني على التركيز؟</strong><p>شيء واحد يشتّتني أحيانًا: <span class="booklet-answer"></span></p><p>خطوة يمكنني تجربتها قبل الصلاة: <span class="booklet-answer"></span></p></div></article>
+        <article class="booklet-section"><h2>11. مواقف أتدرّب فيها على فهم النعمة</h2><p><strong>الموقف الأول:</strong> أنت تلعب وسمعت أن وقت الصلاة قد دخل. كيف توازن بين إكمال اللعب والمحافظة على الصلاة؟</p><span class="booklet-answer"></span><p><strong>الموقف الثاني:</strong> سألك أخوك الأصغر: لماذا نصلّي كل يوم؟ كيف تشرح له الأمر بكلمات بسيطة؟</p><span class="booklet-answer"></span><p><strong>الموقف الثالث:</strong> نسيت معنى ذكر تقوله في الصلاة. ماذا تفعل لتتعلّمه؟</p><span class="booklet-answer"></span><p><strong>الموقف الرابع:</strong> أخطأت في التعامل مع أحد أصدقائك ثم تذكّرت أن الصلاة تعين على الخير. ما الخطوة التي تساعدك على إصلاح الخطأ؟</p><span class="booklet-answer"></span></article>
+        <article class="booklet-section"><h2>12. خلاصة الكتيّب</h2><ul><li>الصلاة نعمة عظيمة وعبادة فرضها الله علينا.</li><li>فُرضت الصلوات الخمس في حديث الإسراء والمعراج، وفضل الله واسع.</li><li>في الصلاة نذكر الله ونقرأ القرآن وندعوه.</li><li>السجود موضع عظيم للدعاء، كما جاء في حديث صحيح رواه مسلم.</li><li>نستعين بالصبر والصلاة، ونأخذ بالأسباب ونطلب المساعدة عند الحاجة.</li><li>الصلاة تعيننا على فعل الخير، وإذا أخطأنا نتوب ونصلح أخطاءنا.</li><li>نُظهر شكرنا على نعمة الصلاة بتعلّمها والمحافظة عليها والاستعداد لها.</li></ul><p><strong>عهدي مع نفسي:</strong> سأتعلم معنى واحدًا من معاني الصلاة، وأطبّقه في حياتي، وأطلب المساعدة من أسرتي عندما أحتاج إليها.</p><span class="booklet-answer"></span><p class="booklet-note">هذا كتيّب تعليمي مبسّط للأطفال، ولا يغني عن تعلّم صفة الصلاة وأحكامها من الوالدين أو المعلّمين الموثوقين.</p></article>
+        <article class="booklet-section" id="bookletTwoQuizLink"><h2>هل أنت مستعد لاختبار ما تعلّمته؟</h2><p>أحسنت! بعد قراءة الكتيّب، جرّب الاختبار التفاعلي لتراجع أهم المعلومات عن نعمة الصلاة ومعانيها.</p><div class="actions"><button type="button" class="primary" id="startBookletTwoQuiz">اختبر نفسك في الكتيّب الثاني</button></div></article>
+      </div>
+      <div class="booklet-toolbar actions"><button type="button" class="secondary" data-page="homePage">العودة إلى المكتبة</button><button type="button" class="primary" id="printBookletTwoBottom">طباعة الكتيّب</button></div>
+      <footer>أحب صلاتي · الكتيّب الثاني: الصلاة هدية عظيمة من الله</footer>
+    </section>
+
+    <section id="bookletThreePage" class="page hidden booklet-page">
+      <header class="booklet-cover"><p class="kicker">سلسلة أحب صلاتي · الكتيّب الثالث</p><h1>ماذا تعلّمني الصلاة؟</h1><p>نتعرّف إلى الدروس التي تعلّمنا إياها الصلاة، وكيف نطبّقها في يومنا وأخلاقنا.</p></header>
+      <div class="booklet-toolbar actions"><button type="button" class="secondary" data-page="homePage">العودة إلى المكتبة</button><button type="button" class="primary" id="printBookletThree">طباعة الكتيّب</button></div>
+      <div class="booklet-content">
+        <article class="booklet-section"><h2>عن هذا الكتاب</h2><p>الصلاة عبادة نتقرّب بها إلى الله، ونتعلّم منها معاني كثيرة يمكن أن ترافقنا خارج وقت الصلاة أيضًا. فهي تذكّرنا بربنا، وتدرّبنا على المحافظة على الوقت، وتدعونا إلى الخشوع والصبر، وتعيننا على مراجعة سلوكنا.</p><p>هذا الكتيّب لا يكرّر فقط لماذا نصلي، ولا يركّز على الصلاة بوصفها نعمة فحسب؛ بل يسأل: ماذا أتعلم من الصلاة؟ وكيف أترجم هذه الدروس إلى خطوات نافعة في البيت والمدرسة ومع الأصدقاء؟</p><p>سنستشهد بآيات من القرآن الكريم وأحاديث صحيحة، وسنميّز بين النص الشرعي والشرح المبسّط المستفاد منه. اقرأ بهدوء، وأجب عن الأنشطة بنفسك، واطلب المساعدة من والديك أو معلّم موثوق عندما تحتاج إليها.</p></article>
+        <article class="booklet-section"><h2>1. تعلّمني الصلاة أن ألتزم وأحافظ على الوقت</h2><p>للصلوات المفروضة أوقات معلومة، ولذلك نتعلّم أن نرتّب أعمال يومنا وألا نترك الصلاة حتى تفوتنا بسبب الانشغال أو اللعب. المحافظة على الوقت لا تعني أن حياتنا كلها تصبح صلاة؛ بل نتعلّم كيف نوازن بين العبادة والدراسة والراحة والواجبات.</p><div class="booklet-verse">﴿إِنَّ الصَّلَاةَ كَانَتْ عَلَى الْمُؤْمِنِينَ كِتَابًا مَوْقُوتًا﴾<br><small>سورة النساء، الآية 103</small></div><p>وسُئل النبي ﷺ عن أحب الأعمال إلى الله، فقال: «الصَّلَاةُ عَلَى وَقْتِهَا».</p><p class="booklet-note">المصدر: صحيح البخاري، الحديث رقم 527.</p><p>أتدرّب على الاستعداد للصلاة قبل وقتها، وأنهي ما يمكن إنهاؤه من اللعب، وأضع تذكيرًا مناسبًا بمساعدة أسرتي.</p><div class="booklet-activity"><strong>فكّر وأجب</strong><p>ما نشاط يشغلني أحيانًا عن الاستعداد للصلاة؟</p><span class="booklet-answer"></span><p>ما الخطوة التي تساعدني على تنظيم وقتي؟</p><span class="booklet-answer"></span></div></article>
+        <article class="booklet-section"><h2>2. تعلّمني الصلاة الخشوع والتواضع</h2><p>في الصلاة أقف بين يدي الله، وأتذكر أنني عبد أحتاج إلى هدايته ورحمته. أركع وأسجد لله وحده، وأحاول أن يكون قلبي منتبهًا لما أقول وأفعل.</p><div class="booklet-verse">﴿قَدْ أَفْلَحَ الْمُؤْمِنُونَ ۝ الَّذِينَ هُمْ فِي صَلَاتِهِمْ خَاشِعُونَ﴾<br><small>سورة المؤمنون، الآيتان 1–2</small></div><p>الخشوع يعني أن يحاول المصلي حضور قلبه وتعظيم الله في صلاته. وقد تطرأ على الطفل أفكار مشتتة؛ فإذا انتبه إلى ذلك، يعود بهدوء إلى القراءة والحركات، ويتعلم المعاني بالتدريج، ولا ييأس أو يصف نفسه بأنه فاشل.</p><div class="booklet-activity"><strong>ألاحظ قلبي</strong><p>ما الشيء الذي يساعدني على الانتباه في الصلاة؟</p><span class="booklet-answer"></span><p>إذا سرحت أفكاري، فماذا أستطيع أن أفعل؟</p><span class="booklet-answer"></span></div></article>
+        <article class="booklet-section"><h2>3. تعلّمني الصلاة أن أذكر الله</h2><p>نقرأ في الصلاة القرآن ونكبّر الله ونسبّحه وندعوه. وكلما فهمت معنى ما أقوله، كان أسهل عليّ أن أتذكره وأحاول أن أنصت إليه بقلب حاضر.</p><div class="booklet-verse">﴿وَأَقِمِ الصَّلَاةَ لِذِكْرِي﴾<br><small>سورة طه، الآية 14</small></div><p>حين أقول «الله أكبر»، أذكّر نفسي بعظمة الله. وحين أقرأ الفاتحة، أتعلّم أن أعبد الله وأطلب منه الهداية والعون. ومن المفيد أن أختار ذكرًا واحدًا في كل مرة وأتعلّم معناه بمساعدة أسرتي.</p><div class="booklet-activity"><strong>أربط الذكر بمعناه</strong><p>اكتب ذكرًا تقوله في الصلاة:</p><span class="booklet-answer"></span><p>ما معنى هذا الذكر بكلماتك؟</p><span class="booklet-answer"></span></div></article>
+        <article class="booklet-section"><h2>4. تعلّمني الصلاة الصبر وطلب العون</h2><p>قد أواجه أمرًا صعبًا في المدرسة، أو أشعر بالقلق، أو أختلف مع صديق. تعلّمني الصلاة أن أرجع إلى الله بالدعاء وأن أستعين بالصبر، ثم أبذل الأسباب النافعة وأطلب المساعدة من شخص موثوق إذا احتجت.</p><div class="booklet-verse">﴿وَاسْتَعِينُوا بِالصَّبْرِ وَالصَّلَاةِ﴾<br><small>سورة البقرة، الآية 45</small></div><p>لا تعني الآية أن كل مشكلة ستختفي فورًا بعد الصلاة، ولا أن الدعاء يغني عن الدراسة أو إصلاح الخطأ أو طلب المشورة. بل نتعلم أن نجمع بين العبادة والعمل والصبر.</p><div class="booklet-activity"><strong>ماذا أفعل؟</strong><p>أشعر بالقلق قبل اختبار. اذكر خطوتين نافعتين.</p><span class="booklet-answer"></span><p>أختلف مع صديقي. كيف أتصرف بهدوء؟</p><span class="booklet-answer"></span></div></article>
+        <article class="booklet-section"><h2>5. تعلّمني الصلاة أن أراجع سلوكي</h2><p>قال الله تعالى:</p><div class="booklet-verse">﴿إِنَّ الصَّلَاةَ تَنْهَىٰ عَنِ الْفَحْشَاءِ وَالْمُنْكَرِ﴾<br><small>سورة العنكبوت، الآية 45</small></div><p>من معاني الآية أن الصلاة إذا أُقيمت كما شرع الله تعين صاحبها على الابتعاد عن السيئات وتذكّره بطاعة الله. لذلك أسأل نفسي: هل أحاول أن أكون صادقًا؟ هل أحفظ الأمانة؟ هل أمتنع عن إيذاء الآخرين؟</p><p>ولا يعني هذا أن كل من يصلي لا يخطئ؛ فالإنسان قد يقع في الخطأ ويحتاج إلى التوبة وإصلاح ما أفسده. إذا آذيت أحدًا، أحاول أن أعتذر وأعيد الحق إلى صاحبه وأتعلم كيف أتصرف بشكل أفضل.</p><div class="booklet-activity"><strong>أحوّل الدرس إلى عمل</strong><p>إذا وجدت شيئًا ليس لي، فسأفعل:</p><span class="booklet-answer"></span><p>إذا جرحت مشاعر صديقي بكلامي، فسأحاول:</p><span class="booklet-answer"></span></div></article>
+        <article class="booklet-section"><h2>6. تعلّمني الصلاة الاستمرار وعدم الاستسلام</h2><p>نحافظ على الصلاة يومًا بعد يوم، ونتعلّم ألا نجعل التعب أو الانشغال العابر سببًا للتهاون. والاستمرار لا يعني أن الإنسان لن يتعب أو ينسى أبدًا؛ بل يعني أن يراجع نفسه ويعود إلى الصواب ويطلب العون عندما يحتاج.</p><div class="booklet-verse">﴿إِلَّا الْمُصَلِّينَ ۝ الَّذِينَ هُمْ عَلَىٰ صَلَاتِهِمْ دَائِمُونَ﴾<br><small>سورة المعارج، الآيتان 22–23</small></div><p>إذا وجدت المحافظة على الصلاة صعبة، أتحدث مع أسرتي كي تساعدني على تنظيم وقتي والاستعداد. وأضع هدفًا عمليًا أستطيع متابعته، بدل الاكتفاء بقول «سأتحسن» دون خطة.</p><div class="booklet-activity"><strong>خطوة صغيرة أستمر عليها</strong><p>ما العادة البسيطة التي ستساعدني على الاستعداد للصلاة؟</p><span class="booklet-answer"></span><p>من الشخص الذي يمكن أن يشجعني؟</p><span class="booklet-answer"></span></div></article>
+        <article class="booklet-section"><h2>7. تعلّمني الصلاة معنى النور</h2><p>قال رسول الله ﷺ في حديث صحيح:</p><div class="booklet-verse">«وَالصَّلَاةُ نُورٌ»<br><small>صحيح مسلم، الحديث رقم 223</small></div><p>هذا جزء من حديث أطول يذكر أعمالًا عظيمة، ومنها الصلاة. ونفهم من وصف الصلاة بالنور أنها هداية وخير للمسلم؛ فهي تذكّره بعبادة الله وتدعوه إلى الطريق الصالح. هذا شرح للمعنى، وليس إضافة إلى نص الحديث.</p><p>حين أحتار بين فعل صحيح وفعل خاطئ، أتذكر أنني أريد طاعة الله، وأفكر في عاقبة تصرفي، وأسأل شخصًا موثوقًا إن لم أعرف الحكم.</p><div class="booklet-activity"><strong>أبحث عن الاختيار الصحيح</strong><p>اذكر موقفًا يحتاج إلى اختيار بين الصدق والكذب، وما التصرف الصحيح فيه؟</p><span class="booklet-answer"></span></div></article>
+        <article class="booklet-section"><h2>8. تعلّمني الصلاة العمل مع الآخرين</h2><p>قال الله تعالى:</p><div class="booklet-verse">﴿وَأَقِيمُوا الصَّلَاةَ وَآتُوا الزَّكَاةَ وَارْكَعُوا مَعَ الرَّاكِعِينَ﴾<br><small>سورة البقرة، الآية 43</small></div><p>تذكّرنا الآية بالصلاة مع المصلّين. ومن المعاني التي نتعلّمها من الصلاة مع الجماعة أن ننتظم مع الآخرين، ونراعي آداب المسجد، ونحترم من حولنا ولا نزعجهم. ونتعلم هذه الآداب من الوالدين والمعلمين، مع مراعاة أحكام الصلاة والجماعة التي نتعلمها من مصدر موثوق.</p><div class="booklet-activity"><strong>آدابي مع الآخرين</strong><p>كيف أساعد على الهدوء والاحترام عندما أصلي مع الآخرين؟</p><span class="booklet-answer"></span><p>اذكر تصرفًا يدل على احترام المصلين من حولي.</p><span class="booklet-answer"></span></div></article>
+        <article class="booklet-section"><h2>9. تعلّمني الصلاة أن أكون متواضعًا</h2><p>في الصلاة أركع وأسجد لله ولا أتكبّر على عبادته. والتواضع لا يعني أن أحتقر نفسي، بل أن أعرف أنني أحتاج إلى الله، وأعامل الناس باحترام، ولا أظن أنني أفضل من غيري بسبب علمي أو شكلي أو ما أملك.</p><p>إذا تعلمت أمرًا جديدًا، أحمد الله وأستفيد منه، ولا أسخر ممن يتعلم ببطء. وإذا نصحني أحد، أحاول أن أستمع وأفكر فيما قاله بدل أن أغضب مباشرة.</p><div class="booklet-activity"><strong>أتدرّب على التواضع</strong><p>كيف أتصرف عندما أرى شخصًا يتعلم الصلاة وما زال يخطئ؟</p><span class="booklet-answer"></span><p>كيف أستجيب لنصيحة صحيحة؟</p><span class="booklet-answer"></span></div></article>
+        <article class="booklet-section"><h2>10. كيف أطبّق دروس الصلاة في يومي؟</h2><p>يمكنني أن أترجم الدروس التي أتعلمها من الصلاة إلى أفعال عملية: أستعد للصلاة في وقتها، وأحاول الانتباه إلى ما أقرأ، وأصبر عند مواجهة الصعوبات، وأراجع سلوكي إذا أخطأت، وأحترم الناس من حولي.</p><p>هذه الدروس تحتاج إلى تدريب. لا أتوقع من نفسي أن أكون كاملًا، لكنني أحاول أن أتحسن وأصلح أخطائي. كما أن التزامي بالصلاة لا يعفيني من واجباتي الأخرى؛ فأدرس، وأساعد أسرتي، وأحافظ على الأمانة، وأتعامل مع الناس بالحسنى.</p><div class="booklet-activity"><strong>خطة التطبيق اليومي</strong><p>الدرس الذي أريد العمل به اليوم:</p><span class="booklet-answer"></span><p>التصرف الذي سأجربه:</p><span class="booklet-answer"></span><p>كيف سأعرف أنني حاولت تطبيقه؟</p><span class="booklet-answer"></span></div></article>
+        <article class="booklet-section"><h2>11. مواقف أتدرب فيها على الدروس</h2><p><strong>الموقف الأول:</strong> أنت تلعب وأوشك وقت الصلاة أن يدخل. ما خطتك حتى لا تتأخر عن الاستعداد؟</p><span class="booklet-answer"></span><p><strong>الموقف الثاني:</strong> غضبت من أخيك ورفعت صوتك عليه. كيف تصلح الموقف وتراجع سلوكك؟</p><span class="booklet-answer"></span><p><strong>الموقف الثالث:</strong> لم تفهم معنى ذكر تقوله في الصلاة. ما الخطوة التي تساعدك على تعلمه؟</p><span class="booklet-answer"></span><p><strong>الموقف الرابع:</strong> ترى طفلًا جديدًا يتعلم الصلاة. كيف تشجعه برفق بدل السخرية منه؟</p><span class="booklet-answer"></span></article>
+        <article class="booklet-section"><h2>12. خلاصة الكتيّب</h2><ul><li>تعلّمني الصلاة تنظيم الوقت والمحافظة على العبادة.</li><li>تدعوني إلى الخشوع والتواضع وذكر الله.</li><li>تعلّمني أن أستعين بالصبر والصلاة وأن أبذل الأسباب.</li><li>تذكّرني بمراجعة سلوكي وإصلاح الخطأ إذا وقع مني.</li><li>تساعدني على الاستمرار في الطاعة، والتعاون واحترام الآخرين.</li><li>أتعلم هذه الدروس بالتدريج، وأسأل الوالدين أو المعلم الموثوق عند الحاجة.</li></ul><p><strong>عهدي مع نفسي:</strong> سأختار درسًا واحدًا من هذا الكتيّب، وأحاول تطبيقه في حياتي اليومية.</p><span class="booklet-answer"></span><p class="booklet-note">هذا كتيّب تربوي مبسّط، ولا يغني عن تعلّم أحكام الصلاة وصفاتها من الوالدين أو المعلمين الموثوقين.</p></article>
+        <article class="booklet-section" id="bookletThreeQuizLink"><h2>هل أنت مستعد لاختبار ما تعلّمته؟</h2><p>اختبر فهمك للدروس التي تعلّمناها من الصلاة، ثم راجع إجاباتك وتذكّر كيف تطبّقها.</p><div class="actions"><button type="button" class="primary" id="startBookletThreeQuiz">اختبر نفسك في الكتيّب الثالث</button></div></article>
+      </div>
+      <div class="booklet-toolbar actions"><button type="button" class="secondary" data-page="homePage">العودة إلى المكتبة</button><button type="button" class="primary" id="printBookletThreeBottom">طباعة الكتيّب</button></div>
+      <footer>أحب صلاتي · الكتيّب الثالث: ماذا تعلّمني الصلاة؟</footer>
+    </section>
+
     <section id="unavailablePage" class="page hidden">
       <header class="hero">
-        <p class="kicker">ط³ظ„ط³ظ„ط© ط£ط­ط¨ طµظ„ط§طھظٹ</p>
-        <h1 id="unavailableTitle">ظ‡ط°ط§ ط§ظ„ظƒطھظٹظ‘ط¨ ط؛ظٹط± ظ…طھظˆظپط± ط§ظ„ط¢ظ†</h1>
-        <p>ظ†ط¹ظ…ظ„ ط¹ظ„ظ‰ طھط¬ظ‡ظٹط² ظ…ط­طھظˆظ‰ ط§ظ„ظƒطھظٹظ‘ط¨ ظ„ظ‚ط±ط§ط،طھظ‡ ظ…ط¨ط§ط´ط±ط© ط¹ط¨ط± ط§ظ„ظ…ظˆظ‚ط¹.</p>
+        <p class="kicker">سلسلة أحب صلاتي</p>
+        <h1 id="unavailableTitle">هذا الكتيّب غير متوفر الآن</h1>
+        <p>نعمل على تجهيز محتوى الكتيّب لقراءته مباشرة عبر الموقع.</p>
       </header>
       <article class="card unavailable-panel">
-        <div class="unavailable-icon" aria-hidden="true">â—·</div>
-        <h2>ط؛ظٹط± ظ…طھظˆظپط± ط¹ظ„ظ‰ ط§ظ„ظ…ظˆظ‚ط¹ ظپظٹ ط§ظ„ظˆظ‚طھ ط§ظ„ط­ط§ظ„ظٹ</h2>
-        <p id="unavailableDescription">ظ„ظ… ظٹظڈظ†ط´ط± ظ…ط­طھظˆظ‰ ظ‡ط°ط§ ط§ظ„ظƒطھظٹظ‘ط¨ ط¨ط¹ط¯. ظٹظ…ظƒظ†ظƒ ط§ظ„ط¹ظˆط¯ط© ط¥ظ„ظ‰ ظ…ظƒطھط¨ط© آ«ط£ط­ط¨ طµظ„ط§طھظٹآ» ظ„ط§ط³طھط¹ط±ط§ط¶ ط¨ظ‚ظٹط© ط§ظ„ظƒطھظٹظ‘ط¨ط§طھ.</p>
-        <div class="actions">
-          <button type="button" class="primary" data-page="homePage">ط§ظ„ط¹ظˆط¯ط© ظ„ظ„ط±ط¦ظٹط³ظٹط©</button>
-        </div>
+        <div class="unavailable-icon" aria-hidden="true">◷</div>
+        <h2>غير متوفر على الموقع في الوقت الحالي</h2>
+        <p id="unavailableDescription">لم يُنشر محتوى هذا الكتيّب بعد. يمكنك العودة إلى مكتبة «أحب صلاتي» لاستعراض بقية الكتيّبات.</p>
+        <div class="actions"><button type="button" class="primary" data-page="homePage">العودة للرئيسية</button></div>
       </article>
     </section>
+
+    <section id="quizThreePage" class="page hidden">
+      <header class="hero"><p class="kicker">سلسلة أحب صلاتي · الكتيّب الثالث</p><h1>اختبر نفسك: ماذا تعلّمني الصلاة؟</h1><p>أجب عن الأسئلة لتتذكّر الدروس التي نتعلمها من الصلاة.</p></header>
+      <section id="quizThreeArea" aria-live="polite">
+        <div class="progress-wrap"><span id="quizThreeStepLabel">السؤال 1 من 10</span><span id="quizThreeScoreLabel">إجابات صحيحة: 0</span></div>
+        <div class="progress" aria-hidden="true"><span id="quizThreeProgressBar"></span></div>
+        <article class="card"><div class="question-number" id="quizThreeQuestionNumber">السؤال الأول</div><h2 id="quizThreeQuestionText"></h2><div class="options" id="quizThreeOptions"></div><div id="quizThreeFeedback" class="feedback hidden" role="status"></div><div class="actions"><button id="quizThreeCheckBtn" class="primary" type="button">تحقّق من إجابتي</button><button id="quizThreeNextBtn" class="secondary hidden" type="button">السؤال التالي</button></div></article>
+      </section>
+      <section id="quizThreeResultArea" class="card result hidden" aria-live="polite"><div class="result-mark">★</div><h2>أحسنت! أنهيت الاختبار</h2><p>هذه نتيجتك في اختبار الكتيّب الثالث.</p><div id="quizThreeFinalScore" class="score"></div><p id="quizThreeResultMessage"></p><button id="quizThreeRestartBtn" class="primary" type="button">أعيد الاختبار</button></section>
+      <div class="actions"><button type="button" class="secondary" data-page="bookletThreePage">العودة إلى الكتيّب الثالث</button><button type="button" class="primary" data-page="homePage">العودة إلى المكتبة</button></div>
+      <footer>أحب صلاتي · الكتيّب الثالث: ماذا تعلّمني الصلاة؟</footer>
+    </section>
+
+    <section id="quizTwoPage" class="page hidden">
+      <header class="hero"><p class="kicker">سلسلة أحب صلاتي · الكتيّب الثاني</p><h1>اختبر نفسك: الصلاة هدية عظيمة من الله</h1><p>أجب عن الأسئلة لتتذكّر ما تعلّمته عن نعمة الصلاة ومعانيها.</p></header>
+      <section id="quizTwoArea" aria-live="polite">
+        <div class="progress-wrap"><span id="quizTwoStepLabel">السؤال 1 من 10</span><span id="quizTwoScoreLabel">إجابات صحيحة: 0</span></div>
+        <div class="progress" aria-hidden="true"><span id="quizTwoProgressBar"></span></div>
+        <article class="card"><div class="question-number" id="quizTwoQuestionNumber">السؤال الأول</div><h2 id="quizTwoQuestionText"></h2><div class="options" id="quizTwoOptions"></div><div id="quizTwoFeedback" class="feedback hidden" role="status"></div><div class="actions"><button id="quizTwoCheckBtn" class="primary" type="button">تحقّق من إجابتي</button><button id="quizTwoNextBtn" class="secondary hidden" type="button">السؤال التالي</button></div></article>
+      </section>
+      <section id="quizTwoResultArea" class="card result hidden" aria-live="polite"><div class="result-mark">★</div><h2>أحسنت! أنهيت الاختبار</h2><p>هذه نتيجتك في اختبار الكتيّب الثاني.</p><div id="quizTwoFinalScore" class="score"></div><p id="quizTwoResultMessage"></p><button id="quizTwoRestartBtn" class="primary" type="button">أعيد الاختبار</button></section>
+      <div class="actions"><button type="button" class="secondary" data-page="bookletTwoPage">العودة إلى الكتيّب الثاني</button><button type="button" class="primary" data-page="homePage">العودة إلى المكتبة</button></div>
+      <footer>أحب صلاتي · الكتيّب الثاني: الصلاة هدية عظيمة من الله</footer>
+    </section>
+
     <section id="quizPage" class="page hidden">
-    <header class="hero">
-      <p class="kicker">ط³ظ„ط³ظ„ط© ظƒطھظٹط¨ط§طھ ط£ط­ط¨ طµظ„ط§طھظٹ</p>
-      <h1>ط§ط®طھط¨ط± ظ†ظپط³ظƒ: ظ„ظ…ط§ط°ط§ ط£ظڈطµظ„ظ‘ظٹطں</h1>
-      <p>ط£ط³ط¦ظ„ط© ظ‚طµظٹط±ط© طھط³ط§ط¹ط¯ظƒ ط¹ظ„ظ‰ طھط°ظƒظ‘ط± ظ…ط§ طھط¹ظ„ظ‘ظ…طھظ‡ ظپظٹ ط§ظ„ظƒطھظٹط¨. ط§ظ‚ط±ط£ ط§ظ„ط³ط¤ط§ظ„طŒ ظˆط§ط®طھط± ط§ظ„ط¥ط¬ط§ط¨ط© ط§ظ„طھظٹ طھط±ط§ظ‡ط§ طµط­ظٹط­ط©طŒ ط«ظ… ط§ظƒطھط´ظپ ظ†طھظٹط¬طھظƒ.</p>
-    </header>
-    <section id="quizArea" aria-live="polite">
-      <div class="progress-wrap"><span id="stepLabel">ط§ظ„ط³ط¤ط§ظ„ 1 ظ…ظ† 10</span><span id="scoreLabel">ط¥ط¬ط§ط¨ط§طھ طµط­ظٹط­ط©: 0</span></div>
-      <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
-      <article class="card">
-        <div class="question-number" id="questionNumber">ط§ظ„ط³ط¤ط§ظ„ ط§ظ„ط£ظˆظ„</div>
-        <h2 id="questionText"></h2>
-        <div class="options" id="options"></div>
-        <div id="feedback" class="feedback hidden" role="status"></div>
-        <div class="actions">
-          <button id="checkBtn" class="primary">طھط­ظ‚ظ‘ظ‚ ظ…ظ† ط¥ط¬ط§ط¨طھظٹ</button>
-          <button id="nextBtn" class="secondary hidden">ط§ظ„ط³ط¤ط§ظ„ ط§ظ„طھط§ظ„ظٹ</button>
-        </div>
-      </article>
-    </section>
-    <section id="resultArea" class="card result hidden" aria-live="polite">
-      <div class="result-mark">âک…</div>
-      <h2>ط£ط­ط³ظ†طھ! ط£ظ†ظ‡ظٹطھ ط§ظ„ط§ط®طھط¨ط§ط±</h2>
-      <p>ظ‡ط°ظ‡ ظ†طھظٹط¬طھظƒ ظپظٹ ط£ط³ط¦ظ„ط© ظƒطھظٹط¨ آ«ظ„ظ…ط§ط°ط§ ط£ظڈطµظ„ظ‘ظٹطںآ»</p>
-      <div id="finalScore" class="score"></div>
-      <p id="resultMessage"></p>
-      <button id="restartBtn" class="primary">ط£ط¹ظٹط¯ ط§ظ„ط§ط®طھط¨ط§ط±</button>
-    </section>
-    <p class="small-note">طھط°ظƒظ‘ط±: ط§ظ„ظ‡ط¯ظپ ظ‡ظˆ ط§ظ„طھط¹ظ„ظ‘ظ… ظˆط§ظ„ظپظ‡ظ…طŒ ظˆط¥ط°ط§ ظ„ظ… طھط¹ط±ظپ ط¥ط¬ط§ط¨ط©طŒ ظٹظ…ظƒظ†ظƒ ط§ظ„ط±ط¬ظˆط¹ ط¥ظ„ظ‰ ط§ظ„ظƒطھظٹط¨ ظˆط·ظ„ط¨ ط§ظ„ظ…ط³ط§ط¹ط¯ط© ظ…ظ† ط£ط³ط±طھظƒ ط£ظˆ ظ…ط¹ظ„ظ‘ظ…ظƒ.</p>
-    <footer>ط£ط­ط¨ طµظ„ط§طھظٹ آ· ظ„ظ…ط§ط°ط§ ط£ظڈطµظ„ظ‘ظٹطں</footer>
+      <header class="hero">
+        <p class="kicker">سلسلة كتيبات أحب صلاتي</p>
+        <h1>اختبر نفسك: لماذا أُصلّي؟</h1>
+        <p>أسئلة قصيرة تساعدك على تذكّر ما تعلّمته في الكتيب. اقرأ السؤال، واختر الإجابة التي تراها صحيحة، ثم اكتشف نتيجتك.</p>
+      </header>
+      <section id="quizArea" aria-live="polite">
+        <div class="progress-wrap"><span id="stepLabel">السؤال 1 من 10</span><span id="scoreLabel">إجابات صحيحة: 0</span></div>
+        <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+        <article class="card">
+          <div class="question-number" id="questionNumber">السؤال الأول</div>
+          <h2 id="questionText"></h2>
+          <div class="options" id="options"></div>
+          <div id="feedback" class="feedback hidden" role="status"></div>
+          <div class="actions">
+            <button id="checkBtn" class="primary">تحقّق من إجابتي</button>
+            <button id="nextBtn" class="secondary hidden">السؤال التالي</button>
+          </div>
+        </article>
+      </section>
+      <section id="resultArea" class="card result hidden" aria-live="polite">
+        <div class="result-mark">★</div>
+        <h2>أحسنت! أنهيت الاختبار</h2>
+        <p>هذه نتيجتك في أسئلة كتيب «لماذا أُصلّي؟»</p>
+        <div id="finalScore" class="score"></div>
+        <p id="resultMessage"></p>
+        <button id="restartBtn" class="primary">أعيد الاختبار</button>
+      </section>
+      <p class="small-note">تذكّر: الهدف هو التعلّم والفهم، وإذا لم تعرف إجابة، يمكنك الرجوع إلى الكتيب وطلب المساعدة من أسرتك أو معلّمك.</p>
+      <footer>أحب صلاتي · لماذا أُصلّي؟</footer>
     </section>
   </div>
 </main>
+
 <script>
 const questions = [
-  {q:"ظ„ظ…ط§ط°ط§ ط®ظ„ظ‚ ط§ظ„ظ„ظ‡ ط§ظ„ط¬ظ† ظˆط§ظ„ط¥ظ†ط³ ظƒظ…ط§ ظˆط±ط¯ ظپظٹ ط§ظ„ط¢ظٹط© ط§ظ„طھظٹ طھط¹ظ„ظ‘ظ…ظ†ط§ظ‡ط§طں", options:["ظ„ظٹط¹ط¨ط¯ظˆظ‡","ظ„ظٹط¬ظ…ط¹ظˆط§ ط§ظ„ظ…ط§ظ„ ظپظ‚ط·","ظ„ظٹطھط³ط§ط¨ظ‚ظˆط§ ظپظٹ ط§ظ„ظ„ط¹ط¨"], answer:0, explain:"ظ‚ط§ظ„ ط§ظ„ظ„ظ‡ طھط¹ط§ظ„ظ‰: ï´؟ظˆظ…ط§ ط®ظ„ظ‚طھ ط§ظ„ط¬ظ† ظˆط§ظ„ط¥ظ†ط³ ط¥ظ„ط§ ظ„ظٹط¹ط¨ط¯ظˆظ†ï´¾."},
-  {q:"ط£ظٹظ‘ ظ…ظ…ط§ ظٹط£طھظٹ ظٹظڈط¹ط¯ظ‘ ظ…ظ† ط´ظƒط± ط§ظ„ظ„ظ‡ ط¹ظ„ظ‰ ظ†ط¹ظ…ظ‡طں", options:["ط¥ظپط³ط§ط¯ ط§ظ„ظ†ط¹ظ… ط¹ظ…ط¯ظ‹ط§","ط§ط³طھط®ط¯ط§ظ… ط§ظ„ظ†ط¹ظ… ظپظٹ ط§ظ„ط®ظٹط±","طھط¬ط§ظ‡ظ„ ظ…ظ† ظٹط­طھط§ط¬ ط¥ظ„ظ‰ ط§ظ„ظ…ط³ط§ط¹ط¯ط©"], answer:1, explain:"ظ…ظ† ط´ظƒط± ط§ظ„ظ†ط¹ظ… ط£ظ† ظ†ط­ظ…ط¯ ط§ظ„ظ„ظ‡ ظˆظ†ط³طھط®ط¯ظ… ظ…ط§ ط£ظ†ط¹ظ… ط¨ظ‡ ط¹ظ„ظٹظ†ط§ ظپظٹظ…ط§ ظٹظ†ظپط¹."},
-  {q:"ط¨ظ…ط§ط°ط§ ظ†ط¨ط¯ط£ ط§ظ„طµظ„ط§ط©طں", options:["ط¨ط§ظ„طھط³ظ„ظٹظ…","ط¨طھظƒط¨ظٹط±ط© ط§ظ„ط¥ط­ط±ط§ظ…: ط§ظ„ظ„ظ‡ ط£ظƒط¨ط±","ط¨ط§ظ„ط±ظƒظˆط¹ ظ…ط¨ط§ط´ط±ط©"], answer:1, explain:"طھط¨ط¯ط£ ط§ظ„طµظ„ط§ط© ط¨طھظƒط¨ظٹط±ط© ط§ظ„ط¥ط­ط±ط§ظ…طŒ ظˆطھظڈط®طھظژظ… ط¨ط§ظ„طھط³ظ„ظٹظ…."},
-  {q:"ظ…ظ† ط£ظٹظ† ظ†طھط¹ظ„ظ‘ظ… طµظپط© ط§ظ„طµظ„ط§ط©طں", options:["ظ…ظ† ظ‡ط¯ظٹ ط§ظ„ظ†ط¨ظٹ ï·؛ ظˆطھط¹ظ„ظٹظ… ط£ظ‡ظ„ ط§ظ„ط¹ظ„ظ… ط§ظ„ظ…ظˆط«ظˆظ‚ظٹظ†","ظ…ظ† ط§ط®طھط±ط§ط¹ ط­ط±ظƒط§طھ ط¬ط¯ظٹط¯ط©","ظ…ظ† ط§ظ„طھط®ظ…ظٹظ† ظپظ‚ط·"], answer:0, explain:"ظ†طھط¹ظ„ظ‘ظ… ط§ظ„طµظ„ط§ط© ظ…ظ† ط§ظ„ظ‚ط±ط¢ظ† ظˆط§ظ„ط³ظ†ط©طŒ ظˆظ…ظ† طھط¹ظ„ظٹظ… ط§ظ„ظˆط§ظ„ط¯ظٹظ† ظˆط§ظ„ظ…ط¹ظ„ظ…ظٹظ† ط§ظ„ظ…ظˆط«ظˆظ‚ظٹظ†."},
-  {q:"ظƒظ… طµظ„ط§ط© ظ…ظپط±ظˆط¶ط© ظپظٹ ط§ظ„ظٹظˆظ… ظˆط§ظ„ظ„ظٹظ„ط©طں", options:["ط«ظ„ط§ط« طµظ„ظˆط§طھ","ط£ط±ط¨ط¹ طµظ„ظˆط§طھ","ط®ظ…ط³ طµظ„ظˆط§طھ"], answer:2, explain:"ط§ظ„طµظ„ظˆط§طھ ط§ظ„ظ…ظپط±ظˆط¶ط© ظ‡ظٹ ط§ظ„ظپط¬ط± ظˆط§ظ„ط¸ظ‡ط± ظˆط§ظ„ط¹طµط± ظˆط§ظ„ظ…ط؛ط±ط¨ ظˆط§ظ„ط¹ط´ط§ط،."},
-  {q:"ظ…طھظ‰ ظٹط¨ط¯ط£ ظˆظ‚طھ طµظ„ط§ط© ط§ظ„ظ…ط؛ط±ط¨طں", options:["ط¨ط¹ط¯ ط؛ط±ظˆط¨ ط§ظ„ط´ظ…ط³","ظ‚ط¨ظ„ ط´ط±ظˆظ‚ ط§ظ„ط´ظ…ط³","ظپظٹ ظ…ظ†طھطµظپ ط§ظ„ظ†ظ‡ط§ط±"], answer:0, explain:"ظٹط¨ط¯ط£ ظˆظ‚طھ ط§ظ„ظ…ط؛ط±ط¨ ط¨ط¹ط¯ ط؛ط±ظˆط¨ ط§ظ„ط´ظ…ط³."},
-  {q:"ط¨ظ…ط§ط°ط§ ط´ط¨ظ‘ظ‡ ط§ظ„ظ†ط¨ظٹ ï·؛ ط§ظ„طµظ„ظˆط§طھ ط§ظ„ط®ظ…ط³ ظپظٹ ط§ظ„ط­ط¯ظٹط« ط§ظ„ظˆط§ط±ط¯ ظپظٹ ط§ظ„ظƒطھظٹط¨طں", options:["ط¨ط¬ط¨ظ„ ط¨ط¹ظٹط¯","ط¨ظ†ظ‡ط± ط¬ط§ط±ظچ ظٹط؛طھط³ظ„ ظ…ظ†ظ‡ ط§ظ„ظ…ط±ط، ظƒظ„ ظٹظˆظ… ط®ظ…ط³ ظ…ط±ط§طھ","ط¨ط´ط¬ط±ط© ظ„ط§ طھطھط؛ظٹط±"], answer:1, explain:"ط´ط¨ظ‘ظ‡ ط§ظ„ظ†ط¨ظٹ ï·؛ ط§ظ„طµظ„ظˆط§طھ ط§ظ„ط®ظ…ط³ ط¨ظ†ظ‡ط± ط¬ط§ط±ظچ ظٹط؛طھط³ظ„ ظ…ظ†ظ‡ ط§ظ„ط¥ظ†ط³ط§ظ† ط®ظ…ط³ ظ…ط±ط§طھ ظƒظ„ ظٹظˆظ…."},
-  {q:"ظ…ط§ط°ط§ ط£ظپط¹ظ„ ط¥ط°ط§ ط£ط®ط·ط£طھ ظپظٹ ط­ظ‚ ط´ط®طµطں", options:["ط£طµط±ظ‘ ط¹ظ„ظ‰ ط§ظ„ط®ط·ط£","ط£طµظ„ط­ ط®ط·ط¦ظٹ ظˆط£ط³طھط؛ظپط± ط§ظ„ظ„ظ‡ ظˆط£ط¬طھظ‡ط¯ ظپظٹ ط§ظ„ط®ظٹط±","ط£ط¤ط°ظٹ ط§ظ„ط¢ط®ط±ظٹظ†"], answer:1, explain:"ظ†طھط¹ظ„ظ‘ظ… ط£ظ† ظ†ط³طھط؛ظپط± ط§ظ„ظ„ظ‡ ظˆظ†طµظ„ط­ ط£ط®ط·ط§ط،ظ†ط§ ظˆظ†ط¬طھظ‡ط¯ ظپظٹ ظپط¹ظ„ ط§ظ„ط®ظٹط±."},
-  {q:"ظ…ط§ط°ط§ ظٹظ…ظƒظ†ظ†ظٹ ط£ظ† ط£ظپط¹ظ„ ظپظٹ ط§ظ„طµظ„ط§ط©طں", options:["ط£ط°ظƒط± ط§ظ„ظ„ظ‡ ظˆط£ظ‚ط±ط£ ط§ظ„ظ‚ط±ط¢ظ† ظˆط£ط¯ط¹ظˆظ‡","ط£ظ†ط´ط؛ظ„ ط¨ط§ظ„ظ„ط¹ط¨","ط£ط¤ط°ظٹ ظ…ظ† ط­ظˆظ„ظٹ"], answer:0, explain:"ظپظٹ ط§ظ„طµظ„ط§ط© ظ†ط°ظƒط± ط§ظ„ظ„ظ‡طŒ ظˆظ†طھظ„ظˆ ط§ظ„ظ‚ط±ط¢ظ†طŒ ظˆظ†ط¯ط¹ظˆظ‡ ط¨ظ…ط§ ظ†ط­طھط§ط¬ ط¥ظ„ظٹظ‡."},
-  {q:"ط¥ط°ط§ ظ„ظ… ط£ظپظ‡ظ… ط£ظ…ط±ظ‹ط§ ظ…طھط¹ظ„ظ‚ظ‹ط§ ط¨ط§ظ„طµظ„ط§ط©طŒ ظ…ط§ط°ط§ ط£ظپط¹ظ„طں", options:["ط£طھظˆظ‚ظپ ط¹ظ† ط§ظ„طھط¹ظ„ظ‘ظ…","ط£ط®ظ…ظ† ط§ظ„ط¥ط¬ط§ط¨ط© ط¯ظˆظ† ط³ط¤ط§ظ„","ط£ط³ط£ظ„ ظˆط§ظ„ط¯ظٹظ‘ ط£ظˆ ظ…ط¹ظ„ظ‘ظ…ظ‹ط§ ظ…ظˆط«ظˆظ‚ظ‹ط§"], answer:2, explain:"ط·ظ„ط¨ ط§ظ„ظ…ط³ط§ط¹ط¯ط© ظ…ظ† ط´ط®طµ ظ…ظˆط«ظˆظ‚ ط®ط·ظˆط© ط¬ظٹط¯ط© ظپظٹ ط·ط±ظٹظ‚ ط§ظ„طھط¹ظ„ظ‘ظ…."}
+  {q:"لماذا خلق الله الجن والإنس كما ورد في الآية التي تعلّمناها؟", options:["ليعبدوه","ليجمعوا المال فقط","ليتسابقوا في اللعب"], answer:0, explain:"قال الله تعالى: ﴿وما خلقت الجن والإنس إلا ليعبدون﴾."},
+  {q:"أيّ مما يأتي يُعدّ من شكر الله على نعمه؟", options:["إفساد النعم عمدًا","استخدام النعم في الخير","تجاهل من يحتاج إلى المساعدة"], answer:1, explain:"من شكر النعم أن نحمد الله ونستخدم ما أنعم به علينا فيما ينفع."},
+  {q:"بماذا نبدأ الصلاة؟", options:["بالتسليم","بتكبيرة الإحرام: الله أكبر","بالركوع مباشرة"], answer:1, explain:"تبدأ الصلاة بتكبيرة الإحرام، وتُختَم بالتسليم."},
+  {q:"من أين نتعلّم صفة الصلاة؟", options:["من هدي النبي ﷺ وتعليم أهل العلم الموثوقين","من اختراع حركات جديدة","من التخمين فقط"], answer:0, explain:"نتعلّم الصلاة من القرآن والسنة، ومن تعليم الوالدين والمعلمين الموثوقين."},
+  {q:"كم صلاة مفروضة في اليوم والليلة؟", options:["ثلاث صلوات","أربع صلوات","خمس صلوات"], answer:2, explain:"الصلوات المفروضة هي الفجر والظهر والعصر والمغرب والعشاء."},
+  {q:"متى يبدأ وقت صلاة المغرب؟", options:["بعد غروب الشمس","قبل شروق الشمس","في منتصف النهار"], answer:0, explain:"يبدأ وقت المغرب بعد غروب الشمس."},
+  {q:"بماذا شبّه النبي ﷺ الصلوات الخمس في الحديث الوارد في الكتيب؟", options:["بجبل بعيد","بنهر جارٍ يغتسل منه المرء كل يوم خمس مرات","بشجرة لا تتغير"], answer:1, explain:"شبّه النبي ﷺ الصلوات الخمس بنهر جارٍ يغتسل منه الإنسان خمس مرات كل يوم."},
+  {q:"ماذا أفعل إذا أخطأت في حق شخص؟", options:["أصرّ على الخطأ","أصلح خطئي وأستغفر الله وأجتهد في الخير","أؤذي الآخرين"], answer:1, explain:"نتعلّم أن نستغفر الله ونصلح أخطاءنا ونجتهد في فعل الخير."},
+  {q:"ماذا يمكنني أن أفعل في الصلاة؟", options:["أذكر الله وأقرأ القرآن وأدعوه","أنشغل باللعب","أؤذي من حولي"], answer:0, explain:"في الصلاة نذكر الله، ونتلو القرآن، وندعوه بما نحتاج إليه."},
+  {q:"إذا لم أفهم أمرًا متعلقًا بالصلاة، ماذا أفعل؟", options:["أتوقف عن التعلّم","أخمن الإجابة دون سؤال","أسأل والديّ أو معلّمًا موثوقًا"], answer:2, explain:"طلب المساعدة من شخص موثوق خطوة جيدة في طريق التعلّم."}
 ];
+
 let current = 0;
 let score = 0;
 let answered = false;
 const $ = id => document.getElementById(id);
-const arabicNumbers = ["ط§ظ„ط£ظˆظ„","ط§ظ„ط«ط§ظ†ظٹ","ط§ظ„ط«ط§ظ„ط«","ط§ظ„ط±ط§ط¨ط¹","ط§ظ„ط®ط§ظ…ط³","ط§ظ„ط³ط§ط¯ط³","ط§ظ„ط³ط§ط¨ط¹","ط§ظ„ط«ط§ظ…ظ†","ط§ظ„طھط§ط³ط¹","ط§ظ„ط¹ط§ط´ط±"];
+const arabicNumbers = ["الأول","الثاني","الثالث","الرابع","الخامس","السادس","السابع","الثامن","التاسع","العاشر"];
+
 function renderQuestion() {
   answered = false;
   const item = questions[current];
-  $("stepLabel").textContent = `ط§ظ„ط³ط¤ط§ظ„ ${current + 1} ظ…ظ† ${questions.length}`;
-  $("scoreLabel").textContent = `ط¥ط¬ط§ط¨ط§طھ طµط­ظٹط­ط©: ${score}`;
+  $("stepLabel").textContent = `السؤال ${current + 1} من ${questions.length}`;
+  $("scoreLabel").textContent = `إجابات صحيحة: ${score}`;
   $("progressBar").style.width = `${(current / questions.length) * 100}%`;
-  $("questionNumber").textContent = `ط§ظ„ط³ط¤ط§ظ„ ${arabicNumbers[current]}`;
+  $("questionNumber").textContent = `السؤال ${arabicNumbers[current]}`;
   $("questionText").textContent = item.q;
   $("options").replaceChildren();
   $("feedback").className = "feedback hidden";
   $("feedback").textContent = "";
+
   item.options.forEach((option, index) => {
     const label = document.createElement("label");
     label.className = "option";
@@ -359,36 +448,44 @@ function renderQuestion() {
     label.append(input, span);
     $("options").append(label);
   });
+
   $("checkBtn").classList.remove("hidden");
   $("checkBtn").disabled = false;
   $("nextBtn").classList.add("hidden");
 }
+
 function checkAnswer() {
   if (answered) return;
   const selected = document.querySelector('input[name="answer"]:checked');
+
   if (!selected) {
     $("feedback").className = "feedback";
-    $("feedback").textContent = "ط§ط®طھط± ط¥ط¬ط§ط¨ط© ط£ظˆظ„ظ‹ط§طŒ ط«ظ… ط§ط¶ط؛ط· آ«طھط­ظ‚ظ‘ظ‚ ظ…ظ† ط¥ط¬ط§ط¨طھظٹآ».";
+    $("feedback").textContent = "اختر إجابة أولًا، ثم اضغط «تحقّق من إجابتي».";
     return;
   }
+
   answered = true;
   const item = questions[current];
   const chosen = Number(selected.value);
-  const labels = [...document.querySelectorAll(".option")];
+  const labels = [...document.querySelectorAll("#options .option")];
+
   labels.forEach((label, i) => {
     label.querySelector("input").disabled = true;
     if (i === item.answer) label.classList.add("correct");
     if (i === chosen && chosen !== item.answer) label.classList.add("wrong");
   });
+
   const isCorrect = chosen === item.answer;
   if (isCorrect) score++;
-  $("scoreLabel").textContent = `ط¥ط¬ط§ط¨ط§طھ طµط­ظٹط­ط©: ${score}`;
+
+  $("scoreLabel").textContent = `إجابات صحيحة: ${score}`;
   $("feedback").className = `feedback ${isCorrect ? "good" : "bad"}`;
-  $("feedback").textContent = `${isCorrect ? "ط¥ط¬ط§ط¨ط© طµط­ظٹط­ط©طŒ ط£ط­ط³ظ†طھ!" : "ظ„ظٹط³طھ ظ‡ط°ظ‡ ط§ظ„ط¥ط¬ط§ط¨ط© ط§ظ„طµط­ظٹط­ط©."} ${item.explain}`;
+  $("feedback").textContent = `${isCorrect ? "إجابة صحيحة، أحسنت!" : "ليست هذه الإجابة الصحيحة."} ${item.explain}`;
   $("checkBtn").classList.add("hidden");
   $("nextBtn").classList.remove("hidden");
-  $("nextBtn").textContent = current === questions.length - 1 ? "ط¹ط±ط¶ ط§ظ„ظ†طھظٹط¬ط©" : "ط§ظ„ط³ط¤ط§ظ„ ط§ظ„طھط§ظ„ظٹ";
+  $("nextBtn").textContent = current === questions.length - 1 ? "عرض النتيجة" : "السؤال التالي";
 }
+
 function nextQuestion() {
   if (current < questions.length - 1) {
     current++;
@@ -398,55 +495,359 @@ function nextQuestion() {
     $("resultArea").classList.remove("hidden");
     $("progressBar").style.width = "100%";
     $("finalScore").textContent = `${score} / ${questions.length}`;
-    $("resultMessage").textContent = score === questions.length ? "ظ…ظ…طھط§ط²! ط£ط¬ط¨طھ ط¹ظ† ط¬ظ…ظٹط¹ ط§ظ„ط£ط³ط¦ظ„ط© ط¥ط¬ط§ط¨ط© طµط­ظٹط­ط©. ظˆط§طµظ„ طھط¹ظ„ظ‘ظ… ط§ظ„طµظ„ط§ط© ظˆط§ظ„ظ…ط­ط§ظپط¸ط© ط¹ظ„ظٹظ‡ط§." : score >= 7 ? "ط£ط­ط³ظ†طھ! طھط°ظƒظ‘ط±طھ ظƒط«ظٹط±ظ‹ط§ ظ…ظ† ط§ظ„ظ…ط¹ظ„ظˆظ…ط§طھ. ط±ط§ط¬ط¹ ط§ظ„ط¥ط¬ط§ط¨ط§طھ ط§ظ„طھظٹ طھط­طھط§ط¬ ط¥ظ„ظ‰ طھط«ط¨ظٹطھظ‡ط§طŒ ط«ظ… ط¬ط±ظ‘ط¨ ظ…ط±ط© ط£ط®ط±ظ‰." : "ط¨ط¯ط§ظٹط© ط·ظٹط¨ط©! ط§ط±ط¬ط¹ ط¥ظ„ظ‰ ط§ظ„ظƒطھظٹط¨ ظˆط±ط§ط¬ط¹ ظ…ط§ طھط¹ظ„ظ‘ظ…طھظ‡طŒ ط«ظ… ط£ط¹ط¯ ط§ظ„ط§ط®طھط¨ط§ط± ظ„طھط±ظ‰ طھظ‚ط¯ظ‘ظ…ظƒ.";
+    $("resultMessage").textContent =
+      score === questions.length
+        ? "ممتاز! أجبت عن جميع الأسئلة إجابة صحيحة. واصل تعلّم الصلاة والمحافظة عليها."
+        : score >= 7
+          ? "أحسنت! تذكّرت كثيرًا من المعلومات. راجع الإجابات التي تحتاج إلى تثبيتها، ثم جرّب مرة أخرى."
+          : "بداية طيبة! ارجع إلى الكتيب وراجع ما تعلّمته، ثم أعد الاختبار لترى تقدّمك.";
   }
 }
+
 function restart() {
-  current = 0; score = 0;
+  current = 0;
+  score = 0;
   $("resultArea").classList.add("hidden");
   $("quizArea").classList.remove("hidden");
   renderQuestion();
 }
+
 $("checkBtn").addEventListener("click", checkAnswer);
 $("nextBtn").addEventListener("click", nextQuestion);
 $("restartBtn").addEventListener("click", restart);
+
 function showPage(pageId) {
-  document.querySelectorAll(".page").forEach(page => page.classList.toggle("hidden", page.id !== pageId));
+  document.querySelectorAll(".page").forEach(page => {
+    page.classList.toggle("hidden", page.id !== pageId);
+  });
+
   document.querySelectorAll("[data-page]").forEach(button => {
     const active = button.dataset.page === pageId;
     button.classList.toggle("nav-active", active && button.closest(".top-nav") !== null);
     if (active) button.setAttribute("aria-current", "page");
     else button.removeAttribute("aria-current");
   });
+
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
-document.querySelectorAll("[data-page]").forEach(button => button.addEventListener("click", () => showPage(button.dataset.page)));
-document.getElementById("bookletOneLink").addEventListener("click", event => { event.preventDefault(); showPage("bookletOnePage"); });
+
+document.querySelectorAll("[data-page]").forEach(button => {
+  button.addEventListener("click", () => showPage(button.dataset.page));
+});
+
+document.getElementById("bookletOneLink").addEventListener("click", event => {
+  event.preventDefault();
+  showPage("bookletOnePage");
+});
+
+document.getElementById("bookletTwoLink").addEventListener("click", event => {
+  event.preventDefault();
+  showPage("bookletTwoPage");
+});
+
+document.getElementById("bookletThreeLink").addEventListener("click", event => {
+  event.preventDefault();
+  showPage("bookletThreePage");
+});
+
 document.getElementById("printBooklet").addEventListener("click", () => window.print());
 document.getElementById("printBookletBottom").addEventListener("click", () => window.print());
-document.getElementById("startBookletQuiz").addEventListener("click", () => { restart(); showPage("quizPage"); });
-document.getElementById("browseGroups").addEventListener("click", () => {
-  document.getElementById("libraryHeading").scrollIntoView({ behavior: "smooth", block: "start" });
+document.getElementById("printBookletTwo").addEventListener("click", () => window.print());
+document.getElementById("printBookletTwoBottom").addEventListener("click", () => window.print());
+document.getElementById("printBookletThree").addEventListener("click", () => window.print());
+document.getElementById("printBookletThreeBottom").addEventListener("click", () => window.print());
+
+document.getElementById("startBookletQuiz").addEventListener("click", () => {
+  restart();
+  showPage("quizPage");
 });
-document.querySelectorAll("[data-booklet]").forEach(link => link.addEventListener("click", event => {
-  event.preventDefault();
-  const title = link.dataset.booklet;
-  $("unavailableTitle").textContent = title;
-  $("unavailableDescription").textContent = (link.dataset.description || "ظ„ظ… ظٹظڈظ†ط´ط± ظ…ط­طھظˆظ‰ ظ‡ط°ط§ ط§ظ„ظƒطھظٹظ‘ط¨ ط¨ط¹ط¯.") + " ظ„ظ… ظٹظڈظ†ط´ط± ظ…ط­طھظˆظ‰ ط§ظ„ظƒطھظٹظ‘ط¨ ط¹ظ„ظ‰ ط§ظ„ظ…ظˆظ‚ط¹ ط¨ط¹ط¯. ظٹظ…ظƒظ†ظƒ ط§ظ„ط¹ظˆط¯ط© ط¥ظ„ظ‰ ظ…ظƒطھط¨ط© آ«ط£ط­ط¨ طµظ„ط§طھظٹآ» ظ„ط§ط³طھط¹ط±ط§ط¶ ط¨ظ‚ظٹط© ط§ظ„ظƒطھظٹظ‘ط¨ط§طھ.";
-  showPage("unavailablePage");
-}));
+
+document.getElementById("startBookletTwoQuiz").addEventListener("click", () => {
+  restartBookletTwoQuiz();
+  showPage("quizTwoPage");
+});
+
+document.getElementById("startBookletThreeQuiz").addEventListener("click", () => {
+  restartBookletThreeQuiz();
+  showPage("quizThreePage");
+});
+
+document.getElementById("browseGroups").addEventListener("click", () => {
+  document.getElementById("libraryHeading").scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+  });
+});
+
+document.querySelectorAll("[data-booklet]").forEach(link => {
+  link.addEventListener("click", event => {
+    event.preventDefault();
+    const title = link.dataset.booklet;
+    $("unavailableTitle").textContent = title;
+    $("unavailableDescription").textContent =
+      (link.dataset.description || "لم يُنشر محتوى هذا الكتيّب بعد.") +
+      " لم يُنشر محتوى الكتيّب على الموقع بعد. يمكنك العودة إلى مكتبة «أحب صلاتي» لاستعراض بقية الكتيّبات.";
+    showPage("unavailablePage");
+  });
+});
+
 document.getElementById("brandHome").addEventListener("click", event => {
   event.preventDefault();
   showPage("homePage");
 });
-document.querySelectorAll("#bookletOnePage .booklet-answer").forEach((placeholder, index) => {
+
+/* اختبار الكتيّب الثالث */
+const bookletThreeQuestions = [
+  {q:"ماذا تعلّمنا الصلاة عن الوقت؟", options:["أن نؤجل كل شيء حتى ننسى الصلاة","أن نحافظ على الصلاة في أوقاتها وننظم أعمالنا","أن نترك الدراسة والعمل"], answer:1, explain:"من دروس الصلاة الاستعداد لها والمحافظة عليها في وقتها مع تنظيم أعمال اليوم."},
+  {q:"ما معنى الخشوع في الصلاة؟", options:["محاولة حضور القلب وتعظيم الله","الإسراع لإنهاء الصلاة فقط","الانشغال بكل ما حولنا"], answer:0, explain:"الخشوع يشمل حضور القلب وتعظيم الله، ونتعلمه بالتدريج."},
+  {q:"ما الآية التي تقول «وأقم الصلاة لذكري»؟", options:["سورة طه، الآية 14","سورة الناس، الآية 1","سورة الفلق، الآية 2"], answer:0, explain:"وردت الآية في سورة طه، الآية 14."},
+  {q:"إذا واجهت صعوبة، كيف أستفيد من درس الصلاة؟", options:["أترك كل محاولة","أستعين بالصبر والصلاة وأبذل الأسباب وأطلب المساعدة عند الحاجة","ألوم نفسي فقط"], answer:1, explain:"نجمع بين الصلاة والصبر والعمل النافع وطلب المساعدة المناسبة."},
+  {q:"ماذا نتعلم من قوله تعالى «إن الصلاة تنهى عن الفحشاء والمنكر»؟", options:["أن الصلاة تعين على ترك السيئات وفعل الخير","أن المصلي لا يمكن أن يخطئ أبدًا","أن إصلاح الأخطاء غير مهم"], answer:0, explain:"الصلاة تعين صاحبها على الطاعة، وإذا أخطأ الإنسان يتوب ويصلح ما يستطيع."},
+  {q:"أي عبارة وردت في الحديث الصحيح الذي تعلّمنا منه أن الصلاة نور؟", options:["والصلاة نور","الصلاة لعب فقط","لا حاجة إلى الصلاة"], answer:0, explain:"ورد في صحيح مسلم: «والصلاة نور»، وهو جزء من حديث أطول."},
+  {q:"ما المقصود بالاستمرار في الصلاة؟", options:["أنني لن أتعب أو أنسى أبدًا","أن أداوم على الصلاة وأعود إلى الصواب إذا قصّرت","أن أتركها عندما أجد صعوبة"], answer:1, explain:"الاستمرار يعني المداومة والاجتهاد والعودة إلى الصواب، لا ادعاء الكمال."},
+  {q:"كيف أتصرف إذا أخطأت في حق صديقي؟", options:["أصر على الخطأ","أصلح الخطأ وأعتذر وأتعلم منه","أسخر منه"], answer:1, explain:"نراجع سلوكنا ونحاول إصلاح الخطأ والاعتذار لمن آذيناه."},
+  {q:"ماذا تعلّمنا الصلاة مع الآخرين؟", options:["احترام من حولنا ومراعاة آداب الجماعة","إزعاج المصلين","التفاخر على الآخرين"], answer:0, explain:"نتعلم الانتظام مع المصلين واحترامهم ومراعاة آداب المسجد والجماعة."},
+  {q:"إذا رأيت طفلًا يتعلم الصلاة ويخطئ، فماذا أفعل؟", options:["أسخر منه","أشجعه وأساعده برفق إن استطعت","أمنعه من التعلّم"], answer:1, explain:"نتعلم التواضع والرحمة ومساعدة من يتعلم بدل السخرية منه."}
+];
+
+let bookletThreeCurrent = 0;
+let bookletThreeScore = 0;
+let bookletThreeAnswered = false;
+const bookletThreeArabicNumbers = ["الأول","الثاني","الثالث","الرابع","الخامس","السادس","السابع","الثامن","التاسع","العاشر"];
+
+function renderBookletThreeQuestion() {
+  bookletThreeAnswered = false;
+  const item = bookletThreeQuestions[bookletThreeCurrent];
+
+  $("quizThreeStepLabel").textContent = `السؤال ${bookletThreeCurrent + 1} من ${bookletThreeQuestions.length}`;
+  $("quizThreeScoreLabel").textContent = `إجابات صحيحة: ${bookletThreeScore}`;
+  $("quizThreeProgressBar").style.width = `${(bookletThreeCurrent / bookletThreeQuestions.length) * 100}%`;
+  $("quizThreeQuestionNumber").textContent = `السؤال ${bookletThreeArabicNumbers[bookletThreeCurrent]}`;
+  $("quizThreeQuestionText").textContent = item.q;
+  $("quizThreeOptions").replaceChildren();
+  $("quizThreeFeedback").className = "feedback hidden";
+  $("quizThreeFeedback").textContent = "";
+
+  item.options.forEach((option, index) => {
+    const label = document.createElement("label");
+    label.className = "option";
+
+    const input = document.createElement("input");
+    input.type = "radio";
+    input.name = "bookletThreeAnswer";
+    input.value = index;
+    input.setAttribute("aria-label", option);
+
+    const span = document.createElement("span");
+    span.textContent = option;
+
+    label.append(input, span);
+    $("quizThreeOptions").append(label);
+  });
+
+  $("quizThreeCheckBtn").classList.remove("hidden");
+  $("quizThreeCheckBtn").disabled = false;
+  $("quizThreeNextBtn").classList.add("hidden");
+}
+
+function checkBookletThreeAnswer() {
+  if (bookletThreeAnswered) return;
+
+  const selected = document.querySelector('input[name="bookletThreeAnswer"]:checked');
+
+  if (!selected) {
+    $("quizThreeFeedback").className = "feedback";
+    $("quizThreeFeedback").textContent = "اختر إجابة أولًا، ثم اضغط «تحقّق من إجابتي».";
+    return;
+  }
+
+  bookletThreeAnswered = true;
+  const item = bookletThreeQuestions[bookletThreeCurrent];
+  const chosen = Number(selected.value);
+  const labels = [...document.querySelectorAll("#quizThreeOptions .option")];
+
+  labels.forEach((label, index) => {
+    label.querySelector("input").disabled = true;
+    if (index === item.answer) label.classList.add("correct");
+    if (index === chosen && chosen !== item.answer) label.classList.add("wrong");
+  });
+
+  const correct = chosen === item.answer;
+  if (correct) bookletThreeScore++;
+
+  $("quizThreeScoreLabel").textContent = `إجابات صحيحة: ${bookletThreeScore}`;
+  $("quizThreeFeedback").className = `feedback ${correct ? "good" : "bad"}`;
+  $("quizThreeFeedback").textContent =
+    `${correct ? "إجابة صحيحة، أحسنت!" : "ليست هذه الإجابة الصحيحة."} ${item.explain}`;
+
+  $("quizThreeCheckBtn").classList.add("hidden");
+  $("quizThreeNextBtn").classList.remove("hidden");
+  $("quizThreeNextBtn").textContent =
+    bookletThreeCurrent === bookletThreeQuestions.length - 1 ? "عرض النتيجة" : "السؤال التالي";
+}
+
+function nextBookletThreeQuestion() {
+  if (bookletThreeCurrent < bookletThreeQuestions.length - 1) {
+    bookletThreeCurrent++;
+    renderBookletThreeQuestion();
+  } else {
+    $("quizThreeArea").classList.add("hidden");
+    $("quizThreeResultArea").classList.remove("hidden");
+    $("quizThreeProgressBar").style.width = "100%";
+    $("quizThreeFinalScore").textContent = `${bookletThreeScore} / ${bookletThreeQuestions.length}`;
+
+    $("quizThreeResultMessage").textContent =
+      bookletThreeScore === bookletThreeQuestions.length
+        ? "رائع! أجبت عن جميع الأسئلة إجابة صحيحة. حاول تطبيق هذه الدروس في يومك."
+        : bookletThreeScore >= 7
+          ? "أحسنت! راجع ما يحتاج إلى تثبيت، وفكر كيف تطبق هذه الدروس في حياتك."
+          : "لا بأس، فالتعلم خطوة خطوة. ارجع إلى الكتيّب ثم جرّب الاختبار مرة أخرى.";
+  }
+}
+
+function restartBookletThreeQuiz() {
+  bookletThreeCurrent = 0;
+  bookletThreeScore = 0;
+  $("quizThreeResultArea").classList.add("hidden");
+  $("quizThreeArea").classList.remove("hidden");
+  renderBookletThreeQuestion();
+}
+
+$("quizThreeCheckBtn").addEventListener("click", checkBookletThreeAnswer);
+$("quizThreeNextBtn").addEventListener("click", nextBookletThreeQuestion);
+$("quizThreeRestartBtn").addEventListener("click", restartBookletThreeQuiz);
+
+/* اختبار الكتيّب الثاني */
+const bookletTwoQuestions = [
+  {q:"ما المقصود بكلمة «هدية» في عنوان الكتيّب؟", options:["لفظ وارد حرفيًا في حديث الإسراء","تعبير تربوي يقرّب معنى نعمة الصلاة","اسم صلاة إضافية"], answer:1, explain:"كلمة «هدية» هنا تعبير تعليمي عن نعمة الصلاة، وليست اقتباسًا من لفظ الحديث."},
+  {q:"كم صلاة مفروضة في اليوم والليلة؟", options:["ثلاث صلوات","خمس صلوات","سبع صلوات"], answer:1, explain:"الصلوات المفروضة خمس في اليوم والليلة."},
+  {q:"في أي حدث ورد فرض الصلوات الخمس في الحديث المذكور؟", options:["في ليلة الإسراء والمعراج","في يوم الهجرة إلى المدينة","في غزوة بدر"], answer:0, explain:"ورد ذلك في حديث الإسراء والمعراج."},
+  {q:"ما المعنى الذي تشير إليه الآية «وأقم الصلاة لذكري»؟", options:["أن الصلاة للذكر والعبادة","أن الصلاة وقت للعب فقط","أن الصلاة لا تحتاج إلى تعلّم"], answer:0, explain:"تعلّمنا الآية أن نقيم الصلاة لذكر الله."},
+  {q:"ماذا علّمنا النبي ﷺ عن الدعاء في السجود؟", options:["أن نترك الدعاء دائمًا","أن نكثر الدعاء في السجود","أن السجود ليس من الصلاة"], answer:1, explain:"ورد في صحيح مسلم الحث على الإكثار من الدعاء في السجود."},
+  {q:"بحسب الآية المذكورة في الكتيّب، بماذا نستعين؟", options:["بالصبر والصلاة","بالغضب والعجلة","بتجاهل المشكلات"], answer:0, explain:"قال الله تعالى: «استعينوا بالصبر والصلاة»."},
+  {q:"إذا شعرت بالقلق قبل الامتحان، ما التصرف الأنسب؟", options:["أترك المراجعة تمامًا","أصلي وأدعو الله وأراجع دروسي وأطلب المساعدة عند الحاجة","ألوم نفسي ولا أتكلم مع أحد"], answer:1, explain:"نجمع بين العبادة وبذل الأسباب وطلب المساعدة المناسبة."},
+  {q:"ما أحد الآثار التي تشير إليها آية «إن الصلاة تنهى عن الفحشاء والمنكر»؟", options:["أن الصلاة تعين على تذكّر الخير وترك المنكر","أن المصلي لا يمكن أن يخطئ أبدًا","أن الأخلاق لا علاقة لها بالسلوك"], answer:0, explain:"الصلاة تعين على الطاعة والابتعاد عن الأعمال السيئة، والإنسان قد يخطئ ويحتاج إلى التوبة والإصلاح."},
+  {q:"إذا أخطأت في حق صديق، ماذا أفعل؟", options:["أصر على الخطأ","أصلح الخطأ وأعتذر وأجتهد في الخير","أتجاهل ما حدث دائمًا"], answer:1, explain:"من السلوك الحسن أن نصلح الخطأ ونعتذر لمن آذيناه."},
+  {q:"كيف أشكر الله على نعمة الصلاة؟", options:["بإهمال تعلّمها","بتعلّمها والمحافظة عليها والاستعداد لها","باعتبارها أمرًا لا يحتاج إلى اهتمام"], answer:1, explain:"نظهر شكرنا بتعلّم الصلاة والمحافظة عليها والاستعداد لها."}
+];
+
+let bookletTwoCurrent = 0;
+let bookletTwoScore = 0;
+let bookletTwoAnswered = false;
+const bookletTwoArabicNumbers = ["الأول","الثاني","الثالث","الرابع","الخامس","السادس","السابع","الثامن","التاسع","العاشر"];
+
+function renderBookletTwoQuestion() {
+  bookletTwoAnswered = false;
+  const item = bookletTwoQuestions[bookletTwoCurrent];
+
+  $("quizTwoStepLabel").textContent = `السؤال ${bookletTwoCurrent + 1} من ${bookletTwoQuestions.length}`;
+  $("quizTwoScoreLabel").textContent = `إجابات صحيحة: ${bookletTwoScore}`;
+  $("quizTwoProgressBar").style.width = `${(bookletTwoCurrent / bookletTwoQuestions.length) * 100}%`;
+  $("quizTwoQuestionNumber").textContent = `السؤال ${bookletTwoArabicNumbers[bookletTwoCurrent]}`;
+  $("quizTwoQuestionText").textContent = item.q;
+  $("quizTwoOptions").replaceChildren();
+  $("quizTwoFeedback").className = "feedback hidden";
+  $("quizTwoFeedback").textContent = "";
+
+  item.options.forEach((option, index) => {
+    const label = document.createElement("label");
+    label.className = "option";
+
+    const input = document.createElement("input");
+    input.type = "radio";
+    input.name = "bookletTwoAnswer";
+    input.value = index;
+    input.setAttribute("aria-label", option);
+
+    const span = document.createElement("span");
+    span.textContent = option;
+
+    label.append(input, span);
+    $("quizTwoOptions").append(label);
+  });
+
+  $("quizTwoCheckBtn").classList.remove("hidden");
+  $("quizTwoCheckBtn").disabled = false;
+  $("quizTwoNextBtn").classList.add("hidden");
+}
+
+function checkBookletTwoAnswer() {
+  if (bookletTwoAnswered) return;
+
+  const selected = document.querySelector('input[name="bookletTwoAnswer"]:checked');
+
+  if (!selected) {
+    $("quizTwoFeedback").className = "feedback";
+    $("quizTwoFeedback").textContent = "اختر إجابة أولًا، ثم اضغط «تحقّق من إجابتي».";
+    return;
+  }
+
+  bookletTwoAnswered = true;
+  const item = bookletTwoQuestions[bookletTwoCurrent];
+  const chosen = Number(selected.value);
+  const labels = [...document.querySelectorAll("#quizTwoOptions .option")];
+
+  labels.forEach((label, index) => {
+    label.querySelector("input").disabled = true;
+    if (index === item.answer) label.classList.add("correct");
+    if (index === chosen && chosen !== item.answer) label.classList.add("wrong");
+  });
+
+  const correct = chosen === item.answer;
+  if (correct) bookletTwoScore++;
+
+  $("quizTwoScoreLabel").textContent = `إجابات صحيحة: ${bookletTwoScore}`;
+  $("quizTwoFeedback").className = `feedback ${correct ? "good" : "bad"}`;
+  $("quizTwoFeedback").textContent =
+    `${correct ? "إجابة صحيحة، أحسنت!" : "ليست هذه الإجابة الصحيحة."} ${item.explain}`;
+
+  $("quizTwoCheckBtn").classList.add("hidden");
+  $("quizTwoNextBtn").classList.remove("hidden");
+  $("quizTwoNextBtn").textContent =
+    bookletTwoCurrent === bookletTwoQuestions.length - 1 ? "عرض النتيجة" : "السؤال التالي";
+}
+
+function nextBookletTwoQuestion() {
+  if (bookletTwoCurrent < bookletTwoQuestions.length - 1) {
+    bookletTwoCurrent++;
+    renderBookletTwoQuestion();
+  } else {
+    $("quizTwoArea").classList.add("hidden");
+    $("quizTwoResultArea").classList.remove("hidden");
+    $("quizTwoProgressBar").style.width = "100%";
+    $("quizTwoFinalScore").textContent = `${bookletTwoScore} / ${bookletTwoQuestions.length}`;
+
+    $("quizTwoResultMessage").textContent =
+      bookletTwoScore === bookletTwoQuestions.length
+        ? "ممتاز! أجبت عن جميع الأسئلة إجابة صحيحة. واصل تعلّم الصلاة والمحافظة عليها."
+        : bookletTwoScore >= 7
+          ? "أحسنت! تذكّرت معظم المعلومات. راجع ما تحتاج إلى تثبيته ثم جرّب مرة أخرى."
+          : "بداية طيبة! أعد قراءة الكتيّب وراجع إجاباته، ثم جرّب الاختبار من جديد.";
+  }
+}
+
+function restartBookletTwoQuiz() {
+  bookletTwoCurrent = 0;
+  bookletTwoScore = 0;
+  $("quizTwoResultArea").classList.add("hidden");
+  $("quizTwoArea").classList.remove("hidden");
+  renderBookletTwoQuestion();
+}
+
+$("quizTwoCheckBtn").addEventListener("click", checkBookletTwoAnswer);
+$("quizTwoNextBtn").addEventListener("click", nextBookletTwoQuestion);
+$("quizTwoRestartBtn").addEventListener("click", restartBookletTwoQuiz);
+
+/* إنشاء خانات الإجابة في الكتيّبات الثلاثة */
+document.querySelectorAll("#bookletOnePage .booklet-answer, #bookletTwoPage .booklet-answer, #bookletThreePage .booklet-answer").forEach((placeholder, index) => {
   const field = document.createElement("textarea");
   field.className = "booklet-answer-input";
   field.rows = 2;
-  field.setAttribute("aria-label", `ظ…ط³ط§ط­ط© ط§ظ„ط¥ط¬ط§ط¨ط© ${index + 1}`);
-  field.placeholder = "ط§ظƒطھط¨ ط¥ط¬ط§ط¨طھظƒ ظ‡ظ†ط§...";
+  field.setAttribute("aria-label", `مساحة الإجابة ${index + 1}`);
+  field.placeholder = "اكتب إجابتك هنا...";
   placeholder.replaceWith(field);
 });
+
 showPage("homePage");
 renderQuestion();
 </script>
